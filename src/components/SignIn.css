@@ -1,0 +1,94 @@
+/* .singin_container .overlay{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+} */
+.singin_container{
+    max-width: 400px;
+    background-color: #fff;
+    padding: 5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+.signin_content h3{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 32.2px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.signin_content label{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18.2px;
+    text-align: center;
+}
+.signin_content input{
+    margin-top: 10px;
+    width: 300px;
+    height: 41px;
+    padding: 13px 10px 13px 10px;
+    border-radius: 6px;
+    border: 0.5px solid #494949;
+    margin: 0 auto;
+}
+.signinBtn button{
+    margin-top: 10px;
+    width: 300px;
+    height: 42px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    background-color: #55BFEA;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+.altsignin{
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+    color: #23222259;
+    font-size: 15px;
+    margin-top: 25px;
+    margin-right: 50px;
+    margin-bottom: 25px;
+}
+.socialIcons{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 32px;
+    margin-right: 50px;
+}
+.icon{
+    text-align: center;
+}
+.icon p{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.4px;
+    text-align: center;
+    color: #23222259;
+}
+.text{
+    margin-right: 50px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15.4px;
+    text-align: center;
+    margin-top: 25px;
+}
