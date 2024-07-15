@@ -25,7 +25,7 @@ function App() {
 					<Route exact path="ngn" element={<Nigeria />} />
 					<Route exact path="manage-booking" element={<ManageBooking />} />
 				</Routes>
-				<Route exact path="offer" element={<Offer/>}/>
+				<Offer/>
 			</Router>
 		</>
 	);
