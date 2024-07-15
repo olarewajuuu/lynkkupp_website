@@ -24,8 +24,8 @@ function App() {
 					<Route exact path="flight-status" element={<Support />} />
 					<Route exact path="ngn" element={<Nigeria />} />
 					<Route exact path="manage-booking" element={<ManageBooking />} />
-					<Route exact path="offer" element={<Offer/>}/>
 				</Routes>
+				<Route exact path="offer" element={<Offer/>}/>
 			</Router>
 		</>
 	);
