@@ -4,7 +4,9 @@ import { Link, NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { ImCross } from "react-icons/im";
-import SignIn from "../../components/SignIn";
+import SignIn from "../../components/auth/SignIn";
+// import HotelPartnerForm2 from "../../components/auth/HotelPartnerForm2";
+import HotelPartnerForm from "../../components/auth/HotelPartnerForm";
 
 
 const Navbar = () => {
@@ -17,6 +19,17 @@ const Navbar = () => {
   const toggleSignin = () => {
     setSignin(!signin)
   }
+  const [partner, setPartner] = useState(false)
+
+  const togglePartner = () => {
+    setPartner(!partner)
+
+  }
+
+  const handleFunction = () => {
+    togglePartner()
+    handleClicked()
+  };
 
 
   return (
@@ -44,7 +57,7 @@ const Navbar = () => {
             <button 
             onClick={toggleSignin}
             className="navButtonSign">Sign in</button>
-            <button className= {clicked ? "navButtonPat active": "navButtonPat"}>Partern with us</button>
+            <button className= {clicked ? "navButtonPat active": "navButtonPat"} onClick={handleFunction} >Partern with us</button>
           </div>
           <div className="icons" onClick={handleClicked}>
           {!clicked? <GiHamburgerMenu /> : <ImCross />}
@@ -52,7 +65,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      {signin && <SignIn /> }
+      {signin && <SignIn cancelSignin = {toggleSignin} /> }
+  
+  {partner && <HotelPartnerForm partner = {togglePartner} /> }
+
     </>
   );
 };
