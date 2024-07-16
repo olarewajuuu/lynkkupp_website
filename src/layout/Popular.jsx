@@ -80,7 +80,7 @@ const Popular = () => {
 									</span>
 								</button>
 							)}
-							{index === 0 && 2 && (
+							{index ===  2 && (
 								<button
 									type="button"
 									className="flex absolute top-1/2 transform -translate-y-1/2 -right-8 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
