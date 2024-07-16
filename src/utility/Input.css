@@ -1,0 +1,113 @@
+
+.img_input_caption{
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 22.27px;
+    text-align: left;
+}
+.img_input_upload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 218px;
+    height: 130px;
+    padding: 13px 27px 13px 27px;
+    border-radius: 6px;
+    border: 0.5px solid #494949;
+}
+.img_image_preview{
+    width: 100px;
+    height: 50px;
+
+}
+.img_file_accepted{
+    color: green;
+    font-size: 6px;
+}
+.img_error_text{
+    color: red;
+    font-size: 6px;
+}
+.price{
+    margin: 20px 0;
+    width: 218px;
+    height: 24px;
+}
+.price::placeholder{
+    padding-left: 10px;
+}
+@media screen and (max-width: 760px) {
+
+    .img_input_upload{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 180px;
+        height: 130px;
+        padding: 13px 27px 13px 27px;
+        border-radius: 6px;
+        border: 0.5px solid #494949;
+    }
+    .price{
+        margin: 20px 0;
+        width: 180px;
+        height: 24px;
+    }
+    .price::placeholder{
+        padding-left: 10px;
+    }
+    .img_image_preview{
+        width: 100px;
+        height: 50px;
+    
+    }
+    .img_file_accepted{
+        color: green;
+        font-size: 6px;
+    }
+    .img_error_text{
+        color: red;
+        font-size: 6px;
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+     .img_input_upload{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 180px;
+        height: 130px;
+        padding: 13px 27px 13px 27px;
+        border-radius: 6px;
+        border: 0.5px solid #494949;
+    }
+    .price{
+        margin: 20px 0;
+        width: 180px;
+        height: 24px;
+    }
+    .price::placeholder{
+        padding-left: 10px;
+    }
+    .img_image_preview{
+        width: 100px;
+        height: 50px;
+    
+    }
+    .img_file_accepted{
+        color: green;
+        font-size: 6px;
+    }
+    .img_error_text{
+        color: red;
+        font-size: 6px;
+    }
+}
