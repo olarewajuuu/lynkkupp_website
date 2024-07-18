@@ -2,7 +2,7 @@
 
 const Flights = () => {
   return (
-    <div>Flights Page is under construction</div>
+    <div></div>
   )
 }
 
