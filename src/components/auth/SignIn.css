@@ -1,37 +1,46 @@
-/* .singin_container .overlay{
-    width: 100vw;
-    height: 100vh;
+.singin_container .overlay{
+    width: 70vw;
+    height: 70vh;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixedZ;
-}  */
+    position: fixed;
+} 
 .singin_container{
     max-width: 400px;
     background-color: #fff;
-    padding: 5rem 2.5rem;
+    padding: 0.5rem 0rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 8px;
+    z-index: 20;
+    /* border: 1px solid ; */
 
 }
+.signin_content {
+    padding: 0rem 3.5rem;
+}
 .signin_content h3{
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 700;
     line-height: 32.2px;
     text-align: center;
     margin-bottom: 40px;
 }
+.signin_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+}
 .signin_content label{
     font-size: 13px;
     font-weight: 500;
     line-height: 18.2px;
-    text-align: center;
+    text-align: left;
 }
 .signin_content input{
     margin-top: 10px;
@@ -40,10 +49,10 @@
     padding: 13px 10px 13px 10px;
     border-radius: 6px;
     border: 0.5px solid #494949;
-    margin: 0 auto;
+
 }
 .signinBtn button{
-    margin-top: 10px;
+    margin: 10px auto;
     width: 300px;
     height: 42px;
     padding: 10px 30px 10px 30px;
@@ -89,7 +98,6 @@
 }
 .text{
     margin-right: 50px;
-    font-family: Roboto;
     font-size: 11px;
     font-weight: 400;
     line-height: 15.4px;
@@ -99,47 +107,28 @@
 .errors{
     color: #ec0606;
     font-size: 12px;
+    text-align: center;
 }
 .sign_mobile{
     display: none;
   }
 
+
+
   @media screen and (max-width: 760px) {
     .sign_mobile{
         display: block;
         background-color: #55BFEA;
-        padding: 15px 15px;
+        padding: 0px 35px;
         color: #fff;
-        font-size: 18px;
+        font-size: 14px;
         line-height: 22.4px;
         text-align: left;
-        width: 400px;
-        margin-bottom: 50px;
-    }
-     .sign_mobile img{
-        width: 31px;
-        height: 31px;
-    }
-     .sign_mobile p{
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-  }
-
-  @media screen and (max-width: 960px) {
-    .sign_mobile{
-        display: block;
-        background-color: #55BFEA;
-        padding: 15px 15px;
-        color: #fff;
-        font-size: 18px;
-        line-height: 22.4px;
-        text-align: left;
-        width: 400px;
+        width: 100%;
         margin-bottom: 50px;
 
     }
+
     .sign_mobile img{
         width: 31px;
         height: 31px;
@@ -149,5 +138,13 @@
         align-items: center;
         gap: 20px;
     }
-
+    .text{
+        margin-right: 0px;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 15.4px;
+        text-align: center;
+        margin-top: 0px;
+        padding: 20px;
+    }
 }

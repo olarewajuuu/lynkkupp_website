@@ -76,12 +76,12 @@ const HotelPartnerForm = ({partner}) => {
             onClick={handleClick}
             className="active"
             >
-              <img src={eventImg} />I am a hotel owner
+              <img src={eventImg} /><span>I am a hotel owner</span>
             </a>
           </li>
           <li>
             <a href="" onClick={toggleticketing}>
-              <img src={hotelImg} />I handle event ticketing
+              <img src={hotelImg} /><span>I handle event ticketing</span>
             </a>
           </li>
         </ul>
@@ -98,7 +98,6 @@ const HotelPartnerForm = ({partner}) => {
               <div className="contact1">
                 <label htmlFor="Contact1">Contact 1*</label>
                 <br className="gap" />
-                {/* <input type="text" placeholder="phone number" /> */}
                 <PhoneInput
                   className="phone"
                   country={"ng"}

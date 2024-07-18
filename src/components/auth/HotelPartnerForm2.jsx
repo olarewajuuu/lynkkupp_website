@@ -43,14 +43,15 @@ const HotelPartnerForm2 = ({partner2}) => {
         <h1 className="container_head_upload">
           Partner with <span>LynKKupp</span>
         </h1>
-        <ul className="list_upload">
+         
+        <ul className="list_upload border-b-2 border-[#494949]">
           <li>
-            <a href="" className="active_upload">
+            <a href="" className="active_upload flex justify-center items-center">
               <img src={eventImg} />I am a hotel owner
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="" className="flex justify-center items-center">
               <img src={hotelImg} />I handle event ticketing
             </a>
           </li>

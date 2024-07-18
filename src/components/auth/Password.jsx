@@ -74,14 +74,16 @@ const Password = ({cancelPassword}) => {
     
       <div className="password_content">
       <div className="password_mobile" >
-      <img src={backImg } onClick={cancelPassword} />
-      <p className="back"> Sign in</p>
+      
+      <p className="sm:flex items-center gap-3 text-white"><img src={backImg } onClick={cancelPassword} /> Sign in</p>
       </div>
+      <div className="overlay" onClick={cancelPassword} ></div>
       <h3>Create password</h3>
       <p className="headline">Use a minimum of 8 characters, including uppercase letters, lowercase letters and numbers.</p>
         <form >
           <label htmlFor="password">Password</label>
           <br />
+          <div className="passcon">
           <input
             name="password"
             type={showPassword ? 'text' : 'password'}
@@ -93,12 +95,15 @@ const Password = ({cancelPassword}) => {
           <span onClick={toggleShowPassword} className="showPassword">
           {showPassword ? '❌' : '👁️'}
         </span>
-          <span className="errors">{validationMessage}</span>
+        </div>
+          <span className="password_errors">{validationMessage}</span>
           <br/> 
           <br />
 
           <label htmlFor="" >Confirm Password</label>
           <br />
+
+          <div className="passcon">
           <input
             name="password"
             type={showPassword ? 'text' : 'password'}
@@ -109,7 +114,8 @@ const Password = ({cancelPassword}) => {
           <span onClick={toggleShowPassword} className="showConfirmPassword">
           {showPassword ? '❌' : '👁️'}
         </span>
-          <span className="errors">{confirmMessage}</span>
+        </div>
+          <span className="password_errors">{confirmMessage}</span>
         
         </form>
         <div className="passwordBtn">

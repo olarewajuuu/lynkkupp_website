@@ -15,11 +15,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    gap: 100px;
     
 }
 .container .list li{
-    border-bottom: 1px solid #494949;
-    font-size: 30px;
+    /* border-bottom: 1px solid #494949; */
+    font-size: 50px;
     font-weight: 500;
     line-height: 46.2px;
     text-align: center;
@@ -27,7 +29,7 @@
     
 }
 .container .list li a{
-    padding: 0 70px;
+    /* padding: 0 70px; */
     color:#494949 ;
     text-decoration: none;
     
@@ -182,6 +184,173 @@
     display: none;
 }
 @media screen and (max-width: 1366px){
+    .container{
+        width: 100%;
+        padding: 50px 110px;
+    }
+    .container_head{
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 67.2px;
+        text-align: center;
+    }
+    .container_head span{
+        color:#55BFEA ;
+    }
+    .container .list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        border-bottom: 1px solid #494949;
+        margin-top: 30px;
+        
+    }
+    .container .list li{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 6.2px;
+        text-align: center;
+        list-style-type: none;
+        
+    }
+    .container .list li a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 0 30px;
+        color:#494949 ;
+        text-decoration: none;
+    }
+
+    .container .list li a:hover{
+        border-bottom: 3px solid #0588BD;
+        padding-bottom: 5px;
+    }
+    .container .list li .active{
+        border-bottom: 3px solid #0588BD;
+        padding-bottom: 5px;
+    } 
+    .container .caption{
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 56px;
+        text-align: left;
+        margin-top: 50px;
+        color: #494949;
+    }
+    
+     .form .hotelName label{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.75px;
+        text-align: left;
+       
+    }
+    .form .hotelName input{
+        width: 100%;
+        padding: 13px 10px 13px 25px;
+        border-radius: 6px;
+        border: 0.5px solid #494949;
+        margin:  10px 0;
+    }
+    .form .contact{
+        display: flex;
+        justify-content: center;
+        gap: 0px;
+    }
+    .form .contact label{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.75px;
+        text-align: left;
+    }
+    .form .contact input{
+        width: 570px;
+        padding: 30px 10px 20px 45px;
+        border-radius: 6px;
+        border: 0.5px solid #494949;
+        margin:  10px 30px;
+    }
+    .gap{
+        margin-top: 200px;
+    }
+    .form .contact .whatsapp{
+        width: 570px;
+        padding: 13px 10px 13px 25px;
+        border-radius: 6px;
+        border: 0.5px solid #494949;
+        margin:  10px 0;
+    }
+    
+    .form .address input{
+        width: 100%;
+        padding: 13px 10px 13px 25px;
+        border-radius: 6px;
+        border: 0.5px solid #494949;
+        margin:  10px 0;
+    }
+    .form .address label{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.75px;
+        text-align: left;
+    }
+    .form .place{
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+    }
+    .form .place input{
+        width: 570px;
+        padding: 13px 10px 13px 25px;
+        border-radius: 6px;
+        border: 0.5px solid #494949;
+        margin:  10px 0;
+    }
+    
+    .state_input{
+        width: 570px;
+        padding: 13px 10px 13px 25px;
+        border-radius: 6px;
+        border: 0.5px solid #494949;
+        margin:  10px 0;
+    }
+    
+    .form .place label{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.75px;
+        text-align: left;
+    }
+    
+    .form .website input{
+        width: 100%;
+        padding: 13px 10px 13px 25px;
+        border-radius: 6px;
+        border: 0.5px solid #494949;
+        margin:  10px 0;
+    }
+    .form .website label{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.75px;
+        text-align: left;
+    }
+    .form .cac input{
+        width: 100%;
+        padding: 13px 10px 13px 25px;
+        border-radius: 6px;
+        border: 0.5px solid #494949;
+        margin:  10px 0;
+    }
+    .form .cac label{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.75px;
+        text-align: left;
+    }
     .form .contact input{
         width: 500px;
     }
@@ -262,7 +431,11 @@
     }
     .form .contact input{
         width: 100%;
+        margin:  10px 0px;
     }
+    /* .form .contact input{
+        width: 100%;
+    } */
     .form .contact .whatsapp{
         width: 100%;
     }
@@ -277,7 +450,34 @@
     }
     .state_input{
         width: 100%;
-
+    }
+ }
+ @media screen and (max-width: 440px){
+    .container .list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #494949; 
+    }
+    .container .list li{
+        font-size: 5px;
+        
+    }
+    .container .list li a{
+        padding: 0 10px;
+        
+    }
+    .container .list img{
+        margin-right: 0px;
+        width: 5px;
+    }
+    .container .list li a:hover{
+        border-bottom: 3px solid #05bd05;
+        padding-bottom: 14px;
+    }
+    .container .list li .active{
+        border-bottom: 3px solid #0588BD;
+        padding-bottom: 14px;
     }
  }
 

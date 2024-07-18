@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./SignIn.css";
 import fbImg from "../../assets/Images/Group 44.svg";
 import ggImg from "../../assets/Images/png-transparent-google-logo-google-text-trademark-logo-removebg-preview 1.svg";
@@ -48,13 +49,13 @@ const SignIn = ({cancelSignin}) => {
     <div className="contain">
       <div className="singin_container">
       <div className="sign_mobile" >
-      <p> <img src={backImg } onClick={cancelSignin} /> Sign in</p>
+      <p onClick={cancelSignin}  className="mobile md:flex items-center gap-0 text-white"> <img src={backImg }  /> Sign in</p>
       </div>
 
-        <div className="overlay"></div>
+        <div className="overlay" onClick={cancelSignin} ></div>
         <div className="signin_content">
           <h3>Sign in or create an account</h3>
-          <form onSubmit={handleSubmit}>
+          <form className="signin_form" onSubmit={handleSubmit}>
             <label htmlFor="email">Email address</label>
             <br />
             <input
