@@ -90,7 +90,6 @@ const Password = ({cancelPassword}) => {
             value={password}
             placeholder="Enter a password"
             onChange={handlePasswordChange}
-        
           />
           <span onClick={toggleShowPassword} className="showPassword">
           {showPassword ? '❌' : '👁️'}
