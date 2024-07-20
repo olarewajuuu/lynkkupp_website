@@ -10,6 +10,7 @@ import Nigeria from "./pages/Nigeria";
 import ManageBooking from "./pages/ManageBooking";
 import Offer from "./layout/Offer";
 
+
 function App() {
 	return (
 		<>
@@ -25,7 +26,7 @@ function App() {
 					<Route exact path="ngn" element={<Nigeria />} />
 					<Route exact path="manage-booking" element={<ManageBooking />} />
 				</Routes>
-				<Offer/>
+				<Offer />
 			</Router>
 		</>
 	);
