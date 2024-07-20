@@ -8,6 +8,8 @@ import FlightStatus from "./pages/FlightStatus";
 import Support from "./pages/Support";
 import Nigeria from "./pages/Nigeria";
 import ManageBooking from "./pages/ManageBooking";
+import Footer from "./layout/footer/Footer";
+
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route exact path="flights" element={<Flights /> } />
+          <Route exact path="/" element={<Flights /> } />
           <Route exact path="hotels" element={<Hotels /> } />
           <Route exact path="events" element={<Events /> } />
           <Route exact path="flight+hotel" element={<Flight_Hotel /> } />
@@ -25,8 +27,8 @@ function App() {
           <Route exact path="manage-booking" element={<ManageBooking /> } />
         </Routes>
       </Router>
+      <Footer />
     </>
   );
 }
-
 export default App;

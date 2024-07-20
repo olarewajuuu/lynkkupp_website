@@ -1,9 +1,13 @@
-
+import Subscribe from "../component/Subscribe"
 
 const Flights = () => {
   return (
-    <div>Flights Page is under construction</div>
+    <>
+     <Subscribe />
+    </>
+  
   )
+
 }
 
 export default Flights

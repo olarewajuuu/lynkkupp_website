@@ -20,7 +20,7 @@ const Navbar = () => {
           </div>
           <div className={clicked ? "navItems active": "navItems" }>
             <ul>
-                <li><NavLink to="/flights" activeNlassName="active">Flights</NavLink></li>
+                <li><NavLink to="/" activeNlassName="active">Flights</NavLink></li>
                 <li><NavLink to="/hotels" activeNlassName="active">Hotels</NavLink></li>
                 <li><NavLink to="/events" activeNlassName="active">Events</NavLink></li>
                 <li><NavLink to="/flight+hotel" activeNlassName="active">Flight + Hotel</NavLink></li>
