@@ -116,6 +116,9 @@
 
 
   @media screen and (max-width: 760px) {
+    .singin_container .overlay{
+        display: none;
+    } 
     .sign_mobile{
         display: block;
         background-color: #55BFEA;
