@@ -2,7 +2,9 @@ import uploadImg from "../../src/assets/Images/AddRoom.svg";
 import { useState } from "react";
 import { useDropzone } from "react-dropzone";
 import Error from "../utility/Error";
-import "./Input.css"
+import "./Input.css";
+
+
 
 const Input = () => {
     const [files, setFiles] = useState([]);
