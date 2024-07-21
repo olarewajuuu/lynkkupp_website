@@ -399,6 +399,7 @@
         justify-content: space-around;
         align-items: center;
         border-bottom: 1px solid #494949; 
+        gap: 10px;
     }
     .container .list li{
         font-size: 15px;
@@ -410,7 +411,7 @@
     }
     .container .list img{
         margin-right: 10px;
-        width: 15px;
+        width: 5px;
     }
     .container .list li a:hover{
         border-bottom: 3px solid #0588BD;
