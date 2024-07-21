@@ -1,21 +1,21 @@
-.singin_container .overlay{
+/* .singin_container .overlay{
     width: 70vw;
     height: 70vh;
     top: 0;
     left: 0;
     position: fixed;
-} 
+}  */
 .singin_container{
     max-width: 400px;
     background-color: #fff;
-    padding: 0.5rem 0rem;
+    padding: 2.5rem 0rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 0;
-    right: 8px;
+    position: fixed;
+    top: 0px;
+    right: -20px;
     z-index: 20;
     /* border: 1px solid ; */
 
@@ -116,6 +116,20 @@
 
 
   @media screen and (max-width: 760px) {
+<<<<<<< Updated upstream
+=======
+    .singin_container .overlay{
+        display: none;
+    } 
+    .singin_container{
+        position: fixed;
+        top: -20px;
+        right: -20px;
+        z-index: 20;
+        /* border: 1px solid ; */
+    
+    }
+>>>>>>> Stashed changes
     .sign_mobile{
         display: block;
         background-color: #55BFEA;
