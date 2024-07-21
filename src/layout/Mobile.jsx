@@ -3,7 +3,7 @@ import googleImage from "../assets/Images/Frame 172.svg";
 
 const Mobile = () => {
 	return (
-		<div className="bg-[#55BFEA] h-[300px] md:h-[403px] md:mt-10 flex items-center">
+		<div className="bg-[#55BFEA] h-[300px] md:h-[403px] md:mt-20 flex items-center">
 			<div className="flex flex-row items-center md:flex-row w-full">
 				<img
 					src={iphone}

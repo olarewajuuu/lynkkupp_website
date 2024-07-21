@@ -8,9 +8,11 @@ import Mobile from "./Mobile";
 const Offer = () => {
 	return (
 		<>
-			<div className="hidden md:bg-[#d9d9d9] bg-opacity-15 h-[187px] p-16 flex-row justify-between items-center mt-10">
-				<div className="flex justify-between items-center gap-4">
-					<img src={iconOutline} alt="outline icon" className="pb-8" />
+			<div className="hidden md:flex flex-row justify-between items-center bg-[#d9d9d9] bg-opacity-15 h-[287px] p-16 mt-10">
+				<div className="flex items-center gap-4">
+					<div>
+						<img src={iconOutline} alt="outline icon" className="pb-8" />
+					</div>
 					<div className="text-[#494949] flex flex-col">
 						<h1 className="text-2xl font-bold mb-2">
 							Logistics & Procurement Offer
@@ -21,8 +23,11 @@ const Offer = () => {
 						</p>
 					</div>
 				</div>
-				<div className="flex justify-between items-center gap-4">
-					<img src={handIcon} alt="outline icon" className="pb-8" />
+
+				<div className="flex items-center gap-4">
+					<div>
+						<img src={handIcon} alt="outline icon" className="pb-8" />
+					</div>
 					<div className="text-[#494949] flex flex-col">
 						<h1 className="text-2xl font-bold mb-2">Pay small small</h1>
 						<p className="text-xs font-normal">
@@ -32,9 +37,10 @@ const Offer = () => {
 						</p>
 					</div>
 				</div>
-
 				<div className="flex justify-between items-center gap-4">
-					<img src={smileyIcon} alt="outline icon" className="pb-8" />
+					<div>
+						<img src={smileyIcon} alt="outline icon" className="pb-8" />
+					</div>
 					<div className="text-[#494949] flex flex-col">
 						<div className="flex justify-between items-center text-2xl font-bold mb-2">
 							<h1>24/7</h1>
