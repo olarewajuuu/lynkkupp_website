@@ -13,24 +13,26 @@ import Footer from "./layout/footer/Footer";
 
 
 function App() {
-  return (
-    <>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Flights /> } />
-          <Route exact path="hotels" element={<Hotels /> } />
-          <Route exact path="events" element={<Events /> } />
-          <Route exact path="flight+hotel" element={<Flight_Hotel /> } />
-          <Route exact path="flight-status" element={<FlightStatus /> } />
-          <Route exact path="flight-status" element={<Support /> } />
-          <Route exact path="ngn" element={<Nigeria /> } />
-          <Route exact path="manage-booking" element={<ManageBooking /> } />
-        </Routes>
-      </Router>
-      <Footer />
-	<Offer />
-    </>
-  );
+	return (
+		<>
+			<Router>
+				<Navbar />
+				<Routes>
+					<Route exact path="/" element={<Flights />} />
+					<Route exact path="hotels" element={<Hotels />} />
+					<Route exact path="events" element={<Events />} />
+					<Route exact path="flight+hotel" element={<Flight_Hotel />} />
+					<Route exact path="flight-status" element={<FlightStatus />} />
+					<Route exact path="flight-status" element={<Support />} />
+					<Route exact path="ngn" element={<Nigeria />} />
+					<Route exact path="manage-booking" element={<ManageBooking />} />
+				</Routes>
+				<Offer />
+				<Offer />
+			</Router>
+		</>
+	);
+}
 
 export default App;
+
