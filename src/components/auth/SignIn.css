@@ -125,13 +125,13 @@
     align-items: center;
     position: fixed;
     top: 70px;
-    right: 0px;
+    right: -10px;
     z-index: 20;
   }
   .sign_mobile {
     display: block;
     background-color: #55bfea;
-    padding: 0px 15px;
+    padding: 0px 35px;
     color: #fff;
     font-size: 14px;
     line-height: 22.4px;
