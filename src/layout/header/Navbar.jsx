@@ -48,11 +48,6 @@ const Navbar = () => {
                 <li><NavLink to="/flight+hotel" activeNlassName="active">Flight + Hotel</NavLink></li>
                 <li><NavLink to="/flight-status" activeNlassName="active">Flight status</NavLink></li>
 
-                <li><NavLink to="/">Flights</NavLink></li>
-                <li><NavLink to="/hotels">Hotels</NavLink></li>
-                <li><NavLink to="/events">Events</NavLink></li>
-                <li><NavLink to="/flight+hotel">Flight + Hotel</NavLink></li>
-                <li><NavLink to="/flight-status">Flight status</NavLink></li>
 
                 <span className="space"></span>
                 <li><NavLink to="/support">Support</NavLink></li>

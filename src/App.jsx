@@ -10,6 +10,7 @@ import Nigeria from "./pages/Nigeria";
 import ManageBooking from "./pages/ManageBooking";
 import Offer from "./layout/Offer";
 import Footer from "./layout/footer/Footer";
+import Subscribe from "./components/New folder/Subscribe"
 
 
 function App() {
@@ -28,7 +29,9 @@ function App() {
 					<Route exact path="manage-booking" element={<ManageBooking />} />
 				</Routes>
 				<Offer />
-				<Offer />
+				<br />
+				<Subscribe />
+				<Footer />
 			</Router>
 		</>
 	);

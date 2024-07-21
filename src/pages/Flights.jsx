@@ -1,15 +1,12 @@
-import Subscribe from "../component/Subscribe"
+// import Subscribe from "../component/Subscribe"
 
 const Flights = () => {
   return (
 
     <>
-     <Subscribe />
+     {/* <Subscribe /> */}
     </>
   
-
-    <div></div>
-
   )
 
 }
