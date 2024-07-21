@@ -9,6 +9,7 @@ import Support from "./pages/Support";
 import Nigeria from "./pages/Nigeria";
 import ManageBooking from "./pages/ManageBooking";
 import Offer from "./layout/Offer";
+import Footer from "./layout/footer/Footer";
 
 
 function App() {
@@ -27,9 +28,11 @@ function App() {
 					<Route exact path="manage-booking" element={<ManageBooking />} />
 				</Routes>
 				<Offer />
+				<Offer />
 			</Router>
 		</>
 	);
 }
 
 export default App;
+

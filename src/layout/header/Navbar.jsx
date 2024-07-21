@@ -41,11 +41,19 @@ const Navbar = () => {
           </div>
           <div className={clicked ? "navItems active": "navItems" }>
             <ul>
+
+                <li><NavLink to="/" activeNlassName="active">Flights</NavLink></li>
+                <li><NavLink to="/hotels" activeNlassName="active">Hotels</NavLink></li>
+                <li><NavLink to="/events" activeNlassName="active">Events</NavLink></li>
+                <li><NavLink to="/flight+hotel" activeNlassName="active">Flight + Hotel</NavLink></li>
+                <li><NavLink to="/flight-status" activeNlassName="active">Flight status</NavLink></li>
+
                 <li><NavLink to="/">Flights</NavLink></li>
                 <li><NavLink to="/hotels">Hotels</NavLink></li>
                 <li><NavLink to="/events">Events</NavLink></li>
                 <li><NavLink to="/flight+hotel">Flight + Hotel</NavLink></li>
                 <li><NavLink to="/flight-status">Flight status</NavLink></li>
+
                 <span className="space"></span>
                 <li><NavLink to="/support">Support</NavLink></li>
                 <li><NavLink to="/ngn">NGN</NavLink></li>
