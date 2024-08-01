@@ -1,0 +1,246 @@
+.eventflight_container{
+    background: #fff url(../../assets/Images/EventHero.svg) no-repeat;
+    padding: 5rem 5rem;
+}
+.eventflight_head h1{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 67.2px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.eventflight_head h4{
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 39.2px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.eventflight_link{
+    display: flex;
+    gap: 40px;
+    color: #fff;
+    margin: 50px 0px 10px 100px;
+}
+.eventflight_link .active{
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #55BFEA80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.under_text{
+    font-size: 12px;
+    margin-top: -15px;
+    color: #7c7c7c;
+    font-weight: 400;
+}
+.eventform_container{
+    background-color: #55BFEA80;
+    width: 988px;
+    height: 200px;
+    border-radius: 18px 18px 0px 0px;
+    padding: 20px 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.going{
+    width: 312px;
+    border-radius: 5px 5px 0px 0px;
+}
+.eventdropDown{
+    background-color: #fff;
+    color: #7c7c7c;
+    padding: 2px;
+    font-size: 15px;
+    width: 210px;
+    height: 58px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.eventdropdownContent{
+    width: 150px;
+}
+.Getticket{
+    width: 210px;
+    padding: 10px 10px 10px 10px ;
+    border-radius: 5px;
+    background-color: #55BFEA;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Getticket h4{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26.6px;
+    text-align: center;
+    color: #fff;
+}
+.hotelflighthotel{
+    display: none;
+}
+
+
+@media screen and (max-width: 760px) {
+    .eventflight_container{
+        padding: 8rem 5rem;
+    }
+    .eventflighthotel{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        width: 80px;
+        /* padding: 50px; */
+        /* border: 1px solid; */
+    }
+    .eventflight_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .formDisplay{
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -40px;
+        left: 330px;
+        /* width: 428px; */
+    }
+    .hotelflight_head h1{
+        display: none;
+    }
+    .hotelflight_head h4{
+        display: none;
+    }
+    .hotelflight_link{
+        display: flex;
+        gap: 40px;
+        color: #fff;
+        margin: 0px 0px 0px 0px;
+        /* padding: 10px 10px; */
+        font-size: 12px;
+        background-color: #55BFEA;
+        max-width: 100%;
+        padding: 10px 80px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .hotelflight_link li{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+    .hotelflight_link .active{
+        border: none;
+        padding: 5px 20px;
+        border-radius: 20px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 110px;
+        gap: 20px;
+        position: absolute;
+        left: -70px;
+        bottom: -5px;
+    }
+    .under_text{
+        font-size: 12px;
+        margin-top: -15px;
+        color: #7c7c7c;
+        font-weight: 400;
+    }
+    .form_container{
+        background-color: transparent;
+        width: 988px;
+        height: 200px;
+        border-radius: 18px 18px 0px 0px;
+        padding: 20px 50px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .going{
+        width: 312px;
+        height: 58px;
+        border-radius: 5px 5px 0px 0px;
+        
+    }
+ 
+    .date_container{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: -10px;
+        left: 330px;
+    }
+    .flying{
+        display: fle;
+    }
+
+    .hoteldropDown{
+        background-color: #fff;
+        color: #7c7c7c;
+        padding: 2px;
+        font-size: 15px;
+        width: 310px;
+        height: 58px;
+        border-radius: 5px;
+        /* margin-left: 10px; */
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    .hoteldropDown img{
+        width: 30px;
+    }
+    .hoteldropdownContent{
+        position: absolute;
+        right: -40px;
+        top: 0px;
+     
+    }
+    .Searchlocation{
+        width: 310px;
+        padding: 10px 10px 10px 10px ;
+        border-radius: 5px;
+        background-color: #55BFEA;
+        /* margin-left: 10px; */
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Searchlocation h4{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26.6px;
+        text-align: center;
+        color: #fff;
+    }
+    
+}

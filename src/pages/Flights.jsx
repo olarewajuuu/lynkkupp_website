@@ -1,10 +1,13 @@
-// import Subscribe from "../component/Subscribe"
+import FlightHero from "../layout/hero/FlightHero"
+
 
 const Flights = () => {
   return (
 
     <>
-     {/* <Subscribe /> */}
+      <div>
+        <FlightHero />
+      </div>
     </>
   
   )

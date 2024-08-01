@@ -1,22 +1,21 @@
 import "./HotelPartnerForm.css";
 import hotelImg from "../../assets/Images/clarity_calendar-line.jpg";
 import eventImg from "../../assets/Images/guidance_hotel-room.svg";
-import backImg from "../../assets/Images/ep_back.svg" 
+import backImg from "../../assets/Images/ep_back.svg";
 import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import HotelPartnerForm2 from "./HotelPartnerForm2";
 import Ticketing from "./Ticketing";
 
-
-const HotelPartnerForm = ({partner}) => {
+const HotelPartnerForm = ({ partner }) => {
   const [isActive, setIsActive] = useState(false);
   const toggleClass = () => {
     setIsActive(!isActive);
   };
   const handleClick = (e) => {
     e.preventDefault();
-    toggleClass()
+    toggleClass();
   };
 
   const [phone, setPhone] = useState("");
@@ -33,38 +32,39 @@ const HotelPartnerForm = ({partner}) => {
     setPhone(value);
   };
 
-  const [partner2, setPartner2] = useState(false)
+  const [partner2, setPartner2] = useState(false);
 
   const togglePartner2 = () => {
     setPartner2(!partner2);
-  }
-  const [ticketing, setticketing] = useState(false)
+  };
+  const [ticketing, setticketing] = useState(false);
 
   const toggleticketing = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setticketing(!ticketing);
-    
-  }
+  };
 
   const handleClosePartner = (e) => {
     e.preventDefault();
-    partner()
-  }
+    partner();
+  };
 
   const handleFunction = (e) => {
     e.preventDefault();
-    togglePartner2()
-    handleClosePartner()
+    togglePartner2();
+    handleClosePartner();
   };
-
-
-
-
 
   return (
     <>
-      <div className="mobile" >
-      <h4> <img src={backImg } onClick={handleClosePartner} /> Partner with us</h4>
+    <div className="wrapper">
+
+
+      <div className="mobile">
+        <h4>
+          {" "}
+          <img src={backImg} onClick={handleClosePartner} /> Partner with us
+        </h4>
       </div>
       <div className="container">
         <h1 className="container_head">
@@ -72,16 +72,15 @@ const HotelPartnerForm = ({partner}) => {
         </h1>
         <ul className="list">
           <li>
-            <a href="" 
-            onClick={handleClick}
-            className="active"
-            >
-              <img src={eventImg} /><span>I am a hotel owner</span>
+            <a href="" onClick={handleClick} className="active">
+              <img src={eventImg} />
+              <span>I am a hotel owner</span>
             </a>
           </li>
           <li>
             <a href="" onClick={toggleticketing}>
-              <img src={hotelImg} /><span>I handle event ticketing</span>
+              <img src={hotelImg} />
+              <span>I handle event ticketing</span>
             </a>
           </li>
         </ul>
@@ -192,13 +191,15 @@ const HotelPartnerForm = ({partner}) => {
               <input type="text" placeholder="Enter CAC Number" />
             </div>
           </div>
-          <button className="form_btn" onClick={handleFunction}>Continue</button>
+          <button className="form_btn" onClick={handleFunction}>
+            Continue
+          </button>
         </form>
       </div>
-      {close && <div>Hello</div> }
-      {partner2 && <HotelPartnerForm2 partner2={togglePartner2}/> }
-      {ticketing && <Ticketing /> }
-      
+      </div>
+      {close && <div>Hello</div>}
+      {partner2 && <HotelPartnerForm2 partner2={togglePartner2} />}
+      {ticketing && <Ticketing />}
     </>
   );
 };

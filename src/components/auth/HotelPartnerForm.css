@@ -1,7 +1,17 @@
 .container{
     width: 100%;
     padding: 50px 150px;
+    /* position: sticky;
+    top: 50px; */
+    background-color: #fff;
+    z-index: 22;
 }
+/* .wrapper{
+    position: sticky;
+    top: 70px;
+    z-index: 22;
+    overflow: scroll;
+} */
 .container_head{
     font-size: 48px;
     font-weight: 700;
@@ -366,6 +376,19 @@
     }
 }
 @media screen and (max-width: 760px) {
+    .container{
+        width: 100%;
+        padding: 50px 150px;
+        position: fixed;
+        top: 80px;
+        background-color: #fff;
+        z-index: 22;
+    }
+    /* .wrapper{
+        position: sticky;
+        top: 70px;
+        z-index: 22;
+    } */
     .mobile{
         display: block;
         background-color: #55BFEA;
@@ -374,6 +397,7 @@
         font-size: 18px;
         line-height: 22.4px;
         text-align: left;
+
 
     }
     .mobile img{
@@ -385,12 +409,12 @@
         align-items: center;
         gap: 20px;
     }
-    .container{
+    /* .container{
         width: 100%;
         padding: 10px 10px;
         position: relative;
         top: 20px;
-    }
+    } */
     .container_head{
         font-size: 28px;
     }
@@ -505,8 +529,8 @@
     .container{
         width: 100%;
         padding: 10px 10px;
-        position: relative;
-        top: 20px;
+        /* position: sticky;
+        top: 20px; */
     }
     .container_head{
         font-size: 28px;

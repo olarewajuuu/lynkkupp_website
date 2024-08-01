@@ -60,7 +60,7 @@ const Navbar = () => {
             <button 
             onClick={toggleSignin}
             className="navButtonSign">Sign in</button>
-            <button className= {clicked ? "navButtonPat active": "navButtonPat"} onClick={handleFunction} >Partern with us</button>
+            <button className= {clicked ? "navButtonPat active": "navButtonPat"} onClick={handleFunction} >Partern with us </button>
           </div>
           <div className="icons" onClick={handleClicked}>
           {!clicked? <GiHamburgerMenu /> : <ImCross />}

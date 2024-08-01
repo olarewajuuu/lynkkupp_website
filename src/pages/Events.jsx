@@ -1,9 +1,10 @@
+import EventHero from "../layout/hero/EventHero"
 
 
 const Events = () => {
   return (
     <div>
-      Events Page is under construction
+      <EventHero />
     </div>
   )
 }

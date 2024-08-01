@@ -22,7 +22,7 @@ const Offer = () => {
 					</div>
 				</div>
 				<div className="flex justify-between items-center gap-4">
-					<img src={handIcon} alt="outline icon" className="pb-8" />
+					<img src={handIcon} alt="outline icon" className="pb-8" />		
 					<div className="text-[#494949] flex flex-col">
 						<h1 className="text-2xl font-bold mb-2">Pay small small</h1>
 						<p className="text-xs font-normal">

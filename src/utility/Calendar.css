@@ -1,0 +1,165 @@
+.headerSearchItem{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    /* gap: 15px; */
+}
+.headerSearchInput{
+    border: none;
+    outline: none;
+}
+.headerSearchText{
+    color: #99A0A8;
+    cursor: pointer;
+}
+.date{
+     position: absolute;
+     top: 140px;
+     left: 0px;
+     z-index: 2;
+     width: 500px;
+}
+.leavingNow{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    width: 138px;
+    height: 133px;
+    border-radius: 5px 0px 0px 5px;
+    cursor: pointer;
+}
+.returningNow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-left: 5px;
+    padding: 0px 30px;
+    width: 138px;
+    height: 133px;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+}
+.calenderImg{
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+.datetext{
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 9.38px;
+    color: #99A0A8;
+}
+.dateMonth{
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15.4px;
+    color: #99A0A8;
+    margin-top: 10px;
+}
+.dateDay{
+    font-size: 33px;
+    font-weight: 400;
+    line-height: 46.2px;
+    color: #99A0A8;
+}
+.dateTextDay{
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15.4px;
+    color: #99A0A8;
+}
+@media screen and (max-width: 760px) {
+    .headerSearchItem{
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+        margin-top: 10px;
+        /* margin: auto; */
+        /* gap: 15px; */
+    }
+    .headerSearchInput{
+        border: none;
+        outline: none;
+    }
+    .headerSearchText{
+        color: #99A0A8;
+        cursor: pointer;
+    }
+    .date{
+         position: absolute;
+         top: 80px;
+         left: -20px;
+         z-index: 2;
+         width: 350px;
+         height: 350px;
+    }
+    .leavingNow{
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 30px;
+        width: 152px;
+        height: 73px;
+        border-radius: 5px 0px 0px 5px;
+        cursor: pointer;
+        position: relative;
+    }
+    .returningNow{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        margin-left: 5px;
+        padding: 0px 30px;
+        width: 152px;
+        height: 73px;
+        border-radius: 0px 5px 5px 0px;
+        cursor: pointer;
+        position: relative;
+    }
+    .calenderImg{
+        width: 20px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .datetext{
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 9.38px;
+        color: #99A0A8;
+        position: absolute;
+        top: 10px;
+    }
+    .dateMonth{
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 15.4px;
+        color: #99A0A8;
+        margin-top: 10px;
+    }
+    .dateDay{
+        font-size: 33px;
+        font-weight: 400;
+        line-height: 46.2px;
+        color: #99A0A8;
+    }
+    .dateTextDay{
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 15.4px;
+        color: #99A0A8;
+    }
+}
