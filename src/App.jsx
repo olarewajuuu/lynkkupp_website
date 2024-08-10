@@ -3,15 +3,14 @@ import Navbar from "./layout/header/Navbar";
 import Flights from "./pages/Flights";
 import Hotels from "./pages/Hotels";
 import Events from "./pages/Events";
-import Flight_Hotel from "./pages/Flight_Hotel";
+import Flight_Hotel from "./components/Flight_Hotel";
 import FlightStatus from "./pages/FlightStatus";
 import Support from "./pages/Support";
 import Nigeria from "./pages/Nigeria";
 import ManageBooking from "./pages/ManageBooking";
 import Offer from "./layout/Offer";
 import Footer from "./layout/footer/Footer";
-import Subscribe from "./components/New folder/Subscribe"
-
+import Subscribe from "./components/New folder/Subscribe";
 
 function App() {
 	return (
@@ -38,4 +37,3 @@ function App() {
 }
 
 export default App;
-

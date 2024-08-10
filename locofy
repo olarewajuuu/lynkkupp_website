@@ -1,0 +1,313 @@
+const FLIGHTHOTEL = ({ className = "" }) => {
+  return (
+    <div
+      className={`w-[1278px] bg-white max-w-full overflow-hidden flex flex-col items-end justify-start pt-[59px] 
+      pb-[109px] pl-[18px] pr-[104px] box-border relative gap-[101px] leading-[normal] tracking-[normal]
+       text-center text-smi text-gray font-heading-5-h5-bold ${className}`}
+    >
+      <img
+        className="w-[39px] h-[39px] absolute !m-[0] top-[74px] left-[199px] z-[1]"
+        loading="lazy"
+        alt=""
+        src="/group-60.svg"
+      />
+      <div className="self-stretch flex flex-row items-start justify-center gap-[18px]">
+        <div className="h-[70px] w-[191px] relative">
+          <FrameComponent
+            propMargin="unset"
+            propRight="unset"
+            propBottom="unset"
+            propDisplay="flex"
+            propFlexDirection="row"
+            propPadding="33px 16px 11px"
+            propHeight="100%"
+            propPosition="absolute"
+            propTop="0px"
+            propLeft="0px"
+            propFlex="unset"
+            propBorderRadius="5px"
+            textField1="Radisson Blue"
+            textField11
+            propPosition1="relative"
+            propTop1="unset"
+            propLeft1="unset"
+            propMinWidth="102px"
+          />
+          <div className="absolute top-[17px] left-[16px] leading-[140%] inline-block min-w-[31px] z-[1]">
+            From
+          </div>
+        </div>
+        <div className="h-[70px] w-[195px] relative">
+          <FrameComponent
+            propMargin="unset"
+            propRight="unset"
+            propBottom="unset"
+            propDisplay="flex"
+            propFlexDirection="row"
+            propPadding="33px 16px 11px"
+            propHeight="unset"
+            propPosition="absolute"
+            propTop="0px"
+            propLeft="0px"
+            propFlex="unset"
+            propBorderRadius="5px"
+            textField1="Summit Resort"
+            textField11
+            propPosition1="relative"
+            propTop1="unset"
+            propLeft1="unset"
+            propMinWidth="107px"
+          />
+          <div className="absolute top-[17px] left-[16px] leading-[140%] inline-block min-w-[15px] z-[1]">
+            To
+          </div>
+        </div>
+        <div className="flex-1 flex flex-row items-start justify-start py-0 pl-0 pr-1 box-border min-w-[175px]">
+          <CalendarDates textField1="1 Guest, 1 Room" textField11={false} />
+          <CalendarDates
+            propMarginLeft="-1px"
+            textField1="1 Guest, 1 Room"
+            textField11={false}
+          />
+        </div>
+        <div className="flex-[0.6578] flex flex-row items-start justify-start pt-2.5 px-[47px] pb-[21px] box-border relative min-w-[175px] text-base text-secondary-states-black">
+          <FrameComponent textField1="Summit Resort" textField11={false} />
+          <div className="w-[118px] flex flex-col items-start justify-start pt-[18px] px-0 pb-0 box-border">
+            <div className="self-stretch relative leading-[140%] inline-block min-w-[118px] z-[2]">
+              1 Guest, 1 Room
+            </div>
+          </div>
+          <div className="relative text-smi leading-[140%] text-gray text-left inline-block min-w-[106px] z-[1] ml-[-117px]">
+            Guests and rooms
+          </div>
+          <img
+            className="h-[5px] w-3.5 absolute !m-[0] right-[41px] bottom-[29px] z-[1]"
+            alt=""
+            src="/vector.svg"
+          />
+          <img
+            className="h-[21px] w-[21px] absolute !m-[0] top-[23px] left-[14px] overflow-hidden shrink-0 z-[1]"
+            alt=""
+            src="/bxuser.svg"
+          />
+        </div>
+        <Buttons />
+      </div>
+      <img
+        className="w-[14.4px] h-[15.8px] absolute !m-[0] top-[-71.4px] right-[527.3px]"
+        alt=""
+      />
+      <div className="w-[1022px] flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-left text-4xl text-white">
+        <div className="w-[496px] flex flex-col items-start justify-start gap-6 max-w-full">
+          <div className="rounded-[27px] bg-secondary-states-black overflow-hidden flex flex-row items-start justify-start py-[13px] px-10 whitespace-nowrap z-[1]">
+            <h2 className="m-0 relative text-inherit leading-[140%] font-bold font-[inherit]">{`SAVE MORE, ACHEIVE MORE WITH OUR `}</h2>
+          </div>
+          <div className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
+            <div className="w-[328px] flex flex-row items-start justify-start relative max-w-full">
+              <img
+                className="h-[273px] w-[1242px] absolute !m-[0] top-[-131px] left-[-481px] object-cover"
+                loading="lazy"
+                alt=""
+                src="/rectangle-66@2x.png"
+              />
+              <button className="cursor-pointer border-white border-[4px] border-solid py-[25px] px-[21px] bg-acent-states-sky-blue flex-1 box-border overflow-hidden flex flex-row items-start justify-start whitespace-nowrap max-w-full z-[1] hover:bg-steelblue hover:border-gainsboro hover:border-[4px] hover:border-solid hover:box-border">
+                <b className="relative text-4xl leading-[140%] font-heading-5-h5-bold text-white text-left">
+                  FLIGHT + HOTEL BOOKING
+                </b>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+const Root = ({ className = "" }) => {
+  return (
+    <div
+      className={`w-[132px] h-[234px] bg-white overflow-hidden flex flex-col items-start justify-start pt-[3px] px-[7px] pb-[19px] box-border gap-[4.9px] leading-[normal] tracking-[normal] text-left text-2xs text-secondary-states-fade font-caption-3-caption-bold ${className}`}
+    >
+      <h3 className="m-0 relative text-inherit leading-[140%] font-normal font-[inherit]">
+        Room 1
+      </h3>
+      <div className="w-[102px] flex flex-col items-start justify-start gap-[15px] text-smi text-secondary-states-black">
+        <div className="self-stretch flex flex-row items-end justify-between gap-5">
+          <div className="flex flex-col items-start justify-start gap-0.5">
+            <h2 className="m-0 h-[15px] relative text-inherit leading-[140%] font-medium font-[inherit] inline-block shrink-0">
+              Adults
+            </h2>
+            <div className="flex flex-row items-start justify-start py-0 pl-[3px] pr-1.5 text-5xs text-secondary-states-fade">
+              <div className="flex flex-row items-start justify-start gap-px">
+                <div className="ml-[-3px] flex flex-col items-start justify-start pt-[3px] px-0 pb-0">
+                  <img
+                    className="w-0.5 h-[3px] relative object-contain shrink-0"
+                    loading="lazy"
+                    alt=""
+                    src="/vector.svg"
+                  />
+                </div>
+                <a className="[text-decoration:none] relative text-[inherit] shrink-0">
+                  14 years
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-start justify-end pt-0 px-0 pb-0.5 text-5xs">
+            <div className="flex flex-row items-start justify-start gap-[1.5px]">
+              <img
+                className="h-3 w-3 relative min-h-[12px]"
+                loading="lazy"
+                alt=""
+                src="/group-76.svg"
+              />
+              <div className="flex flex-col items-start justify-start pt-0.5 px-0 pb-0">
+                <a className="[text-decoration:none] relative font-bold text-[inherit]">
+                  1
+                </a>
+              </div>
+              <img
+                className="h-3 w-3 relative min-h-[12px]"
+                loading="lazy"
+                alt=""
+                src="/group-75.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-row items-end justify-start gap-[21px]">
+          <div className="flex flex-col items-start justify-start gap-0.5">
+            <h2 className="m-0 h-[15px] relative text-inherit leading-[140%] font-medium font-[inherit] inline-block shrink-0">
+              Children
+            </h2>
+            <div className="flex flex-row items-start justify-start py-0 pl-1 pr-3 text-5xs text-secondary-states-fade">
+              <a className="[text-decoration:none] relative text-[inherit]">
+                2-4 years
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col items-start justify-end pt-0 px-0 pb-0.5 text-5xs">
+            <div className="flex flex-row items-start justify-start gap-[1.5px]">
+              <img
+                className="h-3 w-3 relative min-h-[12px]"
+                loading="lazy"
+                alt=""
+                src="/group-76-1.svg"
+              />
+              <div className="flex flex-col items-start justify-start pt-0.5 px-0 pb-0">
+                <a className="[text-decoration:none] relative font-bold text-[inherit]">
+                  0
+                </a>
+              </div>
+              <img
+                className="h-3 w-3 relative min-h-[12px]"
+                loading="lazy"
+                alt=""
+                src="/group-75-1.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        className="w-[102px] h-[0.3px] relative"
+        loading="lazy"
+        alt=""
+        src="/line-10.svg"
+      />
+      <section className="flex flex-row items-end justify-start text-left text-2xs text-secondary-states-fade font-caption-3-caption-bold">
+        <div className="flex flex-col items-start justify-start gap-[14.5px]">
+          <div className="flex flex-row items-start justify-start gap-px">
+            <div className="flex flex-col items-start justify-start gap-[2.5px]">
+              <h3 className="m-0 relative text-inherit leading-[140%] font-normal font-[inherit]">
+                Room 2
+              </h3>
+              <h2 className="m-0 h-[15px] relative text-smi leading-[140%] font-medium font-[inherit] text-secondary-states-black inline-block shrink-0">
+                Adults
+              </h2>
+              <div className="flex flex-row items-start justify-start py-0 pl-[3px] pr-1.5 text-5xs">
+                <div className="flex flex-row items-start justify-start gap-px">
+                  <div className="ml-[-3px] flex flex-col items-start justify-start pt-[3px] px-0 pb-0">
+                    <img
+                      className="w-0.5 h-[3px] relative object-contain shrink-0"
+                      loading="lazy"
+                      alt=""
+                      src="/vector-1.svg"
+                    />
+                  </div>
+                  <a className="[text-decoration:none] relative text-[inherit] shrink-0">
+                    14 years
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-start justify-start pt-1 px-0 pb-0 text-5xs text-acent-states-sky-blue">
+              <a className="[text-decoration:none] relative text-[inherit]">
+                Remove
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col items-start justify-start py-0 pl-0 pr-[21px] gap-0.5 text-smi text-secondary-states-black">
+            <h2 className="m-0 h-[15px] relative text-inherit leading-[140%] font-medium font-[inherit] inline-block shrink-0">
+              Children
+            </h2>
+            <div className="flex flex-row items-start justify-start py-0 pl-1 pr-3 text-5xs text-secondary-states-fade">
+              <div className="relative">2-4 years</div>
+            </div>
+          </div>
+          <div className="rounded-sm border-secondary-states-fade border-[0.6px] border-solid flex flex-row items-start justify-start p-0.5 text-5xs">
+            <b className="relative">Add room 3 +</b>
+          </div>
+        </div>
+        <div className="flex flex-col items-start justify-start gap-4 text-5xs text-secondary-states-black">
+          <div className="flex flex-col items-start justify-start gap-[29px]">
+            <div className="flex flex-row items-start justify-start gap-[1.5px]">
+              <img
+                className="h-3 w-3 relative min-h-[12px]"
+                loading="lazy"
+                alt=""
+                src="/group-76-2.svg"
+              />
+              <div className="flex flex-col items-start justify-start pt-0.5 px-0 pb-0">
+                <b className="relative">1</b>
+              </div>
+              <img
+                className="h-3 w-3 relative min-h-[12px]"
+                loading="lazy"
+                alt=""
+                src="/group-75-2.svg"
+              />
+            </div>
+            <div className="flex flex-row items-start justify-start gap-[1.5px]">
+              <img
+                className="h-3 w-3 relative min-h-[12px]"
+                loading="lazy"
+                alt=""
+                src="/group-76-3.svg"
+              />
+              <div className="flex flex-col items-start justify-start pt-0.5 px-0 pb-0">
+                <b className="relative">0</b>
+              </div>
+              <img
+                className="h-3 w-3 relative min-h-[12px]"
+                loading="lazy"
+                alt=""
+                src="/group-75-3.svg"
+              />
+            </div>
+          </div>
+          <div className="rounded-[1px] bg-acent-states-sky-blue flex flex-row items-start justify-start py-1 px-[9px] text-7xs text-white">
+            <b className="relative leading-[140%]">Done</b>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+Root.propTypes = {
+  className: PropTypes.string,
+};
+
+export default Root; 
