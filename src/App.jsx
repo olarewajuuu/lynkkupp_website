@@ -3,14 +3,15 @@ import Navbar from "./layout/header/Navbar";
 import Flights from "./pages/Flights";
 import Hotels from "./pages/Hotels";
 import Events from "./pages/Events";
-import Flight_Hotel from "./components/Flight_Hotel";
 import FlightStatus from "./pages/FlightStatus";
 import Support from "./pages/Support";
 import Nigeria from "./pages/Nigeria";
 import ManageBooking from "./pages/ManageBooking";
-import Offer from "./layout/Offer";
 import Footer from "./layout/footer/Footer";
-import Subscribe from "./components/New folder/Subscribe";
+import HotelPartnerForm from "./components/auth/HotelPartnerForm";
+import HotelPartnerForm2 from "./components/auth/HotelPartnerForm2";
+import HotelPartnerForm3 from "./components/auth/HotelPartnerForm3";
+import HotelPartnerForm4 from "./components/auth/HotelPartnerForm4";
 
 function App() {
 	return (
@@ -21,15 +22,16 @@ function App() {
 					<Route exact path="/" element={<Flights />} />
 					<Route exact path="hotels" element={<Hotels />} />
 					<Route exact path="events" element={<Events />} />
-					<Route exact path="flight+hotel" element={<Flight_Hotel />} />
 					<Route exact path="flight-status" element={<FlightStatus />} />
 					<Route exact path="flight-status" element={<Support />} />
 					<Route exact path="ngn" element={<Nigeria />} />
 					<Route exact path="manage-booking" element={<ManageBooking />} />
+					<Route exact path="hotelpartner" element={<HotelPartnerForm />} />
+					<Route exact path="hotelpartner2" element={<HotelPartnerForm2 />} />
+					<Route exact path="hotelpartner3" element={<HotelPartnerForm3 />} />
+					<Route exact path="hotelpartner4" element={<HotelPartnerForm4 />} />
 				</Routes>
-				<Offer />
 				<br />
-				<Subscribe />
 				<Footer />
 			</Router>
 		</>
