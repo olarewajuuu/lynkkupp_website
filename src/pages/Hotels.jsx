@@ -1,16 +1,13 @@
-import HotelHero from "../layout/hero/HotelHero"
-
-
-
+import HotelHero from "../layout/hero/HotelHero";
+import Offer from "../layout/Offer";
 
 const Hotels = () => {
+	return (
+		<div>
+			<HotelHero />
+			<Offer />
+		</div>
+	);
+};
 
-
-  return (
-    <div>
-      <HotelHero />
-    </div>
-  )
-}
-
-export default Hotels
+export default Hotels;

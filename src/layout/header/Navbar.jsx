@@ -37,11 +37,6 @@ const Navbar = () => {
 		setPartner(!partner);
 	};
 
-	const handleFunction = () => {
-		togglePartner();
-		handleClicked();
-	};
-
 	return (
 		<>
 			<div className="navbar">
@@ -115,13 +110,12 @@ const Navbar = () => {
 						<button onClick={toggleSignin} className="navButtonSign">
 							Sign in
 						</button>
-						<button
-							className={clicked ? "navButtonPat active" : "navButtonPat"}
-							onClick={handleFunction}
-						>
-							Partern with us{" "}
-						</button>
 					</div>
+					<li>
+						<NavLink to="/hotelpartner" activeClassName="active">
+							Partner Form
+						</NavLink>
+					</li>
 					<div className="icons" onClick={handleClicked}>
 						{!clicked ? <GiHamburgerMenu /> : <ImCross />}
 					</div>
