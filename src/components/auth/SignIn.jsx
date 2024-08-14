@@ -45,9 +45,16 @@ const SignIn = ({cancelSignin}) => {
   }
 
 
+
+
   return (
-    <div className="contain">
-      <div className="singin_container">
+    <div 
+    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+    onClick={cancelSignin}
+    >
+      <div className="singin_container"
+      onClick={(e) => e.stopPropagation()}
+      >
       <div className="sign_mobile" >
       <p onClick={cancelSignin}  className="mobile md:flex items-center gap-0 text-white"> <img src={backImg }  /> Sign in</p>
       </div>

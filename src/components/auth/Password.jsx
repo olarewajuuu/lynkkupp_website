@@ -62,13 +62,18 @@ const Password = ({ cancelPassword }) => {
   // };
 
   return (
-    <div>
+    <div
+    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+    onClick={cancelPassword}
+    >
         <div className="password_mobile">
           <p className="sm:flex items-center gap-3 text-white">
             <img src={backImg} onClick={cancelPassword} /> Sign in
           </p>
         </div>
-      <div className="password_content">
+      <div className="password_content"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="overlay" onClick={cancelPassword}></div>
         <h3>Create password</h3>
         <p className="headline">

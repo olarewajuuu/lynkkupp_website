@@ -37,7 +37,7 @@
     color: #7c7c7c;
     font-weight: 400;
 }
-.form_container{
+.heroform_container{
     background-color: #55BFEA80;
     width: 988px;
     height: 200px;
@@ -85,7 +85,8 @@
 @media screen and (max-width: 760px) {
     .flight_container{
         background: #fff url(../../assets/Images/FlightHero.svg) no-repeat;
-        padding: 8rem 5rem;
+        padding: 14rem 5rem;
+        
     }
     .flighthotel{
         display: flex;
@@ -123,6 +124,7 @@
     }
     .flight_link{
         display: flex;
+        justify-content: center;
         gap: 40px;
         color: #fff;
         margin: 0px 0px 0px 0px;
@@ -130,7 +132,8 @@
         font-size: 12px;
         background-color: #55BFEA;
         max-width: 100%;
-        padding: 10px 80px;
+        width: 100%;
+        padding: 10px 10px;
         position: absolute;
         top: 0;
         left: 0;
@@ -163,17 +166,18 @@
         color: #7c7c7c;
         font-weight: 400;
     }
-    .form_container{
+    .heroform_container{
         background-color: transparent;
-        width: 988px;
+        width: 700px;
         height: 200px;
         border-radius: 18px 18px 0px 0px;
-        padding: 20px 50px;
-        margin: 0 auto;
+        padding: 20px 0px;
+        margin: -80px -500px;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
+        position: absolute;
+        
     }
     .going{
         width: 312px;

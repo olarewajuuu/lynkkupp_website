@@ -18,7 +18,9 @@ const Calendar = () => {
 
   return (
     <div>
-      <div className="headerSearchItem">
+      <div className="headerSearchItem"
+      onClick={(e) => e.stopPropagation()}
+      >
         {/* <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" /> */}
         <img src={claendarImg} alt="" className="calenderImg" />
         <div className="leavingNow">
@@ -57,6 +59,7 @@ const Calendar = () => {
 
         {openDate && (
           <DateRange
+          onClick={() => setOpenDate(!openDate)}
             editableDateInputs={true}
             onChange={(item) => setDate([item.selection])}
             moveRangeOnFirstSelection={false}

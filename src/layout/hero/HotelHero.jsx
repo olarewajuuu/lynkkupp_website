@@ -65,52 +65,40 @@ const HotelHero = () => {
           <h4>Your perfect stop for flights, hotels and tickets booking</h4>
         </div>
         <div>
-          <div>
-            <ul className="hotelflight_link">
-              <li >
-                <NavLink
-                  to="/"
-                  activeNlassName="active"
-                  className="hotellist flex justify-end items-center gap-2"
-                >
+        <div>
+            <ul className="hotel_link">
+              <li className="flex justify-end items-center gap-2 cursor-pointer">
                   <img src={FlightImg} alt="" className="w-5" />
+                <NavLink to="/" activeNlassName="active">
                   Book Flights
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="/hotels"
-                  activeNlassName="active"
-                  className="hotellist flex justify-end items-center gap-2"
-                >
+              <li className="flex justify-end items-center gap-2 cursor-pointer">
+                <NavLink to="/hotels" activeNlassName="active" className="flex justify-end items-center gap-2 cursor-pointer">
                   <img src={HotelImg} alt="" className="w-5" />
                   Hotels
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="/events"
-                  activeNlassName="active"
-                  className="hotellist flex justify-end items-center gap-2"
-                >
-                  <img src={EvenyImg} alt="" className="w-5" />
+              <li className="flex justify-end items-center gap-2 cursor-pointer">
+                <img src={EvenyImg} alt="" className="w-5" />
+                <NavLink to="/events" activeNlassName="active">
                   Events
                 </NavLink>
               </li>
-              <li className="hotelflighthotel">
-                <NavLink to="/events" activeNlassName="active"
-                className="hotellist flex justify-end items-center gap-2"
-                >
+              <li className="flighthotel">
+                <div className="img flex gap-4">
                 <img src={FlightImg} alt="" className="w-5" />
-                {/* <img src={HotelImg} alt="" className="w-5" /> */}
-                  Flight+Hotel
+                <img src={HotelImg} alt="" className="w-5" />
+                </div>
+                <NavLink to="/events" activeNlassName="active">
+                  Flight + Hotel
                 </NavLink>
               </li>
             </ul>
           </div>
         </div>
         <div>
-          <div className="form_container">
+          <div className="hotelform_container">
             <form action="">
               <div className="formDisplay flex gap-3"></div>
               <div className="date_container flex mt-2 ">

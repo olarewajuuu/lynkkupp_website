@@ -16,42 +16,33 @@ const EventHero = () => {
           <h4>Your perfect stop for flights, hotels and tickets booking</h4>
         </div>
         <div>
-          <div>
-            <ul className="eventflight_link">
-              <li className="flex gap-0 cursor-pointer">
-                <NavLink
-                  to="/"
-                  activeNlassName="active"
-                  className="eventflight flex justify-end items-center gap-2"
-                >
+        <div>
+            <ul className="event_link">
+              <li className="evennt flex justify-end items-center gap-2 cursor-pointer">
                   <img src={FlightImg} alt="" className="w-5" />
+                <NavLink to="/" activeNlassName="active">
                   Book Flights
                 </NavLink>
               </li>
               <li className="flex justify-end items-center gap-2 cursor-pointer">
-                <NavLink
-                  to="/hotels"
-                  activeNlassName="active"
-                  className="flex justify-end items-center gap-2"
-                >
                   <img src={HotelImg} alt="" className="w-5" />
+                <NavLink to="/hotels" activeNlassName="active">
                   Hotels
                 </NavLink>
               </li>
-              <li className="flex justify-end items-center gap-2 cursor-pointer">
-                <NavLink
-                  to="/events"
-                  activeNlassName="active"
-                  className="flex justify-end items-center gap-2"
-                >
-                  <img src={EvenyImg} alt="" className="w-5" />
+              <li >
+                <NavLink to="/events" activeNlassName="active" className="evnt flex justify-end items-center gap-2 cursor-pointer">
+                <img src={EvenyImg} alt="" className="w-5" />
                   Events
                 </NavLink>
               </li>
-              <li className="hotelflighthotel">
+              <li className="flight_hotel">
+                <NavLink to="/events" activeNlassName="active" className="">
+                <div className="img flex gap-4">
                 <img src={FlightImg} alt="" className="w-5" />
-                <NavLink to="/events" activeNlassName="active">
-                  Flight+Hotel
+                <img src={HotelImg} alt="" className="w-5" />
+                </div>
+                  Flight+ Hotel
                 </NavLink>
               </li>
             </ul>

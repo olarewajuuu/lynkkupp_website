@@ -134,7 +134,7 @@
     margin: -20px;
   }
 }
-@media screen and (max-width: 960px) {
+/* @media screen and (max-width: 960px) {
   .icons {
     display: inline;
     margin-top: 5px;
@@ -186,4 +186,4 @@
   .space{
     margin: -20px;
   }
-}
+} */
