@@ -10,45 +10,42 @@ import Ticketing from "./Ticketing";
 import { Link } from "react-router-dom";
 
 const HotelPartnerForm = ({ partner }) => {
-  const [isActive, setIsActive] = useState(false);
-  const toggleClass = () => {
-    setIsActive(!isActive);
-  };
-  const handleClick = (e) => {
-    e.preventDefault();
-    toggleClass();
-  };
+	const [isActive, setIsActive] = useState(false);
+	const toggleClass = () => {
+		setIsActive(!isActive);
+	};
+	const handleClick = (e) => {
+		e.preventDefault();
+		toggleClass();
+	};
 
-  const [phone, setPhone] = useState("");
+	const [phone, setPhone] = useState("");
 
-  const [selectedOption, setSelectedOption] = useState("");
+	const [selectedOption, setSelectedOption] = useState("");
 
-  // Handler function to update selected option
-  const handleSelectChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+	// Handler function to update selected option
+	const handleSelectChange = (event) => {
+		setSelectedOption(event.target.value);
+	};
 
-  const handleChange = (value) => {
-    // const input = value.target.value;
-    setPhone(value);
-  };
+	const handleChange = (value) => {
+		// const input = value.target.value;
+		setPhone(value);
+	};
 
-  const [partner2, setPartner2] = useState(false);
+	const [partner2, setPartner2] = useState(false);
 
-  const togglePartner2 = () => {
-    setPartner2(!partner2);
-  };
-  const [ticketing, setticketing] = useState(false);
+	const togglePartner2 = () => {
+		setPartner2(!partner2);
+	};
+	const [ticketing, setticketing] = useState(false);
 
-  
+	const handleClosePartner = (e) => {
+		e.preventDefault();
+		partner();
+	};
 
-  const handleClosePartner = (e) => {
-    e.preventDefault();
-    partner();
-  };
-
-
-  return (
+	return (
 		<>
 			<div className="wrapper">
 				<div className="mobile">
@@ -62,15 +59,13 @@ const HotelPartnerForm = ({ partner }) => {
 						Partner with <span>LynKKupp</span>
 					</h1>
 					<ul className="list">
-						<Link>
-							<a href="" onClick={handleClick} className="active">
-								<img src={eventImg} />
-								<span>I am a hotel owner</span>
-							</a>
-						</Link>
+						<div>
+							<img src={eventImg} />
+							<span>I am a hotel owner</span>
+						</div>
 						<Link to="/hotelpartner3">
-              <img src={hotelImg} />
-              <span>I handle event ticketing</span>           
+							<img src={hotelImg} />
+							<span>I handle event ticketing</span>
 						</Link>
 					</ul>
 					<h3 className="caption">Part 1 (Hotel Details)</h3>
