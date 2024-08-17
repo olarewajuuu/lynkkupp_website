@@ -30,12 +30,15 @@ const HotelPartnerForm3 = () => {
 				</div>
 				<div className="flex flex-row items-center justify-center px-2 md:px-0 md:gap-28 mt-10">
 					<div className="flex flex-col w-full md:w-auto">
-						<div className="flex flex-row gap-2 md:gap-4 items-center">
+						<Link
+							to="/hotelpartner"
+							className="flex flex-row gap-2 md:gap-4 items-center"
+						>
 							<img src={hotelImg} alt="hotel image" className="w-5 h-5" />
 							<h1 className="text-[16px] md:text-[33px] font-medium text-inherit">
 								I am a hotel owner
 							</h1>
-						</div>
+						</Link>
 						<hr />
 					</div>
 					<div className="flex flex-col w-full md:w-auto">

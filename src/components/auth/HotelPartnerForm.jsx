@@ -8,27 +8,27 @@ import "react-phone-input-2/lib/style.css";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
+
 const HotelPartnerForm = () => {
 
- 
 
-  const [phone, setPhone] = useState("");
+	const [phone, setPhone] = useState("");
 
-  const [selectedOption, setSelectedOption] = useState("");
+	const [selectedOption, setSelectedOption] = useState("");
 
-  // Handler function to update selected option
-  const handleSelectChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+	// Handler function to update selected option
+	const handleSelectChange = (event) => {
+		setSelectedOption(event.target.value);
+	};
 
-  const handleChange = (value) => {
-    // const input = value.target.value;
-    setPhone(value);
-  };
-
+	const handleChange = (value) => {
+		// const input = value.target.value;
+		setPhone(value);
+	};
 
 
   return (
+
 		<>
 			<div className="wrapper">
 				<div className="mobile">
@@ -40,6 +40,7 @@ const HotelPartnerForm = () => {
 				<h1 className="container_head">
 						Partner with <span>LynKKupp</span>
 					</h1>
+
 				<div className="flex flex-row items-center justify-center px-2 md:px-0 md:gap-28 mt-10">
 					<div className="flex flex-col w-full md:w-auto">
 						<div className="flex flex-row gap-2 md:gap-4 items-center">
@@ -65,6 +66,7 @@ const HotelPartnerForm = () => {
 				
 				</div>
 				<div className="container">
+
 					<h3 className="caption">Part 1 (Hotel Details)</h3>
 					<form action="">
 						<div className="form">

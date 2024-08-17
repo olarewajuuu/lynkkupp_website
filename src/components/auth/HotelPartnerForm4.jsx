@@ -4,6 +4,7 @@ import eventImg from "../../assets/Images/guidance_hotel-room.svg";
 import Error from "../../utility/Error";
 import uploadImg from "../../assets/Images/uploadimg.svg";
 import { useDropzone } from "react-dropzone";
+import { Link } from "react-router-dom";
 
 const HotelPartnerForm4 = () => {
 	const [files, setFiles] = useState([]);
@@ -36,12 +37,12 @@ const HotelPartnerForm4 = () => {
 				</div>
 				<div className="flex flex-row items-center justify-center px-2 md:px-0 md:gap-28 mt-10">
 					<div className="flex flex-col w-full md:w-auto">
-						<div className="flex flex-row gap-2 md:gap-4 items-center">
+						<Link to="/hotelpartner" className="flex flex-row gap-2 md:gap-4 items-center">
 							<img src={hotelImg} alt="hotel image" className="w-5 h-5" />
 							<h1 className="text-[16px] md:text-[33px] font-medium text-inherit">
 								I am a hotel owner
 							</h1>
-						</div>
+						</Link>
 						<hr />
 					</div>
 					<div className="flex flex-col w-full md:w-auto">
@@ -72,7 +73,7 @@ const HotelPartnerForm4 = () => {
 					<input
                type="file"
             accept="image/*"
-            {...getRootProps({ className: "input_field" })}
+            {...getInputProps({ className: "input_field" })}
             hidden
           />
 		  <img src={uploadImg} width={200} alt="" />
