@@ -65,8 +65,8 @@ const FlightHero = () => {
         <div>
           <div>
             <ul className="flight_link">
-              <li className="flex  items-center gap-2 activ cursor-pointer">
-                <NavLink to="/" activeNlassName="active">
+              <li className="flight_active flex  items-center gap-2 activ cursor-pointer">
+                <NavLink to="/" activeNlassName="active" className="flight_active">
                   <img src={FlightImg} alt="" className="w-5" />
                   Book Flights
                 </NavLink>
@@ -81,15 +81,6 @@ const FlightHero = () => {
                 <img src={EvenyImg} alt="" className="w-5" />
                 <NavLink to="/events" activeNlassName="active">
                   Events
-                </NavLink>
-              </li>
-              <li className="flighthotel">
-              <div className="img flex gap-4">
-                <img src={FlightImg} alt="" className="w-5" />
-                <img src={HotelImg} alt="" className="w-5" />
-                </div>
-                <NavLink to="/events" activeNlassName="active">
-                  Flight+Hotel
                 </NavLink>
               </li>
             </ul>

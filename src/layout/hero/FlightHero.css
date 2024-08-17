@@ -125,10 +125,9 @@
     .flight_link{
         display: flex;
         justify-content: center;
-        gap: 40px;
+        gap: 80px;
         color: #fff;
-        margin: 0px 0px 0px 0px;
-        /* padding: 10px 10px; */
+        margin: 0 auto;
         font-size: 12px;
         background-color: #55BFEA;
         max-width: 100%;
@@ -143,12 +142,12 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        
     }
     .flight_link .active{
         border: none;
+        border-bottom: 4px solid #fff;
         padding: 5px 20px;
-        border-radius: 20px;
+        border-radius: 0px;
         background-color: transparent;
         display: flex;
         flex-direction: column;

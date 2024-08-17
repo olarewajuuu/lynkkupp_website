@@ -130,9 +130,9 @@
     .event_link{
         display: flex;
         justify-content: center;
-        gap: 60px;
+        gap: 100px;
         color: #fff;
-        margin: 0px 0px 0px 0px;
+        margin: 0 auto;
         /* padding: 10px 10px; */
         font-size: 12px;
         background-color: #55BFEA;
@@ -152,8 +152,9 @@
     }
     .event_link .active{
         border: none;
+        border-bottom: 4px solid #fff;
         padding: 5px 20px;
-        border-radius: 20px;
+        border-radius: 0px;
         background-color: transparent;
         display: flex;
         flex-direction: column;

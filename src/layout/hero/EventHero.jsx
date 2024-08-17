@@ -36,15 +36,7 @@ const EventHero = () => {
                   Events
                 </NavLink>
               </li>
-              <li className="flight_hotel">
-                <NavLink to="/events" activeNlassName="active" className="">
-                <div className="img flex gap-4">
-                <img src={FlightImg} alt="" className="w-5" />
-                <img src={HotelImg} alt="" className="w-5" />
-                </div>
-                  Flight+ Hotel
-                </NavLink>
-              </li>
+              
             </ul>
           </div>
         </div>

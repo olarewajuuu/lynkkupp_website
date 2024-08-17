@@ -379,10 +379,10 @@
     .container{
         width: 100%;
         padding: 50px 150px;
-        position: fixed;
-        top: 80px;
+        /* position: fixed;
+        top: 80px; */
         background-color: #fff;
-        z-index: 22;
+        /* z-index: 22; */
     }
     /* .wrapper{
         position: sticky;

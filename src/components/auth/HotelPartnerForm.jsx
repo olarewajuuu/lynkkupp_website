@@ -5,19 +5,12 @@ import backImg from "../../assets/Images/ep_back.svg";
 import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import HotelPartnerForm2 from "./HotelPartnerForm2";
-import Ticketing from "./Ticketing";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const HotelPartnerForm = ({ partner }) => {
-  const [isActive, setIsActive] = useState(false);
-  const toggleClass = () => {
-    setIsActive(!isActive);
-  };
-  const handleClick = (e) => {
-    e.preventDefault();
-    toggleClass();
-  };
+const HotelPartnerForm = () => {
+
+ 
 
   const [phone, setPhone] = useState("");
 
@@ -33,19 +26,6 @@ const HotelPartnerForm = ({ partner }) => {
     setPhone(value);
   };
 
-  const [partner2, setPartner2] = useState(false);
-
-  const togglePartner2 = () => {
-    setPartner2(!partner2);
-  };
-  const [ticketing, setticketing] = useState(false);
-
-  
-
-  const handleClosePartner = (e) => {
-    e.preventDefault();
-    partner();
-  };
 
 
   return (
@@ -54,25 +34,37 @@ const HotelPartnerForm = ({ partner }) => {
 				<div className="mobile">
 					<h4>
 						{" "}
-						<img src={backImg} onClick={handleClosePartner} /> Partner with us
+						<img src={backImg} /> Partner with us
 					</h4>
 				</div>
-				<div className="container">
-					<h1 className="container_head">
+				<h1 className="container_head">
 						Partner with <span>LynKKupp</span>
 					</h1>
-					<ul className="list">
-						<Link>
-							<a href="" onClick={handleClick} className="active">
-								<img src={eventImg} />
-								<span>I am a hotel owner</span>
-							</a>
-						</Link>
-						<Link to="/hotelpartner3">
-              <img src={hotelImg} />
-              <span>I handle event ticketing</span>           
-						</Link>
-					</ul>
+				<div className="flex flex-row items-center justify-center px-2 md:px-0 md:gap-28 mt-10">
+					<div className="flex flex-col w-full md:w-auto">
+						<div className="flex flex-row gap-2 md:gap-4 items-center">
+							<img src={hotelImg} alt="hotel image" className="w-5 h-5" />
+
+						<NavLink to="/" activeNlassName="active" className="text-[14px] md:text-[33px] font-medium text-inherit">
+						I am a hotel owner
+        				</NavLink>
+						</div>
+						<hr className="w-full bg-[#0588BD] h-1" />
+					</div>
+
+					<div className="flex flex-col w-full md:w-auto">
+						<div className="flex flex-row gap-2 md:gap-4 items-center">
+							<img src={eventImg} alt="event image" className="w-5 h-5" />
+							
+						<NavLink to="/hotelpartner3" activeNlassName="active" className="text-[14px] md:text-[33px] font-medium text-inherit">
+						I handle event ticketing
+                		</NavLink>
+						
+						</div>	
+					</div>
+				
+				</div>
+				<div className="container">
 					<h3 className="caption">Part 1 (Hotel Details)</h3>
 					<form action="">
 						<div className="form">
@@ -183,9 +175,7 @@ const HotelPartnerForm = ({ partner }) => {
 					</form>
 				</div>
 			</div>
-			{close && <div>Hello</div>}
-			{partner2 && <HotelPartnerForm2 partner2={togglePartner2} />}
-			{ticketing && <Ticketing />}
+
 		</>
 	);
 };
