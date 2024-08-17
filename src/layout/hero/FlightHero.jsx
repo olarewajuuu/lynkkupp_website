@@ -56,7 +56,7 @@ const FlightHero = () => {
   };
 
   return (
-    <div>
+    <div >
       <div className="flight_container">
         <div className="flight_head">
           <h1>Easy Booking, Easy Trip With LynKKupp</h1>
@@ -65,8 +65,8 @@ const FlightHero = () => {
         <div>
           <div>
             <ul className="flight_link">
-              <li className="flex gap-2 activ cursor-pointer">
-                <NavLink to="/" activeNlassName="active">
+              <li className="flight_active flex  items-center gap-2 activ cursor-pointer">
+                <NavLink to="/" activeNlassName="active" className="flight_active">
                   <img src={FlightImg} alt="" className="w-5" />
                   Book Flights
                 </NavLink>
@@ -83,18 +83,12 @@ const FlightHero = () => {
                   Events
                 </NavLink>
               </li>
-              <li className="flighthotel">
-                <img src={FlightImg} alt="" className="w-5" />
-                {/* <img src={HotelImg} alt="" className="w-5" /> */}
-                <NavLink to="/events" activeNlassName="active">
-                  Flight+Hotel
-                </NavLink>
-              </li>
             </ul>
           </div>
         </div>
         <div>
-          <div className="form_container">
+          <div className="heroform_container
+          ">
             <form action="">
               <div className="formDisplay flex gap-3">
                 <div>

@@ -7,8 +7,9 @@ import { useState } from "react";
 import { useDropzone } from "react-dropzone";
 import Error from "../../utility/Error";
 import Input from "../../utility/Input";
+import { NavLink } from "react-router-dom";
 
-const HotelPartnerForm2 = ({partner2}) => {
+const HotelPartnerForm2 = () => {
   const [files, setFiles] = useState([]);
 
   const { getRootProps, getInputProps, acceptedFiles, fileRejections } =
@@ -27,35 +28,43 @@ const HotelPartnerForm2 = ({partner2}) => {
       },
     });
 
-    const handleClosePartner = (e) => {
-      e.preventDefault();
-      partner2()
-    }
 
   return (
     <div className="upload">
-      <div className="mobile_upload">
-        <h4>
-          <img src={backImg} onClick={handleClosePartner} /> Partner with us
-        </h4>
+      <div className="mobile_upload md:hidden">
+        <NavLink to="/hotelpartner" className="flex items-center gap-4">
+        <img src={backImg}/> Partner with us
+          </NavLink>
       </div>
       <div className="container_upload">
         <h1 className="container_head_upload">
           Partner with <span>LynKKupp</span>
         </h1>
          
-        <ul className="list_upload border-b-2 border-[#494949]">
-          <li>
-            <a href="" className="active_upload flex justify-center items-center">
-              <img src={eventImg} />I am a hotel owner
-            </a>
-          </li>
-          <li>
-            <a href="" className="flex justify-center items-center">
-              <img src={hotelImg} />I handle event ticketing
-            </a>
-          </li>
-        </ul>
+        <div className="flex flex-row items-center justify-center px-2 md:px-0 md:gap-28 mt-10">
+					<div className="flex flex-col w-full md:w-auto">
+						<div className="flex flex-row gap-2 md:gap-4 items-center">
+							<img src={hotelImg} alt="hotel image" className="w-5 h-5" />
+
+						<NavLink to="/" activeNlassName="active" className="text-[14px] md:text-[33px] font-medium text-inherit">
+						I am a hotel owner
+            </NavLink>
+						</div>
+						<hr className="w-full bg-[#0588BD] h-1" />
+					</div>
+
+					<div className="flex flex-col w-full md:w-auto">
+						<div className="flex flex-row gap-2 md:gap-4 items-center">
+							<img src={eventImg} alt="event image" className="w-5 h-5" />
+							
+						<NavLink to="/hotelpartner3" activeNlassName="active" className="text-[14px] md:text-[33px] font-medium text-inherit">
+						I handle event ticketing
+            </NavLink>
+						
+						</div>	
+					</div>
+				
+				</div>
         <h3 className="caption_upload">Part 2 (Uploads)</h3>
       </div>
       <form action="">

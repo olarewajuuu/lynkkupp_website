@@ -12,50 +12,61 @@ import "react-datepicker/dist/react-datepicker.css";
 import HotelCalender from "../../utility/HotelCalender";
 
 const HotelHero = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  
+  const [rooms, setRooms] = useState([{ id: 1, adults: 1, children: 0 }]);
+	const [isOpen, setIsOpen] = useState(false);
+	const toggleDropdown = () => {
+		setIsOpen(!isOpen);
+	};
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+	const addRoom = (e) => {
+		e.preventDefault();
+		setRooms([...rooms, { id: rooms.length + 1, adults: 1, children: 0 }]);
+	};
 
-  const [adult, setAdult] = useState(1);
+	const removeRoom = (id) => {
+		setRooms(rooms.filter((room) => room.id !== id));
+	};
 
-  const handleIncreaseAdult = () => {
-    setAdult(adult + 1);
-  };
+	const updateAdults = (id, increment) => {
+		setRooms(
+			rooms.map((room) =>
+				room.id === id
+					? {
+							...room,
+							adults: Math.max(1, room.adults + (increment ? 1 : -1)),
+					  }
+					: room
+			)
+		);
+	};
 
-  const handleDecreaseAdult = () => {
-    if (adult > 1) {
-      setAdult(adult - 1);
-    }
-  };
+	const updateChildren = (id, increment) => {
+		setRooms(
+			rooms.map((room) =>
+				room.id === id
+					? {
+							...room,
+							children: Math.max(0, room.children + (increment ? 1 : -1)),
+					  }
+					: room
+			)
+		);
+	};
 
-  const [children, setChildren] = useState(0);
-  const handleIncreaseChildren = () => {
-    setChildren(children + 1);
-  };
+	// Stop the click event propagation inside the dropdown
+	const handleDropdownClick = (e) => {
+		e.stopPropagation();
+	};
 
-  const handleDecreaseChildren = () => {
-    if (children > 1) {
-      setChildren(children - 1);
-    }
-  };
+	const handleDone = (event) => {
+		event.preventDefault();
+		// Reset all room data
+		setRooms([{ id: 1, adults: 1, children: 0 }]);
+		// Close the dropdown
+		setIsOpen(false);
+	};
 
-  const [infant, setInfant] = useState(1);
-  const handleIncreaseInfant = () => {
-    setInfant(infant + 1);
-  };
-
-  const handleDecreaseInfant = () => {
-    if (infant > 1) {
-      setInfant(infant - 1);
-    }
-  };
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    toggleDropdown();
-  };
 
   return (
     <div>
@@ -65,52 +76,32 @@ const HotelHero = () => {
           <h4>Your perfect stop for flights, hotels and tickets booking</h4>
         </div>
         <div>
-          <div>
-            <ul className="hotelflight_link">
-              <li >
-                <NavLink
-                  to="/"
-                  activeNlassName="active"
-                  className="hotellist flex justify-end items-center gap-2"
-                >
+        <div>
+            <ul className="hotel_link">
+              <li className="flex justify-end items-center gap-2 cursor-pointer">
                   <img src={FlightImg} alt="" className="w-5" />
+                <NavLink to="/" activeNlassName="active">
                   Book Flights
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="/hotels"
-                  activeNlassName="active"
-                  className="hotellist flex justify-end items-center gap-2"
-                >
+              <li className="flex justify-end items-center gap-2 cursor-pointer">
+                <NavLink to="/hotels" activeNlassName="active" className="flex justify-end items-center gap-2 cursor-pointer">
                   <img src={HotelImg} alt="" className="w-5" />
                   Hotels
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="/events"
-                  activeNlassName="active"
-                  className="hotellist flex justify-end items-center gap-2"
-                >
-                  <img src={EvenyImg} alt="" className="w-5" />
+              <li className="flex justify-end items-center gap-2 cursor-pointer">
+                <img src={EvenyImg} alt="" className="w-5" />
+                <NavLink to="/events" activeNlassName="active">
                   Events
                 </NavLink>
               </li>
-              <li className="hotelflighthotel">
-                <NavLink to="/events" activeNlassName="active"
-                className="hotellist flex justify-end items-center gap-2"
-                >
-                <img src={FlightImg} alt="" className="w-5" />
-                {/* <img src={HotelImg} alt="" className="w-5" /> */}
-                  Flight+Hotel
-                </NavLink>
-              </li>
+              
             </ul>
           </div>
         </div>
         <div>
-          <div className="form_container">
+          <div className="hotelform_container">
             <form action="">
               <div className="formDisplay flex gap-3"></div>
               <div className="date_container flex mt-2 ">
@@ -135,75 +126,107 @@ const HotelHero = () => {
                     <img src={DropdownImg} alt="" />
                   </p>
                   {isOpen && (
-                    <div className="hoteldropdownContent px-6 py-8 text-[#000] bg-[#fff] mt-10 absolute top-5 z-10">
-                      <p className="flex gap-4 justify-start items-center">
-                        <span className="font-bold text-xl flex flex-col ">
-                          Adult{" "}
-                          <span className="under_text"> &lt;14 years </span>
-                        </span>
-                        <span
-                          className="border p-2 w-1 h-1 flex justify-center items-center ml-5"
-                          onClick={handleDecreaseAdult}
-                          disabled={adult <= 1}
-                        >
-                          -
-                        </span>
-                        <span className="font-bold">{adult}</span>
-                        <span
-                          onClick={handleIncreaseAdult}
-                          className="border p-2 w-1 h-1 flex justify-center items-center "
-                        >
-                          +
-                        </span>
-                      </p>
-                      <p className="flex gap-4 justify-start items-center">
-                        <span className="font-bold text-xl flex flex-col ">
-                          Chidren{" "}
-                          <span className="under_text"> 2-4 years </span>
-                        </span>
-                        <span
-                          className="border p-2 w-1 h-1 flex justify-center items-center "
-                          onClick={handleDecreaseChildren}
-                          disabled={children <= 1}
-                        >
-                          -
-                        </span>
-                        <span className="font-bold">{children}</span>
-                        <span
-                          className="border p-2 w-1 h-1 flex justify-center items-center "
-                          onClick={handleIncreaseChildren}
-                        >
-                          +
-                        </span>
-                      </p>
-                      <p className="flex gap-4 justify-start items-center">
-                        <span className="font-bold text-xl flex flex-col ">
-                          Infant
-                          <span className="under_text"> &lt; 2 years </span>
-                        </span>
-                        <span
-                          className="border p-2 w-1 h-1 flex justify-center items-center ml-5"
-                          onClick={handleDecreaseInfant}
-                          disabled={infant <= 1}
-                        >
-                          -
-                        </span>
-                        <span className="font-bold">{infant}</span>
-                        <span
-                          className="border p-2 w-1 h-1 flex justify-center items-center "
-                          onClick={handleIncreaseInfant}
-                        >
-                          +
-                        </span>
-                      </p>
-                      <button
-                        onClick={handleClick}
-                        className="px-4 py-1 bg-[#0588BD] border-none text-[#fff] float-right mt-4 text-sm"
-                      >
-                        Done
-                      </button>
-                    </div>
-                  )}
+					<div
+						onClick={handleDropdownClick}
+						className="px-4 py-4 w-[300px] h-[300px] bg-[#fff] flex flex-col items-start overflow-y-auto mt-10 absolute top-20 left-0 z-10"
+					>
+						{rooms.map((room, index) => (
+							<div key={room.id} className="mb-4 w-full">
+								<div className="flex justify-between items-center">
+									<h2 className="text-lg text-[#232222] text-opacity-35">
+										Room {room.id}
+									</h2>
+									{index > 0 && (
+										<button
+											onClick={(e) => {
+												e.preventDefault();
+												removeRoom(room.id);
+											}}
+											className="text-[#55bfea] text-lg"
+										>
+											Remove
+										</button>
+									)}
+								</div>
+								<div className="mt-2">
+									<div className="flex items-center justify-between">
+										<span className="text-sm text-[#494949] font-medium">
+											Adults
+										</span>
+										<div className="flex items-center space-x-2">
+											<button
+												className="bg-gray-200 text-[#494949] px-2 py-1 rounded"
+												onClick={(e) => {
+													e.preventDefault();
+													updateAdults(room.id, false);
+												}}
+											>
+												-
+											</button>
+											<span className="text-sm">{room.adults}</span>
+											<button
+												className=" bg-[#55bfea] bg-opacity-20 text-[#494949] px-2 py-1 rounded"
+												onClick={(e) => {
+													e.preventDefault();
+													updateAdults(room.id, true);
+												}}
+											>
+												+
+											</button>
+										</div>
+									</div>
+									<p className="text-xs text-[#232222]">{">"} 14 years</p>
+								</div>
+								<div className="mt-2">
+									<div className="flex items-center justify-between">
+										<span className="text-sm text-[#494949] font-medium">
+											Children
+										</span>
+										<div className="flex items-center space-x-2">
+											<button
+												className="bg-gray-200  px-2 py-1 rounded"
+												onClick={(e) => {
+													e.preventDefault();
+													updateChildren(room.id, false);
+												}}
+											>
+												-
+											</button>
+											<span className="text-sm text-[#232222]">
+												{room.children}
+											</span>
+											<button
+												className=" bg-[#55bfea] bg-opacity-20 px-2 py-1 rounded"
+												onClick={(e) => {
+													e.preventDefault();
+													updateChildren(room.id, true);
+												}}
+											>
+												+
+											</button>
+										</div>
+									</div>
+									<p className="text-xs text-[#232222]">2-4 years</p>
+									<hr className="my-4" />
+								</div>
+							</div>
+						))}
+						<div className="flex justify-between w-full">
+							<button
+								onClick={addRoom}
+								className="border-2 border-[#232222] border-opacity-35 text-[#232222] text-opacity-35 py-2 px-4 rounded-md"
+							>
+								Add room {rooms.length + 1} +
+							</button>
+							<button
+								onClick={handleDone}
+								className="bg-[#55bfea] text-white py-2 px-4 rounded"
+							>
+								Done
+							</button>
+						</div>
+					</div>
+				)}
                 </div>
 
                 <div className="Searchlocation">

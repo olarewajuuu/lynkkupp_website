@@ -16,13 +16,13 @@
     text-align: center;
     color: #FFFFFF;
 }
-.hotelflight_link{
+.hotel_link{
     display: flex;
     gap: 40px;
     color: #fff;
     margin: 50px 0px 10px 100px;
 }
-.hotelflight_link .active{
+.hotel_link .active{
     border: 1px solid #fff;
     padding: 5px 10px;
     border-radius: 20px;
@@ -37,7 +37,7 @@
     color: #7c7c7c;
     font-weight: 400;
 }
-.form_container{
+.hotelform_container{
     background-color: #55BFEA80;
     width: 988px;
     height: 200px;
@@ -100,7 +100,7 @@
 
 @media screen and (max-width: 760px) {
     .hotelflight_container{
-        padding: 8rem 5rem;
+        padding: 13rem 5rem;
     }
     .hotelflighthotel{
         display: flex;
@@ -142,30 +142,34 @@
     .hotelflight_head h4{
         display: none;
     }
-    .hotelflight_link{
+    .hotel_link{
         display: flex;
-        gap: 40px;
+        justify-content: center;
+        gap: 100px;
         color: #fff;
-        margin: 0px 0px 0px 0px;
+        margin: 0 auto;
+        /* padding: 10px 10px; */
         font-size: 12px;
         background-color: #55BFEA;
         max-width: 100%;
-        padding: 0px 0px;
+        width: 100%;
+        padding: 10px 10px;
         position: absolute;
         top: 0;
         left: 0;
     }
-    .hotelflight_link li{
+    .hotel_link li{
         position: relative;
         display: flex;
         flex-direction: column;
-        gap: 0px;
+        gap: 20px;
         
     }
-    .hotelflight_link .active{
+    .hotel_link .active{
         border: none;
+        border-bottom: 4px solid #fff;
         padding: 5px 20px;
-        border-radius: 20px;
+        border-radius: 0px;
         background-color: transparent;
         display: flex;
         flex-direction: column;
@@ -183,17 +187,17 @@
         color: #7c7c7c;
         font-weight: 400;
     }
-    .form_container{
+    .hotelform_container{
         background-color: transparent;
-        width: 988px;
+        width: 700px;
         height: 200px;
         border-radius: 18px 18px 0px 0px;
         padding: 20px 50px;
-        margin: 0 auto;
+        margin: -90px -500px;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
+        position: absolute;
     }
     .going{
         width: 312px;
