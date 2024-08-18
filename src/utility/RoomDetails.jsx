@@ -62,17 +62,19 @@ const RoomDetails = () => {
 		<div>
 			<div
 				onClick={toggleDropdown}
-				className="relative border border-gray-300 w-[400px] h-[55px] md:w-[263px] md:h-[70px] p-4 rounded-md mr-2 mb-2 md:mb-0"
+				className="relative border border-gray-300 w-full h-[70px] md:w-[263px] [70px] p-4 rounded-md mr-2 mb-2 md:mb-0"
 			>
-				<div className="flex flex-row justify-center items-center gap-4">
-					<img src={UserImg} alt="" />
-					<div className="flex flex-col">
-						<span className="text-[13px] text-[#232222] font-normal">
-							Guests and Rooms
-						</span>
-						<span className="text-[16px] text-[#494949] font-normal">
-							1 Guest, 1 room
-						</span>
+				<div className="flex flex-row justify-between items-center md:justify-center gap-4">
+					<div className="flex gap-2">
+						<img src={UserImg} alt="" />
+						<div className="flex flex-col">
+							<span className="text-[13px] text-[#232222] font-normal">
+								Guests and Rooms
+							</span>
+							<span className="text-[16px] text-[#494949] font-normal">
+								1 Guest, 1 room
+							</span>
+						</div>
 					</div>
 					<img src={DropdownImg} alt="" />
 				</div>

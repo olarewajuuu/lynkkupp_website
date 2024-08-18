@@ -97,11 +97,11 @@ const Navbar = () => {
 								</NavLink>
 								{isOpen ? (
 									<div
-										className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+										className="fixed inset-0 md:z-50 flex items-center justify-center md:bg-black md:bg-opacity-50"
 										onClick={handleClose}
 									>
 										<div
-											className="bg-[#fff] w-[428px] h-[562px] p-8 md:w-[1278px] md:h-[513px] "
+											className="bg-[#fff] w-[428px] h-[600px] md:p-8 md:w-[1278px] md:h-[513px] "
 											onClick={(e) => e.stopPropagation()}
 										>
 											<Flight_Hotel />
