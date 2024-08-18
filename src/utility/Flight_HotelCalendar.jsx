@@ -46,7 +46,7 @@ const Flight_HotelCalender = () => {
 					moveRangeOnFirstSelection={false}
 					ranges={date}
 					months={2}
-					className="absolute top-20 left-0 z-10 w-[400px]  md:w-[500px]"
+					className="absolute top-20 left-0 z-10 w-[400px] md:w-[500px]"
 					direction="horizontal"
 				/>
 			)}
