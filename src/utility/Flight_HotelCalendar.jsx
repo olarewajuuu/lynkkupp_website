@@ -18,7 +18,7 @@ const Flight_HotelCalender = () => {
 	return (
 		<div className="relative flex flex-col">
 			<div className=" flex items-center gap-4 md:gap-0">
-				<div className=" flex items-center gap-2 border border-gray-300 h-[70px] w-[191px]  px-4 py-2 rounded-r-none rounded-md cursor-pointer">
+				<div className=" flex items-center gap-2 border border-gray-300 h-[55px] md:h-[70px] w-[191px]  px-4 py-2 rounded-r-none rounded-md cursor-pointer">
 					<img src={claendarImg} alt="" className="w-[21px] h-[21px]" />
 					<span
 						onClick={() => setOpenDate(!openDate)}
@@ -28,7 +28,7 @@ const Flight_HotelCalender = () => {
 					</span>
 				</div>
 
-				<div className=" flex items-center gap-2 border border-gray-300 h-[70px] w-[191px]  px-4 py-2 rounded-l-none rounded-md cursor-pointer">
+				<div className=" flex items-center gap-2 border border-gray-300  h-[55px] md:h-[70px] w-[191px]  px-4 py-2 rounded-l-none rounded-md cursor-pointer">
 					<img src={claendarImg} alt="" className="w-[21px] h-[21px]" />
 					<span
 						onClick={() => setOpenDate(!openDate)}
@@ -46,7 +46,7 @@ const Flight_HotelCalender = () => {
 					moveRangeOnFirstSelection={false}
 					ranges={date}
 					months={2}
-					className="absolute top-20 left-0 z-10 w-[500px]"
+					className="absolute top-20 left-0 z-10 w-[400px] md:w-[500px]"
 					direction="horizontal"
 				/>
 			)}
