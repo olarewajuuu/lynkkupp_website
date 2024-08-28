@@ -7,6 +7,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 
 const HotelPartnerForm = () => {
@@ -26,13 +27,19 @@ const HotelPartnerForm = () => {
 		setPhone(value);
 	};
 
+	const navigate = useNavigate();
+
+	const handleClick = () => {
+	  navigate('/'); // Change '/new-page' to your desired route
+	};
+
 
   return (
 
 		<>
 			<div className="wrapper">
 				<div className="mobile">
-					<h4>
+					<h4 onClick={handleClick} >
 						{" "}
 						<img src={backImg} /> Partner with us
 					</h4>

@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { ImCross } from "react-icons/im";
-import SignIn from "../../components/auth/SignIn";
+// import SignIn from "../../components/auth/SignIn";
 // import HotelPartnerForm2 from "../../components/auth/HotelPartnerForm2";
 import HotelPartnerForm from "../../components/auth/HotelPartnerForm";
 import Flight_Hotel from "../../components/Flight_Hotel";
@@ -18,6 +18,7 @@ import countryImg from "../../assets/Images/country.svg"
 import supportImg from "../../assets/Images/support.svg"
 import manageImg from "../../assets/Images/managebookingnav.svg"
 import profileImg from "../../assets/Images/profile.svg"
+import Login from "../../components/auth/Login";
 
 
 
@@ -38,10 +39,10 @@ const Navbar = () => {
 
 	const handleClicked = () => setClicked(!clicked);
 
-	const [signin, setSignin] = useState(false);
+	const [login, setLogin] = useState(false);
 
-	const toggleSignin = () => {
-		setSignin(!signin);
+	const toggleLogin = () => {
+		setLogin(!login);
 	};
 	const [partner, setPartner] = useState(false);
 
@@ -62,7 +63,7 @@ const Navbar = () => {
 						<ul>
 							<li>
 								<p className="options flex mr-4 md:hidden">Options</p>
-								<NavLink to="/" activeClassName="active" className="flex  md:hidden">
+								<NavLink to="/profile" activeClassName="active" className="flex  md:hidden">
 									<img src={profileImg} alt="" className="mr-4"/>
 									Profile
 								</NavLink>
@@ -139,12 +140,12 @@ const Navbar = () => {
 								</NavLink>
 							</li>
 					<div onClick={handleClicked} className="navBtn">
-						<button onClick={toggleSignin} className="navButtonSign">
+						<button onClick={toggleLogin} className="navButtonSign">
 							Sign in
 						</button>
 					</div>
 					<div onClick={handleClicked}>
-						<NavLink to="/hotelpartner" activeClassName="active" className="navButtonPat">
+						<NavLink to="/hotelpartner" activeClassName="active" className="navButtonPattern">
 							Partner Form
 						</NavLink>
 					</div>
@@ -157,7 +158,8 @@ const Navbar = () => {
 				</div>
 			</div>
 
-			{signin && <SignIn cancelSignin={toggleSignin} />}
+			{/* {signin && <SignIn cancelSignin={toggleSignin} />} */}
+			{login && <Login cancelSignin={toggleLogin}/>}
 
 			{partner && <HotelPartnerForm partner={togglePartner} />}
 		</>

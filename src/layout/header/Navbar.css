@@ -87,7 +87,6 @@
     position: relative;
     top: 0;
     z-index: 20;
-  
   }
   .icons {
     display: inline;
@@ -105,11 +104,11 @@
     padding: 80px 100px 80px 100px;
   }
   .cross{
-    font-size: 14px;
+    font-size: 16px;
     color: #039dda;
-    position: absolute;
-    top: 80px;
-    right: 320px;
+    position: relative;
+    top: 60px;
+    right: 410px;
     z-index: 10;
   }
   .handbuger{
@@ -145,7 +144,7 @@
     color: #55bfea;
     font-size: 14px;
     cursor: pointer;
-    width: 166px;
+    width: 246px;
     height: 40px;
     padding: 5px 30px 5px 30px;
     border-radius: 5px;
@@ -154,15 +153,15 @@
   .navButtonSign:hover{
     border: 1px solid #039dda;
   }
-  .navButtonPat{
+  .navButtonPattern {
     background-color: #55bfea;
     color: #fff;
     border: 1px solid #55bfea;
     font-size: 14px;
     cursor: pointer;
-    width: 166px;
+    width: 246px;
     height: 40px;
-    padding: 10px 50px 10px 30px;
+    padding: 10px 80px 10px 80px;
     border-radius: 5px;
   }
   .navButtonPat:hover{
