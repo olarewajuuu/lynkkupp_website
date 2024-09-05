@@ -4,6 +4,7 @@ import HotelImg from "../../assets/Images/HotelImg.svg";
 import EvenyImg from "../../assets/Images/EventImg.svg";
 import flyingImg from "../../assets/Images/flyingto.svg";
 import goingImg from "../../assets/Images/goingtto.svg";
+import dropDownIcon from "../../assets/Images/dropDownIcon.svg";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
@@ -17,6 +18,11 @@ const FlightHero = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  // const [isoption, setOption] = useState({
+
+  // });
+
   // const [search, setSearch] = useState(false);
 
   // const toggleSearch = () => {
@@ -41,18 +47,18 @@ const FlightHero = () => {
   };
 
   const handleDecreaseChildren = () => {
-    if (children > 1) {
+    if (children > 0) {
       setChildren(children - 1);
     }
   };
 
-  const [infant, setInfant] = useState(1);
+  const [infant, setInfant] = useState(0);
   const handleIncreaseInfant = () => {
     setInfant(infant + 1);
   };
 
   const handleDecreaseInfant = () => {
-    if (infant > 1) {
+    if (infant > 0) {
       setInfant(infant - 1);
     }
   };
@@ -102,31 +108,31 @@ const FlightHero = () => {
                   <select
                     name="trip"
                     id="trip"
-                    className="px-2 bg-[#0588BD] text-[#fff]"
+                    className="px-2 bg-[#0588BD] text-[#fff] focus:outline-none py-1"
                   >
-                    <option value="">Round trip</option>
-                    <option value="">One-way</option>
-                    <option value="">Multi-city</option>
+                    <option value="" className="bg-[#fff] text-[#23222259]">Round trip</option>
+                    <option value="" className="bg-[#fff] text-[#23222259]">One-way</option>
+                    <option value="" className="bg-[#fff] text-[#23222259]">Multi-city</option>
                   </select>
                 </div>
                 <div>
                   <select
                     name="Econonmy"
                     id="Econonmy"
-                    className="px-2 bg-[#0588BD] text-[#fff]"
+                    className="px-2 bg-[#0588BD] text-[#fff] focus:outline-none py-1"
                   >
-                    <option value="">Econonmy</option>
-                    <option value="">Premium economy</option>
-                    <option value="">Business</option>
-                    <option value="">First class</option>
+                    <option value="" className="bg-[#fff] text-[#23222259]" >Econonmy</option>
+                    <option value="" className="bg-[#fff] text-[#23222259]" >Premium economy</option>
+                    <option value="" className="bg-[#fff] text-[#23222259]" >Business</option>
+                    <option value="" className="bg-[#fff] text-[#23222259]" >First class</option>
                   </select>
                 </div>
-                <div className="dropdown relative">
+                <div className="dropdown relative ">
                   <p
                     onClick={toggleDropdown}
-                    className="dropDown "
+                    className="dropDown cursor-pointer flex gap-2 py-1 text-[15px] px-2"
                   >
-                    {isOpen ? "1 passengers " : "1 passenger   v"}
+                  {`${adult + children + infant} `} passengers <img src={dropDownIcon} />
                   </p>
                   {isOpen && (
                     <div className="dropdownContent px-6 py-8 text-[#000] bg-[#fff] mt-4 absolute top-5 z-10">
@@ -136,7 +142,7 @@ const FlightHero = () => {
                           <span className="under_text"> &lt;14 years </span>
                         </span>
                         <span
-                          className="border p-2 w-1 h-1 flex justify-center items-center ml-5"
+                          className="border p-2 w-1 h-1 flex justify-center items-center ml-5 cursor-pointer"
                           onClick={handleDecreaseAdult}
                           disabled={adult <= 1}
                         >
@@ -145,7 +151,7 @@ const FlightHero = () => {
                         <span className="font-bold">{adult}</span>
                         <span
                           onClick={handleIncreaseAdult}
-                          className="border p-2 w-1 h-1 flex justify-center items-center "
+                          className="border p-2 w-1 h-1 flex justify-center items-center cursor-pointer"
                         >
                           +
                         </span>
@@ -156,15 +162,15 @@ const FlightHero = () => {
                           <span className="under_text"> 2-4 years </span>
                         </span>
                         <span
-                          className="border p-2 w-1 h-1 flex justify-center items-center "
+                          className="border p-2 w-1 h-1 flex justify-center items-center cursor-pointer"
                           onClick={handleDecreaseChildren}
-                          disabled={children <= 1}
+                          disabled={children <= 0}
                         >
                           -
                         </span>
                         <span className="font-bold">{children}</span>
                         <span
-                          className="border p-2 w-1 h-1 flex justify-center items-center "
+                          className="border p-2 w-1 h-1 flex justify-center items-center cursor-pointer"
                           onClick={handleIncreaseChildren}
                         >
                           +
@@ -176,15 +182,15 @@ const FlightHero = () => {
                           <span className="under_text"> &lt; 2 years </span>
                         </span>
                         <span
-                          className="border p-2 w-1 h-1 flex justify-center items-center ml-5"
+                          className="border p-2 w-1 h-1 flex justify-center items-center ml-5 cursor-pointer"
                           onClick={handleDecreaseInfant}
-                          disabled={infant <= 1}
+                          disabled={infant <= 0}
                         >
                           -
                         </span>
                         <span className="font-bold">{infant}</span>
                         <span
-                          className="border p-2 w-1 h-1 flex justify-center items-center "
+                          className="border p-2 w-1 h-1 flex justify-center items-center cursor-pointer"
                           onClick={handleIncreaseInfant}
                         >
                           +

@@ -75,12 +75,10 @@
     display: none;
 }
 .dropDown{
-    width: 9rem;
+    /* width: 9rem; */
     background-color: #0588BD;
     color: #ffff;
-    padding: 2px;
-    font-size: 12px;
-    /* px-2 bg-[#0588BD] text-[#fff] h-6 w-36 */
+    /* padding: 2px; */
 }
 /* select {
     -webkit-appearance: none;

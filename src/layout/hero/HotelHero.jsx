@@ -120,7 +120,6 @@ const HotelHero = () => {
 
                 <div className="dropdown relative">
                   <p onClick={toggleDropdown} className="hoteldropDown ">
-                    {isOpen ? " " : " "}
                     <img src={UserImg} alt="" />
                     Rooms and guest
                     <img src={DropdownImg} alt="" />
