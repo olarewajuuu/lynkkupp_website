@@ -8,6 +8,8 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import Calendar from "../../utility/Calendar";
+import SearchItems from "./SearchItems";
+import BookData from "../../Data.json"
 
 const FlightHero = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +17,11 @@ const FlightHero = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+  // const [search, setSearch] = useState(false);
+
+  // const toggleSearch = () => {
+  //   setSearch(!search);
+  // };
 
   const [adult, setAdult] = useState(1);
 
@@ -63,7 +70,7 @@ const FlightHero = () => {
           <h4>Your perfect stop for flights, hotels and tickets booking</h4>
         </div>
         <div>
-          <div>
+          <div className="ml-20">
             <ul className="flight_link">
               <li className="flight_active flex  items-center gap-2 activ cursor-pointer">
                 <NavLink to="/" activeNlassName="active" className="flight_active">
@@ -195,16 +202,17 @@ const FlightHero = () => {
               </div>
               <div className="date_container flex mt-2 ">
                 <div className="flying">
-                  <div className="going bg-[#fff] px-4 py-2 mb-1">
+                  <div className="going bg-[#fff] px-4 py-2 mb-1 cursor-pointer"
+                  // onClick={toggleSearch}
+                  >
                     <p className="flex gap-3 text-[#99A0A8] font-bold ">
                       <img src={flyingImg} alt="" />
-                      Flying from ?
+                      Flying from ? 
                     </p>
-                    <input
-                      type="search"
-                      placeholder="City or airport"
-                      className="ml-7"
-                    />
+
+                    <p className="ml-7 text-[#99A0A8]"></p>
+                    <SearchItems  data={BookData}/>
+                    
                   </div>
                   <div className="going bg-[#fff] px-4 py-2">
                     <p className="flex gap-3 text-[#99A0A8] font-bold">
@@ -230,6 +238,7 @@ const FlightHero = () => {
           </div>
         </div>
       </div>
+      {/* {search && <SearchItems />} */}
     </div>
   );
 };

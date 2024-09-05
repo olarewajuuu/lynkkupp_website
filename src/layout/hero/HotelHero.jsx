@@ -76,7 +76,7 @@ const HotelHero = () => {
           <h4>Your perfect stop for flights, hotels and tickets booking</h4>
         </div>
         <div>
-        <div>
+        <div className="ml-20">
             <ul className="hotel_link">
               <li className="flex justify-end items-center gap-2 cursor-pointer">
                   <img src={FlightImg} alt="" className="w-5" />

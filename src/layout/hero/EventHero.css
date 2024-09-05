@@ -1,5 +1,6 @@
 .eventflight_container{
     background: #fff url(../../assets/Images/EventHero.svg) no-repeat;
+    background-size: cover;
     padding: 5rem 5rem;
 }
 .eventflight_head h1{

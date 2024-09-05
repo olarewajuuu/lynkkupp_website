@@ -36,7 +36,7 @@
 .navItems ul li a {
   text-decoration: none;
   color: #000;
-  font-size: 16px;
+  /* font-size: 19px; */
 }
 
 .navBtn {
@@ -69,6 +69,22 @@
 .navButtonPat:hover{
   background-color: #039dda;
 }
+
+.navButtonPattern {
+  background-color: #55bfea;
+  color: #fff;
+  border: 1px solid #55bfea;
+  font-size: 14px;
+  cursor: pointer;
+  width: 246px;
+  height: 40px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+}
+.navButtonPattern:hover{
+  background-color: #039dda;
+}
+
 
 .navItems ul li a:hover,
 .navItems ul li a.active {
@@ -106,9 +122,9 @@
   .cross{
     font-size: 16px;
     color: #039dda;
-    position: relative;
-    top: 60px;
-    right: 410px;
+    position: sticky;
+    top: 70px;
+    right: 0px;
     z-index: 10;
   }
   .handbuger{

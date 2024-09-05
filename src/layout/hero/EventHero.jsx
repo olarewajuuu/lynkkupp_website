@@ -16,7 +16,7 @@ const EventHero = () => {
           <h4>Your perfect stop for flights, hotels and tickets booking</h4>
         </div>
         <div>
-        <div>
+        <div className="ml-20">
             <ul className="event_link">
               <li className="evennt flex justify-end items-center gap-2 cursor-pointer">
                   <img src={FlightImg} alt="" className="w-5" />

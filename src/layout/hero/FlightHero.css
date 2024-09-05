@@ -1,5 +1,6 @@
 .flight_container{
     background: #fff url(../../assets/Images/FlightHero.svg) no-repeat;
+    background-size: cover;
     padding: 5rem 5rem;
 }
 .flight_head h1{
@@ -81,6 +82,17 @@
     font-size: 12px;
     /* px-2 bg-[#0588BD] text-[#fff] h-6 w-36 */
 }
+/* select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    border: none;
+  }
+select:focus{
+    border: none;
+    outline: none;
+  } */
 
 @media screen and (max-width: 760px) {
     .flight_container{

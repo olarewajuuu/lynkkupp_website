@@ -70,19 +70,19 @@ const Navbar = () => {
 							</li>
 							<p className="products flex mt-12 mr-4 md:hidden">Our products</p>
 							<li  onClick={handleClicked}>
-								<NavLink to="/" activeClassName="active" className="flex">
+								<NavLink to="/" activeClassName="active" className="flex text-[19px] font-[400]">
 									<img src={flightImg} alt="" className="flex mr-4 md:hidden"/>
 									Flights
 								</NavLink>
 							</li>
 							<li  onClick={handleClicked}>
-								<NavLink to="/hotels" activeClassName="active" className="flex">
+								<NavLink to="/hotels" activeClassName="active" className="flex text-[19px] font-[400]">
 								<img src={hotelImg} alt="" className="flex mr-4 md:hidden"/>
 									Hotels
 								</NavLink>
 							</li>
 							<li  onClick={handleClicked}>
-								<NavLink to="/events" activeClassName="active" className="flex">
+								<NavLink to="/events" activeClassName="active" className="flex text-[19px] font-[400]">
 								<img src={eventImg} alt="" className="flex mr-4 md:hidden"/>
 									Events
 								</NavLink>
@@ -90,7 +90,7 @@ const Navbar = () => {
 							<li onClick={handleClicked}>
 								<NavLink
 									to="/hotels"
-									activeClassName="active" className="flex"
+									activeClassName="active" className="flex text-[19px] font-[400]"
 									onClick={toggleOverlay}
 								>
 									<img src={flight_hotelImg} alt="" className=" mr-2 md:hidden"/>
@@ -114,27 +114,27 @@ const Navbar = () => {
 							</li>
 							<p className="settings flex mr-4 md:hidden">Settings</p>
 							<li  onClick={handleClicked}>
-								<NavLink to="/flight-status" activeClassName="active" className="flex">
+								<NavLink to="/flight-status" activeClassName="active" className="flex text-[19px] font-[400]">
 								<img src={flightstatusImg} alt="" className="flex mr-4 md:hidden"/>
 									Flight status
 								</NavLink>
 							</li>
-
-							<span className="space"></span>
+						
+							<span className="space mx-10"></span>
 							<li  onClick={handleClicked}>
-								<NavLink to="/support" className="flex">
-								<img src={supportImg} alt="" className="flex mr-4 md:hidden"/>
+								<NavLink to="/support" className="flex text-[13px] font-[400]">
+								<img src={supportImg} alt="" className="flex mr-4 md:hidden "/>
 								Support
 								</NavLink>
 							</li>
 							<li  onClick={handleClicked}>
-								<NavLink to="/ngn" className="flex">
+								<NavLink to="/ngn" className="flex text-[13px] font-[400]">
 								<img src={countryImg} alt="" className="flex mr-4 md:hidden"/>
 								NGN
 								</NavLink>
 							</li>
 							<li  onClick={handleClicked}>
-								<NavLink to="/manage-booking" className="manageBooking flex">
+								<NavLink to="/manage-booking" className="manageBooking flex text-[13px] font-[400]">
 								<img src={manageImg} alt="" className="flex mr-4 md:hidden"/>
 								Manage Booking
 								</NavLink>
@@ -146,7 +146,7 @@ const Navbar = () => {
 					</div>
 					<div onClick={handleClicked}>
 						<NavLink to="/hotelpartner" activeClassName="active" className="navButtonPattern">
-							Partner Form
+						Partner with us
 						</NavLink>
 					</div>
 						</ul>
