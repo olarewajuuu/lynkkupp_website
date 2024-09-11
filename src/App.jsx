@@ -12,6 +12,7 @@ import HotelPartnerForm from "./components/auth/HotelPartnerForm";
 import HotelPartnerForm2 from "./components/auth/HotelPartnerForm2";
 import HotelPartnerForm3 from "./components/auth/HotelPartnerForm3";
 import HotelPartnerForm4 from "./components/auth/HotelPartnerForm4";
+import SearchHotel from "./pages/Book Hotel/SearchHotel"
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 				<Routes>
 					<Route exact path="/" element={<Flights />} />
 					<Route exact path="hotels" element={<Hotels />} />
+					<Route exact path="/hotel-booking" element={<SearchHotel />} />
 					<Route exact path="events" element={<Events />} />
 					<Route exact path="flight-status" element={<FlightStatus />} />
 					<Route exact path="flight-status" element={<Support />} />
