@@ -4,10 +4,12 @@ import ToFroArrow from "../assets/Images/To&FroArrow.svg";
 import Flight_HotelCalender from "../utility/Flight_HotelCalendar";
 import RoomDetails from "../utility/RoomDetails";
 
+
 const Flight_Hotel = () => {
 	const [destinationFrom, setDestinationFrom] = useState("Radisson Blue");
 	const [destinationTo, setDestinationTo] = useState("Summit Resort");
 
+	
 	return (
 		<div>
 			<div className="flex flex-col-reverse md:flex-col items-center justify-center">
@@ -39,7 +41,7 @@ const Flight_Hotel = () => {
 
 						<Flight_HotelCalender />
 						<RoomDetails />
-						<button className="bg-[#55BFEA] text-white text-[19px] w-full font-bold md:w-[162px] h-[70px] rounded-md">
+						<button className="bg-[#55BFEA] text-white text-[19px] w-full font-bold md:w-[162px] h-[70px] rounded-md" >
 							Search
 						</button>
 					</form>
