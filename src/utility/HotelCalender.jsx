@@ -6,15 +6,14 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
 
-const HotelCalender = () => {
+// eslint-disable-next-line react/prop-types
+const HotelCalender = ({ checkInDate, setCheckInDate, checkOutDate, setCheckOutDate }) => {
 	const [openDate, setOpenDate] = useState(false);
-	const [date, setDate] = useState([
-		{
-			startDate: new Date(),
-			endDate: new Date(),
-			key: "selection",
-		},
-	]);
+
+	const handleSelect = (ranges) => {
+		setCheckInDate(ranges.selection.startDate);
+		setCheckOutDate(ranges.selection.endDate);
+	}
 
 	return (
 		<div>
@@ -24,7 +23,7 @@ const HotelCalender = () => {
 					<span
 						onClick={() => setOpenDate(!openDate)}
 						className="hoteldateMonth"
-					>{`${format(date[0].startDate, "dd/MM/yy")} `}</span>
+					>{`${format(checkInDate, "dd/MM/yy")} `}</span>
 				</div>
 
 				<div className="hotelreturningNow">
@@ -32,15 +31,19 @@ const HotelCalender = () => {
 					<span
 						onClick={() => setOpenDate(!openDate)}
 						className="hoteldateMonth"
-					>{`${format(date[0].endDate, "dd/MM/yy")} `}</span>
+					>{`${format(checkOutDate, "dd/MM/yy")} `}</span>
 				</div>
 
 				{openDate && (
 					<DateRange
 						editableDateInputs={true}
-						onChange={(item) => setDate([item.selection])}
+						onChange={handleSelect}
 						moveRangeOnFirstSelection={false}
-						ranges={date}
+						ranges={[{
+							startDate: checkInDate,
+							endDate: checkOutDate,
+							key: "selection"
+						}]}
 						months={2}
 						className="hoteldate"
 						direction="horizontal"
