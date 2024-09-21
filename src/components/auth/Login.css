@@ -1,23 +1,17 @@
-/* .singin_container .overlay {
-  width: 70vw;
-  height: 70vh;
-  top: 0;
-  left: 0;
-  position: fixed;
-} */
+
 .login_container {
     max-width: 400px;
+    height: 630px;
     background-color: #fff;
-    padding: 1.5rem 0rem;
+    padding: 0rem 0rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 0px;
+    right: 0px;
     z-index: 20;
-    /* border: 1px solid ; */
   }
   .login_content {
     padding: 0rem 3.5rem;
@@ -124,29 +118,17 @@
     .silogin_container .overlay {
       display: none;
     }
-    .login_container {
-      max-width: 400px;
-      background-color: #fff;
-      padding: 0.5rem 0rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      top: 20px;
-      right: 0px;
-      z-index: 20;
-    }
+    
     .login_mobile {
       display: block;
       background-color: #55bfea;
-      padding: 0px 35px;
+      padding: 0px 5px;
       color: #fff;
       font-size: 14px;
       line-height: 22.4px;
       text-align: left;
       width: 100%;
-      margin-bottom: 50px;
+      margin-bottom: 10px;
       margin-left: 0px;
     }
 

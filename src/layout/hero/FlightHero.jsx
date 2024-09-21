@@ -9,8 +9,10 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import Calendar from "../../utility/Calendar";
-import SearchItems from "./SearchItems";
+// import SearchItems from "./SearchItems";
 import BookData from "../../Data.json"
+import AutoCompleteSearch from "./AutoCompleteSearch";
+import SearchItems from "./SearchItems";
 
 const FlightHero = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -127,12 +129,12 @@ const FlightHero = () => {
                     <option value="" className="bg-[#fff] text-[#23222259]" >First class</option>
                   </select>
                 </div>
-                <div className="dropdown relative ">
+                <div className="dropdown relative">
                   <p
                     onClick={toggleDropdown}
-                    className="dropDown cursor-pointer flex gap-2 py-1 text-[15px] px-2"
+                    className="dropDown cursor-pointer flex gap-2 py-1 text-[11px] md:text-[15px] px-2"
                   >
-                  {`${adult + children + infant} `} passengers <img src={dropDownIcon} />
+                    {`${adult + children + infant} `} passengers <img src={dropDownIcon} />
                   </p>
                   {isOpen && (
                     <div className="dropdownContent px-6 py-8 text-[#000] bg-[#fff] mt-4 absolute top-5 z-10">
@@ -208,17 +210,17 @@ const FlightHero = () => {
               </div>
               <div className="date_container flex mt-2 ">
                 <div className="flying">
-                  <div className="going bg-[#fff] px-4 py-2 mb-1 cursor-pointer"
+                  <div className="going bg-[#fff] px-4 py-2 cursor-pointer mb-3 md:mb-1"
                   // onClick={toggleSearch}
                   >
                     <p className="flex gap-3 text-[#99A0A8] font-bold ">
                       <img src={flyingImg} alt="" />
-                      Flying from ? 
+                      Flying from ?
                     </p>
 
-                    <p className="ml-7 text-[#99A0A8]"></p>
-                    <SearchItems  data={BookData}/>
-                    
+                    {/* <p className="ml-7 text-[#99A0A8]"></p> */}
+                    <AutoCompleteSearch className="ml-7 text-[#99A0A8]"/>
+
                   </div>
                   <div className="going bg-[#fff] px-4 py-2">
                     <p className="flex gap-3 text-[#99A0A8] font-bold">
@@ -226,17 +228,13 @@ const FlightHero = () => {
                       <img src={goingImg} alt="" />
                       Going to ?
                     </p>
-                    <input
-                      type="search"
-                      placeholder="City or airport"
-                      className="ml-7"
-                    />
+                  <SearchItems />
                   </div>
                 </div>
                 <div className="leaving">
                   <Calendar />
                 </div>
-                <div className="lynkup">
+                <div className="lynkup cursor-pointer">
                   <h4>LynKKupp</h4>
                 </div>
               </div>

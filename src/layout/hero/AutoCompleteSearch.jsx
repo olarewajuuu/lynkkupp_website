@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const SearchItems = () => {
+const AutoCompleteSearch = () => {
     // Array of objects with name, id, and age
     const people = [
         {
@@ -48,14 +48,12 @@ const SearchItems = () => {
     // Handle suggestion selection
     const handleSuggestionClick = (person) => {
         setSearchTerm(person.name);
-        // setRecentSearches(person.name);
         setShowSuggestions(false);
 
         // Update recent searches if the person is not already in recentSearches
         setRecentSearches((prevSearches) => {
             const isAlreadyInSearches = prevSearches.some(
                 (search) => search.name === person.name
-              
             );
 
             if (!isAlreadyInSearches) {
@@ -63,7 +61,7 @@ const SearchItems = () => {
                 const updatedSearches = [person, ...prevSearches];
                 return updatedSearches.slice(0, 2); // Keep only the 2 most recent searches
             }
-            setRecentSearches(person.name)
+
             return prevSearches;
         });
     };
@@ -80,14 +78,14 @@ const SearchItems = () => {
 
             {/* Render the list of filtered suggestions */}
             {showSuggestions && searchTerm && (
-                <div className='absolute top-[550px] left-[320px] bg-white z-30 w-[312px]'>
+                <div className='absolute top-[480px] left-[320px] bg-white z-30 w-[312px]'>
 
                     <h3 className='text-[13px] bg-[#55BFEA] font-[700] text-white px-4 py-[2px]'>RECENT SEARCHES</h3>
                     {recentSearches.length > 0 && (
                         <div className='mx-4 my-2'>
                             {recentSearches.map((person, index) => (
-                                <div key={index} onClick={() => handleSuggestionClick(person)} className='border-b-[1px] border-solid border-[#23222259] py-1'>
-                                    <div className='flex justify-between text-[13px] cursor-pointer'>
+                                <div key={index} className='border-b-[1px] border-solid border-[#23222259] py-1'>
+                                    <div className='flex justify-between text-[13px]'>
                                     <span > {person.name}  </span> 
                                     <span>{person.abbrevation}</span>
                                     </div>
@@ -104,8 +102,8 @@ const SearchItems = () => {
                     {filteredPeople.length > 0 ? (
                         filteredPeople.map((person, index) => (
                             <div key={index} onClick={() => handleSuggestionClick(person)}>
-                                <div key={index} className='border-b-[1px] border-solid border-[#23222259]  py-1 '>
-                                    <div className='flex justify-between text-[13px] cursor-pointer'>
+                                <div key={index} className='border-b-[1px] border-solid border-[#23222259]  py-1'>
+                                    <div className='flex justify-between text-[13px]'>
                                     <span > {person.name}  </span> 
                                     <span>{person.abbrevation}</span>
                                     </div>
@@ -136,4 +134,4 @@ const SearchItems = () => {
     );
 };
 
-export default SearchItems;
+export default AutoCompleteSearch;

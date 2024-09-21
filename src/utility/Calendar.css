@@ -45,12 +45,12 @@
     border-radius: 0px 5px 5px 0px;
     cursor: pointer;
 }
-.calenderImg{
+/* .calenderImg{
     width: 20px;
     position: absolute;
     top: 20px;
     left: 10px;
-}
+} */
 .datetext{
     font-size: 10px;
     font-weight: 700;
@@ -129,12 +129,12 @@
         cursor: pointer;
         position: relative;
     }
-    .calenderImg{
+    /* .calenderImg{
         width: 20px;
         position: absolute;
         top: 0px;
         left: 0px;
-    }
+    } */
     .datetext{
         font-size: 10px;
         font-weight: 700;

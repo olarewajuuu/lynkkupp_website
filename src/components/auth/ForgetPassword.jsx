@@ -55,7 +55,7 @@ const ForgetPassword = ({toggleForgetpassword}) => {
       onClick={(e) => e.stopPropagation()}
       >
       <div className="forget_mobile" >
-      <p onClick={toggleForgetpassword}  className="mobile md:flex items-center gap-0 text-white"> <img src={backImg }  /> Sign in</p>
+      <p onClick={toggleForgetpassword}  className="mobile md:flex items-center gap-0 text-white"> <img src={backImg }  /> Password reset</p>
       </div>
 
         {/* <div className="overlay" onClick={cancelSignin} ></div> */}
@@ -78,11 +78,13 @@ const ForgetPassword = ({toggleForgetpassword}) => {
           <div className="forgetBtn">
             <button type="submit" onClick={handleSubmit}>Send reset link</button>
           </div>
-          <p className="text">
+          <br />
+          <hr />
+          <p className="text-center text-[13px] mt-7">
             {" "}
             By signing in or creating an account, you agree with our{" "}
             <a href="" target="_blank" className="text-[#55bfea]">
-              Terms & conditions and Privacy statement
+              Terms & conditions
             </a>{" "}
             and{" "}
             <a href="" target="_blank" className="text-[#55bfea]">

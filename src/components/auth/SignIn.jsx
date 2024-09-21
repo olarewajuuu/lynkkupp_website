@@ -58,7 +58,7 @@ const SignIn = ({cancelSignin}) => {
       >
        
       <div className="login_mobile" >
-      <p onClick={cancelSignin}  className="mobile md:flex items-center gap-0 text-white"> <img src={backImg }/> Sign in</p>
+      <p onClick={cancelSignin}  className="mobile md:flex items-center gap-0 text-white"> <img src={backImg }/> Create account</p>
       </div>
 
         {/* <div className="overlay" onClick={cancelSignin} ></div> */}
@@ -80,20 +80,20 @@ const SignIn = ({cancelSignin}) => {
           </div>
           <p className="altsignin">Or login with</p>
           <div className="socialIcons">
-            <div className="icon">
-              <img src={fbImg} alt="" />
-              <p>Facebook</p>
+            <div className="flex flex-col justify-center items-center ">
+              <img src={fbImg} alt="" className="w-[30px]"/>
+              <p className="text-[#23222259] text-[13px]">Facebook</p>
             </div>
-            <div className="icon">
-              <img src={ggImg} alt="" />
-              <p>Google</p>
+            <div className="flex flex-col justify-center items-center ">
+              <img src={ggImg} alt=""className="w-[30px]" />
+              <p className="text-[#23222259] text-[13px]">Google</p>
             </div>
           </div>
-          <p className="text">
+          <p className="text-center text-[13px] mt-7">
             {" "}
             By signing in or creating an account, you agree with our{" "}
             <a href="" target="_blank" className="text-[#55bfea]">
-              Terms & conditions and Privacy statement
+              Terms & conditions
             </a>{" "}
             and{" "}
             <a href="" target="_blank" className="text-[#55bfea]">

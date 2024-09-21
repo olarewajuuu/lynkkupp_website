@@ -13,7 +13,7 @@ const ResetLink = ({cancelReset}) => {
       onClick={(e) => e.stopPropagation()}
       >
       <div className="reset_mobile" >
-      <p onClick={cancelReset}  className="mobile md:flex items-center gap-0 text-white"> <img src={backImg }  /> Sign in</p>
+      <p onClick={cancelReset}  className="mobile md:flex items-center gap-0 text-white"> <img src={backImg }  /> Password reset</p>
       </div>
 
         {/* <div className="overlay" onClick={cancelSignin} ></div> */}
@@ -26,18 +26,22 @@ const ResetLink = ({cancelReset}) => {
           <div className="resetBtn">
             <button type="submit" >Back to sign in</button>
           </div>
-          <p className="resettext">
+          <br />
+          <hr />
+          <p className="text-center text-[13px] mt-7">
             {" "}
             By signing in or creating an account, you agree with our{" "}
             <a href="" target="_blank" className="text-[#55bfea]">
-              Terms & conditions and Privacy statement
+              Terms & conditions
             </a>{" "}
             and{" "}
             <a href="" target="_blank" className="text-[#55bfea]">
               Privacy statement
             </a>
           </p>
+          
         </div>
+        
       </div>
       {/* {resetlink && <Password cancelPassword = {handleSubmit} /> } */}
     </div>

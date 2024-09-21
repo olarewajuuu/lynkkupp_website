@@ -17,11 +17,7 @@
       "abbrevation": "ANA"
     },
     
-    {
-      "name": "Eboyin state International Airport",
-      "location": "Eboyin",
-      "abbrevation": "EBO"
-    },
+
     
     {
       "name": "Murtala Muhammed International Airport",
@@ -30,4 +26,5 @@
     }
     
   ]
+  
   

@@ -124,6 +124,7 @@ select:focus{
         position: absolute;
         top: -40px;
         left: 330px;
+        margin-bottom: 120px;
         /* width: 428px; */
     }
     .flight_head h1{
@@ -224,14 +225,16 @@ select:focus{
     }
     #Econonmy, #trip{
         font-size: 12px;
-        width: 100px;
+        width: 90px;
+        margin-bottom: 20px;
     }
     .dropDown{
-        width: 110px;
+        width:110px;
         background-color: #0588BD;
         color: #ffff;
-        padding: 2px;
-        font-size: 12px;
+        /* padding: 2px; */
+        /* font-size: px; */
+        margin-bottom: 20px;
         /* px-2 bg-[#0588BD] text-[#fff] h-6 w-36 */
     }
     .dropdownContent{

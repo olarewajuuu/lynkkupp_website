@@ -6,7 +6,8 @@ import backImg from "../../assets/Images/ep_back.svg"
 import { useState } from "react";
 import SignIn from "./SignIn";
 import ForgetPassword from "./ForgetPassword";
-
+import { LuEye } from "react-icons/lu";
+import { LuEyeOff } from "react-icons/lu";
 
   
 
@@ -122,7 +123,7 @@ const Login = ({cancelSignin}) => {
       onClick={(e) => e.stopPropagation()}
       >
       <div className="login_mobile" >
-      <p onClick={cancelSignin}  className="mobile md:flex items-center gap-0 text-white"> <img src={backImg }  /> Sign in</p>
+      <p onClick={cancelSignin}  className="mobile md:flex items-center gap-0 text-white"> <img src={backImg }  />Sign in/ create account</p>
       </div>
 
         <div className="overlay" onClick={cancelSignin} ></div>
@@ -138,7 +139,7 @@ const Login = ({cancelSignin}) => {
               onChange={handleChange}
             />
             {errors.email && <span className="errors">{errors.email}</span>} 
-
+              <br />
             <div>
             <label htmlFor="password">Password</label>
           <br />
@@ -151,7 +152,7 @@ const Login = ({cancelSignin}) => {
               onChange={handlePasswordChange}
             />
             <span onClick={toggleShowPassword} className="showPassword">
-              {showPassword ? "❌" : "👁️"}
+              {showPassword ? <LuEyeOff /> : <LuEye />}
             </span>
           </div>
             <a onClick={toggleForgetpassword} className="text-[11px] text-[#55bfea] float-right mt-2 cursor-pointer">Forgotten your password?</a>
@@ -162,26 +163,27 @@ const Login = ({cancelSignin}) => {
           <div className="loginBtn">
             <button type="submit"onClick={handleSubmit}>Signin</button>
           </div>
-          <div className="createAccount">
+          <div className="createAccount" >
             <button type="submit" onClick={toggleSignin} >Create account</button>
           </div>
           <p className="altlogin">Or signin with</p>
           <div className="loginsocialIcons">
-            <div className="loginicon">
-              <img src={fbImg} alt="" />
-              <p>Facebook</p>
+            <div className="flex flex-col justify-center items-center ">
+              <img src={fbImg} alt="" className="w-[30px]"/>
+              <p className="text-[#23222259] text-[13px]">Facebook</p>
             </div>
-            <div className="loginicon">
-              <img src={ggImg} alt="" />
-              <p>Google</p>
+            <div className="flex flex-col justify-center items-center ">
+              <img src={ggImg} alt="" className="w-[30px]"/>
+              <p className="text-[#23222259] text-[13px]">Google</p>
             </div>
 
           </div>
-          <p className="logintext">
+          <br />
+          <p className="text-center text-[13px]">
 
             By signing in or creating an account, you agree with our{" "}
             <a href="" target="_blank"  className="text-[#55bfea]">
-              Terms & conditions and Privacy statement
+              Terms & conditions
             </a>{" "}
             and{" "}
             <a href="" target="_blank" className="text-[#55bfea]">

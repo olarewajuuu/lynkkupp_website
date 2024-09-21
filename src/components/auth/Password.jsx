@@ -1,6 +1,10 @@
 import { useState } from "react";
 import backImg from "../../assets/Images/ep_back.svg";
 import "./Password.css";
+import { LuEye } from "react-icons/lu";
+import { LuEyeOff } from "react-icons/lu";
+
+
 
 const Password = ({ cancelPassword }) => {
   // const [password, setPassword] = useState('');
@@ -72,7 +76,7 @@ const Password = ({ cancelPassword }) => {
         {/* <div className="overlay" onClick={cancelPassword}></div> */}
         <div className="password_mobile">
           <p className="mobile md:flex items-center gap-0 text-white">
-            <img src={backImg} onClick={cancelPassword} /> Sign in
+            <img src={backImg} onClick={cancelPassword} /> Create password
           </p>
         </div>
         <h3>Create password</h3>
@@ -92,12 +96,12 @@ const Password = ({ cancelPassword }) => {
               onChange={handlePasswordChange}
             />
             <span onClick={toggleShowPassword} className="showPassword">
-              {showPassword ? "❌" : "👁️"}
+              {showPassword ? <LuEyeOff /> : <LuEye />}
             </span>
           </div>
           <span className="password_errors">{validationMessage}</span>
           <br />
-          <br />
+          
           <label htmlFor="">Confirm Password</label>
           <br />
 
@@ -110,7 +114,7 @@ const Password = ({ cancelPassword }) => {
               onChange={handleConfirmPasswordChange}
             />
             <span onClick={toggleShowPassword} className="showConfirmPassword">
-              {showPassword ? "❌" : "👁️"}
+              {showPassword ? <LuEyeOff /> : <LuEye />}
             </span>
           </div>
           <span className="password_errors">{confirmMessage}</span>
@@ -118,17 +122,19 @@ const Password = ({ cancelPassword }) => {
         <div className="passwordBtn">
           <button type="submit">Create account</button>
         </div>
-        <p className="passwordtext">
-          {" "}
-          By signing in or creating an account, you agree with our{" "}
-          <a href="" target="_blank">
-            Terms & conditions and Privacy statement
-          </a>{" "}
-          and{" "}
-          <a href="" target="_blank">
-            Privacy statement
-          </a>
-        </p>
+        <br />
+        <hr />
+        <p className="text-center text-[12px] mt-3">
+
+            By signing in or creating an account, you agree with our{" "}
+            <a href="" target="_blank"  className="text-[#55bfea]">
+              Terms & conditions
+            </a>{" "}
+            and{" "}
+            <a href="" target="_blank" className="text-[#55bfea]">
+              Privacy statement
+            </a>
+          </p>
       </div>
     </div>
   );

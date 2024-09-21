@@ -22,8 +22,9 @@ const Calendar = () => {
       onClick={(e) => e.stopPropagation()}
       >
         {/* <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" /> */}
-        <img src={claendarImg} alt="" className="calenderImg" />
-        <div className="leavingNow">
+        
+        <div className="leavingNow relative">
+        <img src={claendarImg} alt="" className=" absolute left-2 top-3 md:top-6 md:left-2" />
           <p className="datetext">Leaving on</p>
           <span
             onClick={() => setOpenDate(!openDate)}
@@ -40,7 +41,8 @@ const Calendar = () => {
           >{`${format(date[0].startDate, "eeee")} `}</span>
         </div>
 
-        <div className="returningNow">
+        <div className="returningNow relative">
+        <img src={claendarImg} alt="" className=" absolute left-2 top-3 md:top-6 md:left-2" />
           <p className="datetext">Returning on</p>
           <span
             onClick={() => setOpenDate(!openDate)}

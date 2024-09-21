@@ -1,26 +1,22 @@
-/* .singin_container .overlay {
-  width: 70vw;
-  height: 70vh;
-  top: 0;
-  left: 0;
-  position: fixed;
-} */
+
 .singin_container {
   max-width: 400px;
+  height: 630px;
   background-color: #fff;
-  padding: 3.5rem 0rem;
+  padding: 0rem 0rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 0px;
+  right: 0px;
   z-index: 20;
   /* border: 1px solid ; */
 }
 .signin_content {
-  padding: 0rem 2.5rem;
+  padding: 0rem 3.5rem;
+  padding-top: 50px;
 }
 .signin_content h3 {
   font-size: 23px;
@@ -50,7 +46,7 @@
   border: 0.5px solid #494949;
 }
 .signinBtn button {
-  margin: 10px auto;
+  margin: 20px auto;
   width: 300px;
   height: 42px;
   padding: 10px 30px 10px 30px;
@@ -70,7 +66,7 @@
   font-weight: 400;
   text-align: center;
   color: #23222259;
-  margin-top: 25px;
+  margin-top: 5px;
   margin-bottom: 25px;
 }
 .socialIcons {
@@ -112,19 +108,7 @@
   .singin_container .overlay {
     display: none;
   }
-  .singin_container {
-    max-width: 400px;
-    background-color: #fff;
-    padding: 0.5rem 0rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 20px;
-    right: 0px;
-    z-index: 20;
-  }
+
   .sign_mobil {
     max-width: 400px;
     background-color: #fff;
