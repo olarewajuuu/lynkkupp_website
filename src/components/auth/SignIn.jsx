@@ -2,6 +2,7 @@
 import "./SignIn.css";
 import fbImg from "../../assets/Images/Group 44.svg";
 import ggImg from "../../assets/Images/png-transparent-google-logo-google-text-trademark-logo-removebg-preview 1.svg";
+import lineImg from "../../assets/Images/Line 2.svg" 
 import backImg from "../../assets/Images/ep_back.svg" 
 import { useState } from "react";
 import Password from "./Password";
@@ -78,7 +79,13 @@ const SignIn = ({cancelSignin}) => {
           <div className="signinBtn">
             <button type="submit" onClick={handleSubmit}>Continue with email</button>
           </div>
-          <p className="altsignin">Or login with</p>
+          <br />
+          <div className="flex justify-center items-baseline gap-2">
+           <img src={lineImg} className="w-[100px]" alt="" />
+            <p className="altlogin ">Or signin with</p>
+            <img src={lineImg} className="w-[100px]" alt="" />
+          </div>
+          <br />
           <div className="socialIcons">
             <div className="flex flex-col justify-center items-center ">
               <img src={fbImg} alt="" className="w-[30px]"/>

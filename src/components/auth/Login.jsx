@@ -3,6 +3,7 @@ import fbImg from "../../assets/Images/Group 44.svg";
 import ggImg from "../../assets/Images/png-transparent-google-logo-google-text-trademark-logo-removebg-preview 1.svg";
 // import apImg from "../../assets/Images/Group 42.svg";
 import backImg from "../../assets/Images/ep_back.svg" 
+import lineImg from "../../assets/Images/Line 2.svg" 
 import { useState } from "react";
 import SignIn from "./SignIn";
 import ForgetPassword from "./ForgetPassword";
@@ -166,7 +167,13 @@ const Login = ({cancelSignin}) => {
           <div className="createAccount" >
             <button type="submit" onClick={toggleSignin} >Create account</button>
           </div>
-          <p className="altlogin">Or signin with</p>
+          <br />
+          <div className="flex justify-center items-baseline gap-2">
+           <img src={lineImg} className="w-[100px]" alt="" />
+            <p className="altlogin ">Or signin with</p>
+            <img src={lineImg} className="w-[100px]" alt="" />
+          </div>
+          
           <div className="loginsocialIcons">
             <div className="flex flex-col justify-center items-center ">
               <img src={fbImg} alt="" className="w-[30px]"/>
