@@ -84,7 +84,6 @@ const HotelHero = () => {
     checkOutDate: checkOutDate.toISOString().split("T")[0],
     rooms,
   };
-  console.log(searchData)
   navigate("/hotel-booking", { state: {searchData}});
 
   }
