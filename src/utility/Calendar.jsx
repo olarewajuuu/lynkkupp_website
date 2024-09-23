@@ -18,27 +18,27 @@ const Calendar = () => {
 
   return (
     <div>
-      <div className="headerSearchItem"
-      onClick={(e) => e.stopPropagation()}
+      < className="headerSearchItem"
+        onClick={(e) => e.stopPropagation()}
       >
         {/* <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" /> */}
-        <img src={claendarImg} alt="" className="calenderImg" />
-        <div className="leavingNow">
-          <p className="datetext">Leaving on</p>
-          <span
-            onClick={() => setOpenDate(!openDate)}
-            className="dateMonth"
-          >{`${format(date[0].startDate, "MMMM")} `}</span>
+          <img src={claendarImg} alt="" className="calenderImg" />
+          <div className="leavingNow">
+            <p className="datetext">Leaving on</p>
+            <span
+              onClick={() => setOpenDate(!openDate)}
+              className="dateMonth"
+            >{`${format(date[0].startDate, "MMMM")} `}</span>
 
-          <span
-            onClick={() => setOpenDate(!openDate)}
-            className="dateDay"
-          >{`${format(date[0].startDate, "dd")} `}</span>
-          <span
-            onClick={() => setOpenDate(!openDate)}
-            className="dateTextDay"
-          >{`${format(date[0].startDate, "eeee")} `}</span>
-        </div>
+            <span
+              onClick={() => setOpenDate(!openDate)}
+              className="dateDay"
+            >{`${format(date[0].startDate, "dd")} `}</span>
+            <span
+              onClick={() => setOpenDate(!openDate)}
+              className="dateTextDay"
+            >{`${format(date[0].startDate, "eeee")} `}</span>
+          </div>
 
         <div className="returningNow">
           <p className="datetext">Returning on</p>
@@ -59,7 +59,7 @@ const Calendar = () => {
 
         {openDate && (
           <DateRange
-          onClick={() => setOpenDate(!openDate)}
+            onClick={() => setOpenDate(!openDate)}
             editableDateInputs={true}
             onChange={(item) => setDate([item.selection])}
             moveRangeOnFirstSelection={false}
