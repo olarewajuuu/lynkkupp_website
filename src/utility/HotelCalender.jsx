@@ -45,6 +45,7 @@ const HotelCalender = ({ checkInDate, setCheckInDate, checkOutDate, setCheckOutD
 							key: "selection"
 						}]}
 						months={2}
+						// {/* The month panel can be edited here */}
 						className="hoteldate"
 						direction="horizontal"
 					/>
