@@ -18,7 +18,7 @@ const Calendar = () => {
 
   return (
     <div>
-      < className="headerSearchItem"
+      <div className="headerSearchItem"
         onClick={(e) => e.stopPropagation()}
       >
         {/* <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" /> */}
