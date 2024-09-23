@@ -34,7 +34,7 @@ function App() {
 					<Route exact path="hotelpartner4" element={<HotelPartnerForm4 />} />
 				</Routes>
 				<br />
-				<Footer />
+				<Footer /> 
 			</Router>
 		</>
 	);
