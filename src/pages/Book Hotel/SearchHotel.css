@@ -1,0 +1,191 @@
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+.searchNav{
+    font-size: 0.6875rem;
+    display: grid;
+    width: 100vw;
+    background-color: #55BFEA;
+    padding: 1.375rem 1.625rem 0.9375rem 1rem;
+}
+.searchNav_1{
+    display: flex;
+    justify-content: start;
+    gap: 1em;
+    line-height: 140%;
+}
+.searchNav_2{
+    display: flex;
+    justify-content: end;
+}
+.searchNav_2 button{
+    border: 1.5px solid white;
+    border-radius: 5px;
+    padding: 0.9090em 2.7272em;
+    color: var(--White, #FFF);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-top: 0.0625rem;
+    line-height: 140%;
+}
+.searchNav_3{
+    margin-top: 0.6875rem;
+    
+}
+.searchResult{
+    padding-inline: 1rem 1.625rem;
+    padding-block-start: 0.9375rem;
+    background-color:  #EFEFEF;
+}
+.searchResult_1{
+    display: flex;
+    justify-content: space-between;
+}
+.searchResult_1 .contact{
+    margin-right: 1.2081rem;
+}
+.searchResult_1_child{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.0625rem;
+}
+.searchResult_1_child button{
+    border-radius: 2px;
+    background: #55BFEA;
+    color: #FFF;
+    padding: 0.7272em 1.5454em 0.7272em 0.7272em;
+    
+}
+.searchResult_1_child p{
+    font-weight: 700;
+    margin-top: 1.0625em;
+}
+.searchResult_1_child img{
+    display: inline;
+    width: 1.0909em;
+    height: 1.0909em;
+    /* margin-right: 0.8181em; */
+}
+.searchResult_2_child{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.6571fr 1fr 1.5143fr;
+    font-size: 0.5rem;
+    padding: 1.875em 2.5em 2em 3.5em;
+    background: var(--White, #FFF);
+    margin-top: 1.25rem;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.searchResult_2_child .hotel_description{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.0625em;
+    border-bottom: 0.6px solid #23222233;
+    margin-top: 1em;
+}
+.searchResult_2_child .hotel_description span{
+    font-weight: 700;
+    font-size: 1.1875rem;
+}
+.searchResult_2_child .hotel_description .hotel_description_child{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 19.16%;
+    margin-top: 1.6875em;
+}
+.searchResult_2_child .hotel_description .hotel_description_child_1{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.searchResult_2_child .hotel_description .hotel_description_child_1 p:nth-child(1){
+    font-size: 0.75em;   
+    color: white;
+    background-color:#55BFEA;
+    padding: 0.4em 1.8em 0.15em 1.5em;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+.searchResult_2_child .hotel_description .hotel_description_child_1 p:nth-child(2){
+    font-weight: 500;
+}
+.searchResult_2_child .hotel_description .hotel_description_child_2{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.searchResult_2_child .hotel_description .hotel_description_child_2 img{
+    width: 1.5em;
+    height: 1.5em;
+    
+}
+.searchResult_2_child .hotel_details{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 31.55%;
+        margin-top: 1.625em;
+}
+.searchResult_2_child .hotel_details div:nth-child(1) ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2.125em;
+}
+.searchResult_2_child .hotel_details div:nth-child(1) ul img{
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 0.25em;
+}
+.searchResult_2_child .hotel_details div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.searchResult_2_child .hotel_details div span:nth-child(1){
+    font-size: 2.375em;
+    font-weight: 700;
+    line-height: 140%;
+    color: var(--Secondary-states-Black, #494949);
+}
+.searchResult_2_child .hotel_details div span:nth-child(1) img{
+    display: inline;
+    width: 0.79em;
+    height: 0.79em;
+    margin-right: 0.1em;
+}
+
+
+.searchResult_2_child .hotel_details div button{
+    font-size: 1.625em;
+    padding: 1.25em 3.75em;
+    background-color:  #55BFEA;
+    border-radius: 5px;
+    white-space: nowrap;
+    color:  #FFF;
+    margin-top: 2em;
+}
+.searchResult_3{
+    font-size: 1rem;
+    border: 1.5px solid #55BFEA;
+    border-radius: 5px;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 1.6875em;
+    margin-bottom: 4.625em;
+}
+.searchResult_3 button{
+    padding: 0.625em 1.875em;
+}
