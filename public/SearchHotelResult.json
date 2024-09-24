@@ -126,5 +126,197 @@
             "Air conditioning"
         ],
         "price": "171,500"
+    },
+    {
+        "id": 9,
+        "location_city": "Lagos",
+        "hotel_name": "Lagos Oriental Hotel",
+        "hotel_address": "3, maroko road, lekki - epe express way, 3, lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Lagos_Oriental_Hotel.png",
+        "number_of_reviews": 489,
+        "comment": "wonderful",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": "132,000"
+    },
+    {
+        "id": 10,
+        "location_city": "Lagos",
+        "hotel_name": "The George Hotel Ikoyi",
+        "hotel_address": "30 lugard road, ikoyi, lagos, Nigeria.",
+        "hotel_image": "src/assets/searchResultsImg/The_George_Hotel_Ikoyi.png",
+        "number_of_reviews": 473,
+        "comment": "wonderful",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": "259,000"
+    },
+    {
+        "id": 11,
+        "location_city": "Lagos",
+        "hotel_name": "The View",
+        "hotel_address": "1, godwin omene street, chief collins uchidiuno, off fola osibo, lekki phase 1, lagos, Nigeria.",
+        "hotel_image": "src/assets/searchResultsImg/The_View.png",
+        "number_of_reviews": 490,
+        "comment": "wonderful",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": "126,000"
+    },
+    {
+        "id": 12,
+        "location_city": "Lagos",
+        "hotel_name": "Ellyxville Hotel",
+        "hotel_address": "no 8 africa lane, off admiralty road, lekki phase 1, lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Ellyxville_Hotel.png",
+        "number_of_reviews": 90,
+        "comment": "Good",
+        "ratings": "3/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": "49,500"
+    },
+    {
+        "id": 13,
+        "location_city": "Abuja",
+        "hotel_name": "Abuja Continental Hotel",
+        "hotel_address": "1 ladi Kwali St, Wuse Zone 4, Abuja 900281, Federal Capital Territory",
+        "hotel_image": "src/assets/searchResultsImg/Abuja_Continental_Hotel.png",
+        "number_of_reviews": 3500,
+        "comment": "wonderful",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": "423,000"
+    },
+    {
+        "id": 14,
+        "location_city": "Abuja",
+        "hotel_name": "Day Spring Hotel",
+        "hotel_address": "Zone 6, Plot 4 Juba St, Wuse, Abuja 904101, Federal Capital Territory",
+        "hotel_image": "src/assets/searchResultsImg/Day_Spring_Hotel.png",
+        "number_of_reviews": 763,
+        "comment": "wonderful",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": "170,000"
+    },
+    {
+        "id": 15,
+        "location_city": "Abuja",
+        "hotel_name": "Fraser Suite Abuja",
+        "hotel_address": "294 Leventis Close, Central Business District, Abuja 900103, Federal Capital Territory",
+        "hotel_image": "src/assets/searchResultsImg/Fraser_Suite_Abuja.png",
+        "number_of_reviews": 5747,
+        "comment": "wonderful",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": "387,500"
+    },
+    {
+        "id": 16,
+        "location_city": "Abuja",
+        "hotel_name": "Centurion Apartments",
+        "hotel_address": "30, kitwe street, wuse zone 4, Wuse Zone 4, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Centurion_Apartments.png",
+        "number_of_reviews": 220,
+        "comment": "Good",
+        "ratings": "3/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": "171,500"
+    },
+    {
+        "id": 17,
+        "location_city": "Lagos",
+        "hotel_name": "Lagos Oriental Hotel",
+        "hotel_address": "3, maroko road, lekki - epe express way, 3, lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Lagos_Oriental_Hotel.png",
+        "number_of_reviews": 489,
+        "comment": "wonderful",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": "132,000"
+    },
+    {
+        "id": 18,
+        "location_city": "Lagos",
+        "hotel_name": "The George Hotel Ikoyi",
+        "hotel_address": "30 lugard road, ikoyi, lagos, Nigeria.",
+        "hotel_image": "src/assets/searchResultsImg/The_George_Hotel_Ikoyi.png",
+        "number_of_reviews": 473,
+        "comment": "wonderful",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": "259,000"
+    },
+    {
+        "id": 19,
+        "location_city": "Lagos",
+        "hotel_name": "The View",
+        "hotel_address": "1, godwin omene street, chief collins uchidiuno, off fola osibo, lekki phase 1, lagos, Nigeria.",
+        "hotel_image": "src/assets/searchResultsImg/The_View.png",
+        "number_of_reviews": 490,
+        "comment": "wonderful",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": "126,000"
+    },
+    {
+        "id": 20,
+        "location_city": "Lagos",
+        "hotel_name": "Ellyxville Hotel",
+        "hotel_address": "no 8 africa lane, off admiralty road, lekki phase 1, lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Ellyxville_Hotel.png",
+        "number_of_reviews": 90,
+        "comment": "Good",
+        "ratings": "3/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": "49,500"
     }
 ]
