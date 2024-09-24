@@ -22,6 +22,11 @@ const SearchHotel = () => {
     (hotel) => hotel.location_city.toLowerCase().includes(searchQueryLocation.toLowerCase())
   ) : [];
 
+  const [visibleCount, setVisibleCount] = useState(4)
+
+  const handleShowMore = () => {
+    setVisibleCount((prevCount) => prevCount + 4)
+  }
   return (
     <>
       <nav className="searchNav">
@@ -56,7 +61,7 @@ const SearchHotel = () => {
           <img className="contact" src="../src/assets/Images/contact.svg" />
         </div>
         <div className="searchResult_2">
-          {filteredHotels.map(item => (
+          {filteredHotels.slice(0, visibleCount).map(item => (
             <div className="searchResult_2_child" key={item.id}>
               <div className="hotel_img">
                 <img src={item.hotel_image} />
@@ -100,9 +105,13 @@ const SearchHotel = () => {
             </div>
           ))}
         </div>
-        <div className="searchResult_3">
-          <button type="submit">Show more results</button>
-        </div>
+        {filteredHotels.length > visibleCount && (
+          <div className="searchResult_3">
+            <button onClick={handleShowMore} type="submit">
+            Show more results
+            </button>
+          </div>
+        )}
       </section>
 
     </>
