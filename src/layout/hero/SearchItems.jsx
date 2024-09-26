@@ -80,7 +80,7 @@ const SearchItems = () => {
 
             {/* Render the list of filtered suggestions */}
             {showSuggestions && searchTerm && (
-                <div className='absolute top-[550px] left-[320px] bg-white z-30 w-[312px]'>
+                <div className='absolute top-[140px] left-[0px] md:top-[550px] md:left-[320px] bg-white z-30 w-[312px]'>
 
                     <h3 className='text-[13px] bg-[#55BFEA] font-[700] text-white px-4 py-[2px]'>RECENT SEARCHES</h3>
                     {recentSearches.length > 0 && (

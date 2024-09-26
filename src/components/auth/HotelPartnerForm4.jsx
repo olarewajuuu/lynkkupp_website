@@ -9,21 +9,21 @@ import { Link } from "react-router-dom";
 const HotelPartnerForm4 = () => {
 	const [files, setFiles] = useState([]);
 
-  const { getRootProps, getInputProps, acceptedFiles, fileRejections } =
-    useDropzone({
-      maxFiles: 1,
-      accept: {
-        "image/png": [".png", ".jpg", ".jpeg"],
-      },
+	const { getRootProps, getInputProps, acceptedFiles, fileRejections } =
+		useDropzone({
+			maxFiles: 1,
+			accept: {
+				"image/png": [".png", ".jpg", ".jpeg"],
+			},
 
-      onDrop: (acceptedFiles) => {
-        setFiles(
-          acceptedFiles.map((file) =>
-            Object.assign(file, { preview: URL.createObjectURL(file) })
-          )
-        );
-      },
-    });
+			onDrop: (acceptedFiles) => {
+				setFiles(
+					acceptedFiles.map((file) =>
+						Object.assign(file, { preview: URL.createObjectURL(file) })
+					)
+				);
+			},
+		});
 
 
 	return (
@@ -69,44 +69,44 @@ const HotelPartnerForm4 = () => {
 						>
 							A copy of ticket*
 						</label>
-				 <div {...getRootProps({ className: "input_upload" })}>
-					<input
-               type="file"
-            accept="image/*"
-            {...getInputProps({ className: "input_field" })}
-            hidden
-          />
-		  <img src={uploadImg} width={200} alt="" />
-		  {files.map((file) => (
-              <div className="preview" key={file.name}>
-                <img
-                  src={file.preview}
-                  alt=""
-                  className="image_preview"
-                  onLoad={() => {
-                    URL.revokeObjectURL(file.preview);
-                  }}
-                />
-              </div>
-            ))}
+						<div {...getRootProps({ className: "input_upload" })}>
+							<input
+								type="file"
+								accept="image/*"
+								{...getInputProps({ className: "input_field" })}
+								hidden
+							/>
+							<img src={uploadImg} width={200} alt="" />
+							{files.map((file) => (
+								<div className="preview" key={file.name}>
+									<img
+										src={file.preview}
+										alt=""
+										className="image_preview"
+										onLoad={() => {
+											URL.revokeObjectURL(file.preview);
+										}}
+									/>
+								</div>
+							))}
 
-		   <div className="filesAccepted">
-              {acceptedFiles[0] ? (
-                <p className="file_accepted">File accepted</p>
-              ) : (
-                ""
-              )}
-            </div>
-		 <div className="fileNotAccepted">
-              {fileRejections[0] ? (
-                <Error errorM={fileRejections[0].errors[0]} />
-              ) : (
-                ""
-              )}
-            </div>
-		  </div>
-				 </div>
-					
+							<div className="filesAccepted">
+								{acceptedFiles[0] ? (
+									<p className="file_accepted">File accepted</p>
+								) : (
+									""
+								)}
+							</div>
+							<div className="fileNotAccepted">
+								{fileRejections[0] ? (
+									<Error errorM={fileRejections[0].errors[0]} />
+								) : (
+									""
+								)}
+							</div>
+						</div>
+					</div>
+
 					<div className="mt-14 flex">
 						<button className="text-white bg-[#55bfea] py-3.5 px-5 w-full text-[13px] md:text-[23px] font-bold rounded-md">
 							Proceed to submit

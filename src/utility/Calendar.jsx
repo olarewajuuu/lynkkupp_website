@@ -1,10 +1,11 @@
 import claendarImg from "../assets/Images/clarity_calendar-line.svg";
 import "./Calendar.css";
 import { DateRange } from "react-date-range";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
+
 
 const Calendar = () => {
   const [openDate, setOpenDate] = useState(false);
@@ -16,15 +17,34 @@ const Calendar = () => {
     },
   ]);
 
+  const dateRangeRef = useRef(null);
+
+  // Handle click outside the component
+  const handleClickOutside = (event) => {
+    if (dateRangeRef.current && !dateRangeRef.current.contains(event.target)) {
+      setOpenDate(false);
+    }
+  };
+
+  useEffect(() => {
+    // Add event listener for clicks
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // Remove event listener when component unmounts
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+
   return (
     <div>
       <div className="headerSearchItem"
-      onClick={(e) => e.stopPropagation()}
+         ref={dateRangeRef}
       >
         {/* <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" /> */}
-        
+
         <div className="leavingNow relative">
-        <img src={claendarImg} alt="" className=" absolute left-2 top-3 md:top-6 md:left-2" />
+          <img src={claendarImg} alt="" className=" absolute left-2 top-3 md:top-6 md:left-2" />
           <p className="datetext">Leaving on</p>
           <span
             onClick={() => setOpenDate(!openDate)}
@@ -42,7 +62,7 @@ const Calendar = () => {
         </div>
 
         <div className="returningNow relative">
-        <img src={claendarImg} alt="" className=" absolute left-2 top-3 md:top-6 md:left-2" />
+          <img src={claendarImg} alt="" className=" absolute left-2 top-3 md:top-6 md:left-2" />
           <p className="datetext">Returning on</p>
           <span
             onClick={() => setOpenDate(!openDate)}
@@ -61,9 +81,10 @@ const Calendar = () => {
 
         {openDate && (
           <DateRange
-          onClick={() => setOpenDate(!openDate)}
+            onClick={() => setOpenDate(!openDate)}
             editableDateInputs={true}
             onChange={(item) => setDate([item.selection])}
+            minDate={new Date()}  // Disable past dates
             moveRangeOnFirstSelection={false}
             ranges={date}
             months={2}
