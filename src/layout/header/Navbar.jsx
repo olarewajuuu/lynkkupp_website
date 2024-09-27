@@ -53,7 +53,7 @@ const Navbar = () => {
 	return (
 		<>
 			<div className="navbar">
-				<div className="navContainer">
+				<div className="navContainer relative">
 					<div className="logo">
 						<Link to="/">
 							<img src={logoImg} alt="logo" />
@@ -152,7 +152,7 @@ const Navbar = () => {
 						</ul>
 					</div>
 					<div className="icons" onClick={handleClicked}>
-						{!clicked ? <GiHamburgerMenu className="handbuger" /> : <ImCross  className="cross"/>}
+						{!clicked ? <GiHamburgerMenu className="handbuger" /> : <ImCross  className="text-[16px] text-[#039dda] z-10 absolute left-6 top-20"/>}
 					</div>
 
 				</div>

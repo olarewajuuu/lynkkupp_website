@@ -120,7 +120,7 @@ const HotelPartnerForm = () => {
 						</div>
 
 						<div className="flex flex-col w-full pl-0 md:justify-center md:items-center ">
-							<div className="flex flex-row gap-2 md:gap-4 items-center">
+							<div className="flex flex-row gap-0 md:gap-4 items-center">
 								<img src={eventImg} alt="event image" className="w-5 h-5" />
 
 								<NavLink to="/hotelpartner3" activeNlassName="active" className="text-[0.9rem] md:text-[33px] font-medium text-inherit">

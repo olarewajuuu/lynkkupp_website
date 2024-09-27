@@ -162,7 +162,7 @@
     cursor: pointer;
     width: 246px;
     height: 40px;
-    padding: 5px 30px 5px 30px;
+    padding: 5px 20px 5px 20px;
     border-radius: 5px;
     /* margin-top: -20px; */
   }
@@ -177,7 +177,7 @@
     cursor: pointer;
     width: 246px;
     height: 40px;
-    padding: 10px 80px 10px 80px;
+    padding: 10px 70px 10px 70px;
     border-radius: 5px;
   }
   .navButtonPat:hover{
