@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom"
 import HotelForm from "./HotelForm";
+import HotelFilterSystem from "./HotelFilterSystem";
 import ChevronIcon from "../../assets/Images/ChevronIcon.svg";
 import "./SearchHotel.css";
 
 const SearchHotel = () => {
   const [data, setData] = useState(null);
+  const [sortBy, setSortBy] = useState("");
+  const [selectedAmenities, setSelectedAmenities] = useState([]);
+  const [selectedRatings, setSelectedRatings] = useState([])
   const location = useLocation();
   const searchQuery = location.state?.searchData || "";
   const searchQueryLocation = searchQuery.cityOrAirport
@@ -18,15 +22,49 @@ const SearchHotel = () => {
   }, []);
 
   // Filter the JSON data based on the search query
-  const filteredHotels = data ? data.filter(
+  let filteredHotels = data ? data.filter(
     (hotel) => hotel.location_city.toLowerCase().includes(searchQueryLocation.toLowerCase())
   ) : [];
+
+  // Apply amenities filter if there are selected amenities
+  if (selectedAmenities.length > 0) {
+    filteredHotels = filteredHotels.filter(hotel =>
+      // Only include hotels that have amenities and match all selected amenities
+      hotel.amenities.length > 0 && selectedAmenities.every(amenity => hotel.amenities.includes(amenity))
+    );
+  }
+
+  // Apply rating filter
+  if (selectedRatings.length > 0){
+    filteredHotels = filteredHotels.filter(hotel => selectedRatings.includes(parseInt(hotel.ratings.split("/")[0]))
+  )
+  }
+
 
   const [visibleCount, setVisibleCount] = useState(4)
 
   const handleShowMore = () => {
     setVisibleCount((prevCount) => prevCount + 4)
   }
+
+  const sortedHotels = [...filteredHotels]
+  switch (sortBy) {
+    case "popular":
+      sortedHotels.sort((a, b) => (b.number_of_reviews - a.number_of_reviews))
+      break;
+    case "highest-price":
+      sortedHotels.sort((a, b) => (b.price - a.price));
+      break;
+    case "lowest-price":
+      sortedHotels.sort((a, b) => (a.price - b.price));
+      break;
+    case "user-rating":
+      sortedHotels.sort((a, b) => (b.number_of_reviews - a.number_of_reviews))
+      break;
+    default:
+      break;
+  }
+
   return (
     <>
       <nav className="searchNav">
@@ -61,7 +99,7 @@ const SearchHotel = () => {
           <img className="contact" src="../src/assets/Images/contact.svg" />
         </div>
         <div className="searchResult_2">
-          {filteredHotels.slice(0, visibleCount).map(item => (
+          {sortedHotels.slice(0, visibleCount).map(item => (
             <div className="searchResult_2_child" key={item.id}>
               <div className="hotel_img">
                 <img src={item.hotel_image} />
@@ -108,11 +146,14 @@ const SearchHotel = () => {
         {filteredHotels.length > visibleCount && (
           <div className="searchResult_3">
             <button onClick={handleShowMore} type="submit">
-            Show more results
+              Show more results
             </button>
           </div>
         )}
       </section>
+
+      <HotelFilterSystem setSortBy={setSortBy} setSelectedAmenities={setSelectedAmenities} 
+      setSelectedRatings={setSelectedRatings}/>
 
     </>
   );
