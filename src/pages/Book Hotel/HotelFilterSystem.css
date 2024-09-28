@@ -1,3 +1,6 @@
+body{
+    background-color: whitesmoke;
+}
 .SliderRoot {
     position: relative;
     display: flex;
@@ -15,6 +18,10 @@
     flex-grow: 1;
     border-radius: 9999px;
     height: 3px;
+    -webkit-border-radius: 9999px;
+    -moz-border-radius: 9999px;
+    -ms-border-radius: 9999px;
+    -o-border-radius: 9999px;
 }
 
 .SliderRange {
@@ -40,4 +47,12 @@
 .SliderThumb:focus {
     outline: none;
     box-shadow: 0 0 0 5px var(--black-a8);
+}
+.amenities-filter{
+    display: flex;
+    flex-direction: column;
+}
+.rating-filter{
+    display: flex;
+    flex-direction: column;
 }
