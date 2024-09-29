@@ -31,73 +31,88 @@ const HotelFilterSystem = ({ setSortBy, setSelectedAmenities, setSelectedRatings
     }
 
     return (
-        <div>
-            <h3>Sort By:</h3>
-            <ul className="sorting-options">
-                <li onClick={() => handleSortClick("popular")}>Popular</li>
-                <li onClick={() => handleSortClick("highest-price")}>Highest Price</li>
-                <li onClick={() => handleSortClick('lowest-price')}>Lowest Price</li>
-                <li onClick={() => handleSortClick('user-rating')}>User ratings (Highest first)</li>
-            </ul>
-
-
-            <h2>Filter By:</h2>
-            <div>
-                <input type="search" placeholder="Hilton Hotel" />
+        <aside>
+            <div className="close-button">
+                <img src="../src/assets/Images/cross-icon.svg" alt="" />
             </div>
-            <form>
-                <Slider.Root className="SliderRoot" value={[maxPrice]} min={minPrice} max={270000} step={1000} onValueChange={handlePriceChange}>
-                    <Slider.Track className="SliderTrack">
-                        <Slider.Range className="SliderRange" />
-                    </Slider.Track>
-                    <Slider.Thumb className="SliderThumb" aria-label="Volume" />
-                </Slider.Root>
-            </form>
-            <div>
-                <p>MinPrice: {minPrice}</p>
-                <p>MaxPrice: {maxPrice}</p>
+            <div className="filter">
+                <div className="sort-filter">
+                    <h2>SORT BY:</h2>
+                    <ul className="sorting-options">
+                        <li onClick={() => handleSortClick("popular")}><p>Popular</p></li>
+                        <li onClick={() => handleSortClick("highest-price")}><p>Highest Price</p></li>
+                        <li onClick={() => handleSortClick('lowest-price')}><p>Lowest Price</p></li>
+                        <li onClick={() => handleSortClick('user-rating')}><p>User ratings (Highest first)</p></li>
+                    </ul>
+                </div>
+
+                <div className="slider-filter">
+                    <h2>Filter By:</h2>
+                    <div>
+                        <input type="search" placeholder="Hilton Hotel" />
+                    </div>
+                    <form>
+                        <Slider.Root className="SliderRoot" value={[maxPrice]} min={minPrice} max={270000} step={1000} onValueChange={handlePriceChange}>
+                            <Slider.Track className="SliderTrack">
+                                <Slider.Range className="SliderRange" />
+                            </Slider.Track>
+                            <Slider.Thumb className="SliderThumb" aria-label="Volume" />
+                        </Slider.Root>
+                    </form>
+                    <div>
+                        <p>MinPrice: {minPrice}</p>
+                        <p>MaxPrice: {maxPrice}</p>
+                    </div>
+                </div>
+
+                <div className="amenities-filter">
+                    <h3>Amenities</h3>
+                    <form>
+                        <label>
+                            <input type="checkbox" value="Air conditioning" onChange={handleAmenitiesChange} />
+                            Air conditioning
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Bar/lounge" onChange={handleAmenitiesChange} />
+                            Bar/lounge
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Security" onChange={handleAmenitiesChange} />
+                            Security
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Kitchen" onChange={handleAmenitiesChange} />
+                            Kitchen
+                        </label>
+                    </form>
+                </div>
+
+                <div className="rating-filter">
+                    <h4>Property Rating</h4>
+                    <form>
+                        <label>
+                            <input type="checkbox" value="2" onChange={e => handleRatingSelection(e)} />
+                            2 Stars
+                        </label>
+                        <label>
+                            <input type="checkbox" value="3" onChange={e => handleRatingSelection(e)} />
+                            3 Stars
+                        </label>
+                        <label>
+                            <input type="checkbox" value="4" onChange={e => handleRatingSelection(e)} />
+                            4 Stars
+                        </label>
+                        <label>
+                            <input type="checkbox" value="5" onChange={e => handleRatingSelection(e)} />
+                            5 Stars
+                        </label>
+                    </form>
+                </div>
+                <div className="apply-filterBtn">
+                    <button type="submit">Apply</button>
+                </div>
             </div>
-
-            <h3>Amenities</h3>
-            <form className="amenities-filter">
-                <label>
-                    <input type="checkbox" value="Air conditioning" onChange={handleAmenitiesChange} />
-                    Air conditioning
-                </label>
-                <label>
-                    <input type="checkbox" value="Bar/lounge" onChange={handleAmenitiesChange} />
-                    Bar/lounge
-                </label>
-                <label>
-                    <input type="checkbox" value="Security" onChange={handleAmenitiesChange} />
-                    Security
-                </label>
-                <label>
-                    <input type="checkbox" value="Kitchen" onChange={handleAmenitiesChange} />
-                    Kitchen
-                </label>
-            </form>
-            <h4>Property Rating</h4>
-            <form className="rating-filter">
-            <label>
-                <input type="checkbox" value="2" onChange={e => handleRatingSelection(e)} />
-                2 Stars
-            </label>
-            <label>
-                <input type="checkbox" value="3" onChange={e => handleRatingSelection(e)} />
-                3 Stars
-            </label>
-            <label>
-                <input type="checkbox" value="4" onChange={e => handleRatingSelection(e)} />
-                4 Stars
-            </label>
-            <label>
-                <input type="checkbox" value="5" onChange={e => handleRatingSelection(e)} />
-                5 Stars
-            </label>
-            </form>
-        </div>
-
+        </aside>
     )
 
 }
