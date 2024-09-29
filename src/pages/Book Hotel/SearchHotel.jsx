@@ -26,6 +26,26 @@ const SearchHotel = () => {
     (hotel) => hotel.location_city.toLowerCase().includes(searchQueryLocation.toLowerCase())
   ) : [];
 
+
+  // Apply sort by filter
+  if (sortBy){
+    switch (sortBy) {
+      case "popular":
+        filteredHotels.sort((a, b) => (b.number_of_reviews - a.number_of_reviews))
+        break;
+      case "highest-price":
+        filteredHotels.sort((a, b) => (b.price - a.price));
+        break;
+      case "lowest-price":
+        filteredHotels.sort((a, b) => (a.price - b.price));
+        break;
+      case "user-rating":
+        filteredHotels.sort((a, b) => (b.number_of_reviews - a.number_of_reviews))
+        break;
+      default:
+        break;
+    }
+  }
   // Apply amenities filter if there are selected amenities
   if (selectedAmenities.length > 0) {
     filteredHotels = filteredHotels.filter(hotel =>
@@ -45,25 +65,7 @@ const SearchHotel = () => {
 
   const handleShowMore = () => {
     setVisibleCount((prevCount) => prevCount + 4)
-  }
-
-  const sortedHotels = [...filteredHotels]
-  switch (sortBy) {
-    case "popular":
-      sortedHotels.sort((a, b) => (b.number_of_reviews - a.number_of_reviews))
-      break;
-    case "highest-price":
-      sortedHotels.sort((a, b) => (b.price - a.price));
-      break;
-    case "lowest-price":
-      sortedHotels.sort((a, b) => (a.price - b.price));
-      break;
-    case "user-rating":
-      sortedHotels.sort((a, b) => (b.number_of_reviews - a.number_of_reviews))
-      break;
-    default:
-      break;
-  }
+  } 
 
   return (
     <>
@@ -99,7 +101,7 @@ const SearchHotel = () => {
           <img className="contact" src="../src/assets/Images/contact.svg" />
         </div>
         <div className="searchResult_2">
-          {sortedHotels.slice(0, visibleCount).map(item => (
+          {filteredHotels.slice(0, visibleCount).map(item => (
             <div className="searchResult_2_child" key={item.id}>
               <div className="hotel_img">
                 <img src={item.hotel_image} />
