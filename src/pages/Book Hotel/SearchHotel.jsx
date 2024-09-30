@@ -7,6 +7,7 @@ import "./SearchHotel.css";
 
 const SearchHotel = () => {
   const [data, setData] = useState(null);
+  const [showFilter, setShowFilter] = useState(false)
   const [sortBy, setSortBy] = useState("");
   const [selectedAmenities, setSelectedAmenities] = useState([]);
   const [selectedRatings, setSelectedRatings] = useState([])
@@ -28,7 +29,7 @@ const SearchHotel = () => {
 
 
   // Apply sort by filter
-  if (sortBy){
+  if (sortBy) {
     switch (sortBy) {
       case "popular":
         filteredHotels.sort((a, b) => (b.number_of_reviews - a.number_of_reviews))
@@ -55,9 +56,9 @@ const SearchHotel = () => {
   }
 
   // Apply rating filter
-  if (selectedRatings.length > 0){
+  if (selectedRatings.length > 0) {
     filteredHotels = filteredHotels.filter(hotel => selectedRatings.includes(parseInt(hotel.ratings.split("/")[0]))
-  )
+    )
   }
 
 
@@ -65,7 +66,15 @@ const SearchHotel = () => {
 
   const handleShowMore = () => {
     setVisibleCount((prevCount) => prevCount + 4)
-  } 
+  }
+  const toggleFilter = () => {
+    setShowFilter((prev) => {
+      const newShowFilter = !prev;
+
+      // document.body.style.overflow = newShowFilter ? "hidden" : "auto";
+      return newShowFilter;
+    })
+  }
 
   return (
     <>
@@ -82,7 +91,7 @@ const SearchHotel = () => {
         </div>
         {/*Filter button */}
         <div className="searchNav_2">
-          <button type="submit">FILTERS</button>
+          <button type="submit" onClick={toggleFilter}>FILTERS</button>
         </div>
 
         <div className="searchNav_3">
@@ -154,8 +163,12 @@ const SearchHotel = () => {
         )}
       </section>
 
-      <HotelFilterSystem setSortBy={setSortBy} setSelectedAmenities={setSelectedAmenities} 
-      setSelectedRatings={setSelectedRatings}/>
+      {showFilter && 
+      <HotelFilterSystem
+        setSortBy={setSortBy}
+        setSelectedAmenities={setSelectedAmenities}
+        setSelectedRatings={setSelectedRatings}
+      />}
 
     </>
   );
