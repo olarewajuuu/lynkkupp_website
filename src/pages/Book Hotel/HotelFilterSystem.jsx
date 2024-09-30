@@ -42,26 +42,41 @@ const HotelFilterSystem = ({ setSortBy, setSelectedAmenities, setSelectedRatings
                         <li onClick={() => handleSortClick("popular")}><p>Popular</p></li>
                         <li onClick={() => handleSortClick("highest-price")}><p>Highest Price</p></li>
                         <li onClick={() => handleSortClick('lowest-price')}><p>Lowest Price</p></li>
-                        <li onClick={() => handleSortClick('user-rating')}><p>User ratings (Highest first)</p></li>
+                        <li onClick={() => handleSortClick('user-rating')}><p>User ratings ( Highest first )</p></li>
                     </ul>
                 </div>
 
-                <div className="slider-filter">
-                    <h2>Filter By:</h2>
+                <div className="display-map">
                     <div>
-                        <input type="search" placeholder="Hilton Hotel" />
+                        <img src="" alt="" />
+                        <button type="submit"></button>
+                        <img src="" alt="" />
                     </div>
+                </div>
+
+                <div className="search-filter">
+                    <div className="search-filter_child1">
+                        <h2>Filter by</h2>
+                        <p>Clear all</p>
+                    </div>
+
+                    <div className="search-filter_child2">
+                        <input type="search" placeholder="e.g Hilton Hotel" />
+                    </div>
+                </div>
+                <div className="slider-filter">
+                    <h2>Your Budget ( per night )</h2>
                     <form>
-                        <Slider.Root className="SliderRoot" value={[maxPrice]} min={minPrice} max={270000} step={1000} onValueChange={handlePriceChange}>
-                            <Slider.Track className="SliderTrack">
-                                <Slider.Range className="SliderRange" />
+                        <Slider.Root className="slider-root" value={[maxPrice]} min={minPrice} max={270000} step={1000} onValueChange={handlePriceChange}>
+                            <Slider.Track className="slider-track">
+                                <Slider.Range className="slider-range" />
                             </Slider.Track>
-                            <Slider.Thumb className="SliderThumb" aria-label="Volume" />
+                            <Slider.Thumb className="slider-thumb" aria-label="Volume" />
                         </Slider.Root>
                     </form>
-                    <div>
-                        <p>MinPrice: {minPrice}</p>
-                        <p>MaxPrice: {maxPrice}</p>
+                    <div className="slider-price">
+                        <span>&#8358;{minPrice}</span>
+                        <span>&#8358;{maxPrice}</span> 
                     </div>
                 </div>
 
@@ -112,7 +127,7 @@ const HotelFilterSystem = ({ setSortBy, setSelectedAmenities, setSelectedRatings
                     <button type="submit">Apply</button>
                 </div>
             </div>
-        </aside>
+        </aside >
     )
 
 }
