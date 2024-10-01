@@ -2,7 +2,7 @@ import "../../layout/hero/HotelHero.css";
 import UserImg from "../../assets/Images/user.svg";
 import DropdownImg from "../../assets/Images/dropdown.svg";
 // import flyingImg from "../../assets/Images/flyingto.svg";
-import searcImg from "../../assets/Images/search.svg";
+// import searcImg from "../../assets/Images/search.svg";
 import { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import HotelCalender from "../../utility/HotelCalender";

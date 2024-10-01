@@ -3,13 +3,14 @@
     display: flex;
     gap: 4.7%;
 }
-.formContainer .formChild_3 .hotelSearchItem img{
+
+.formContainer .formChild_3 .hotelSearchItem img {
     width: 1.3636em;
     height: 1.3636em;
 }
 
 .formContainer .formChild_3 .hotelleavingNow {
-    padding: 0px;
+    padding: 0.25em 6.917em 0.583em 1.333em;
     width: 50%;
     height: unset;
     border-radius: 5px;
@@ -20,10 +21,12 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-.formContainer .formChild_3 .hotelleavingNow::before{
+
+.formContainer .formChild_3 .hotelleavingNow::before {
     content: "Check-in";
     font-size: 0.7272em;
 }
+
 .formContainer .formChild_3 .hotelreturningNow {
     margin-left: 0px;
     padding: 0px;
@@ -37,15 +40,16 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-.formContainer .formChild_3 .hotelreturningNow::before{
+
+.formContainer .formChild_3 .hotelreturningNow::before {
     content: "Check-out";
     font-size: 0.7272em;
-    
+
 }
 
 
 .formContainer .formChild_3 .hotelleavingNow,
-.formContainer .formChild_3 .hotelreturningNow{
+.formContainer .formChild_3 .hotelreturningNow {
     padding: 0.2727em 7.5454em 0.6363em 1.4545em;
 }
 
@@ -64,25 +68,30 @@
         "formChild_1 formChild_2"
         "formChild_3 formChild_3"
         "formChild_4 formChild_4";
-    
+
 }
-.formChild_1{
+
+.formChild_1 {
     grid-area: formChild_1;
     padding: 0.2727em 6.5454em 0.4545em 1.4545em;
 }
-.formChild_1 span{
+
+.formChild_1 span {
     font-size: 0.5454em;
     display: block;
     line-height: 140%;
 }
-.formChild_1 input{
-    margin-top: 0.4545em; 
+
+.formChild_1 input {
+    margin-top: 0.4545em;
     line-height: 140%;
 }
-.formChild_2{
+
+.formChild_2 {
     grid-area: formChild_2;
     padding: 0.9090em 1.4545em 0.9090em 0.7272em;
 }
+
 .formChild_3 {
     grid-area: formChild_3;
     margin-bottom: 0px;
@@ -97,44 +106,87 @@
     color: white;
     /* margin-block: 1.2727em 1.3636em; */
 }
-.formChild_1, .formChild_2{
+
+.formChild_1,
+.formChild_2 {
     height: 3.1818em;
     background: var(--White, #FFF);
     border-radius: 5px;
     white-space: nowrap;
 }
-.formChild_2 p{
+
+.formChild_2 p {
     display: flex;
     line-height: 140%;
     justify-content: space-between;
 }
-.formChild_2 p img:nth-of-type(1){
+
+.formChild_2 p img:nth-of-type(1) {
     width: 1.3636em;
     height: 1.3636em;
 }
-.formChild_2 p span{
-    flex-grow: 2; 
+
+.formChild_2 p span {
+    flex-grow: 2;
     margin-left: 0.1818em;
 }
-.formChild_2 p img:nth-of-type(2){
+
+.formChild_2 p img:nth-of-type(2) {
     width: 0.9090em;
     height: 0.3636em;
     margin-left: 2.1818em;
     margin-top: 0.4545em;
 }
-@media screen  and (min-width: 576px){
-    .formChild_1 span{
+
+.formContainer .formChild_3 .hotelleavingNow,
+.formContainer .formChild_3 .hotelreturningNow {
+    display: grid;
+    grid-template-columns: 18% 70%;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 0;
+    row-gap: 0;
+    grid-template-areas:
+        ".           checkIn-Out"
+        "calendarImg date";
+}
+
+.formContainer .formChild_3 .hotelleavingNow::before,
+.formContainer .formChild_3 .hotelreturningNow::before {
+    /* margin-left: 1.25em; */
+    grid-area: checkIn-Out;
+}
+
+.formContainer .formChild_3 .hotelSearchItem img {
+    grid-area: calendarImg;
+}
+
+.formContainer .formChild_3 .hoteldateMonth {
+    /* font-size: 1.375em; */
+    font-weight: 500;
+    color: #494949;
+    grid-area: date;
+}
+
+
+@media screen and (min-width: 576px) {
+    .formChild_1 span {
         font-size: 0.6363em;
     }
-    .formChild_2 p span{
+
+    .formChild_2 p span {
         font-size: 1.0909em;
     }
+
     .formContainer .formChild_3 .hotelleavingNow::before,
-    .formContainer .formChild_3 .hotelreturningNow::before,
-    .formContainer .formChild_3 .hoteldateMonth{
+    .formContainer .formChild_3 .hotelreturningNow::before {
         font-size: 0.8181em;
     }
-    .formChild_4 h4{
+
+    .formContainer .formChild_3 .hoteldateMonth {
+        font-size: 0.9167em;
+    }
+
+    .formChild_4 h4 {
         font-size: 1.1818em;
     }
 }

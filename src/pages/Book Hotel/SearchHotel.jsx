@@ -169,7 +169,6 @@ const SearchHotel = () => {
         setSelectedAmenities={setSelectedAmenities}
         setSelectedRatings={setSelectedRatings}
       />}
-
     </>
   );
 };
