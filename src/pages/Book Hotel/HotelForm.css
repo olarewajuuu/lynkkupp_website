@@ -122,3 +122,19 @@
     margin-left: 2.1818em;
     margin-top: 0.4545em;
 }
+@media screen  and (min-width: 576px){
+    .formChild_1 span{
+        font-size: 0.6363em;
+    }
+    .formChild_2 p span{
+        font-size: 1.0909em;
+    }
+    .formContainer .formChild_3 .hotelleavingNow::before,
+    .formContainer .formChild_3 .hotelreturningNow::before,
+    .formContainer .formChild_3 .hoteldateMonth{
+        font-size: 0.8181em;
+    }
+    .formChild_4 h4{
+        font-size: 1.1818em;
+    }
+}
