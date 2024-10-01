@@ -9,6 +9,13 @@
     width: 100vw;
     background-color: #55BFEA;
     padding: 1.375rem 1.625rem 0.9375rem 1rem;
+    color: rgba(35, 34, 34, 0.35);
+}
+.searchNav_1 span:nth-of-type(1){
+    font-weight: 500;
+}
+.searchNav_1 span:nth-of-type(2){
+    color: white;
 }
 .searchNav_1{
     display: flex;
@@ -63,6 +70,7 @@
 .searchResult_1_child p{
     font-weight: 700;
     margin-top: 1.0625em;
+    color: #494949;
 }
 .searchResult_1_child img{
     display: inline;
@@ -98,6 +106,7 @@
 .searchResult_2_child .hotel_description span{
     font-weight: 700;
     font-size: 1.1875rem;
+    color: #494949;
 }
 .searchResult_2_child .hotel_description .hotel_description_child{
     display: grid;
