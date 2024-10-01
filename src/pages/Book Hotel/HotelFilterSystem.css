@@ -223,3 +223,11 @@ aside {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+@media screen  and (min-width: 576px){
+    aside {
+        font-size: 1rem;
+    } 
+    .sort-filter h2 {
+        font-size: 1.083em;
+    } 
+}
