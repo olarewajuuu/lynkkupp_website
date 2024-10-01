@@ -3,10 +3,10 @@
         "id": 1,
         "location_city": "Lagos",
         "hotel_name": "Lagos Oriental Hotel",
-        "hotel_address": "3, maroko road, lekki - epe express way, 3, lagos.",
+        "hotel_address": "3, Maroko Road, Lekki - Epe Express Way, Lagos.",
         "hotel_image": "src/assets/searchResultsImg/Lagos_Oriental_Hotel.png",
         "number_of_reviews": 489,
-        "comment": "wonderful",
+        "comment": "Wonderful",
         "ratings": "5/5",
         "amenities": [
             "Security",
@@ -19,10 +19,10 @@
         "id": 2,
         "location_city": "Lagos",
         "hotel_name": "The George Hotel Ikoyi",
-        "hotel_address": "30 lugard road, ikoyi, lagos, Nigeria.",
+        "hotel_address": "30 Lugard Road, Ikoyi, Lagos, Nigeria.",
         "hotel_image": "src/assets/searchResultsImg/The_George_Hotel_Ikoyi.png",
         "number_of_reviews": 473,
-        "comment": "wonderful",
+        "comment": "Wonderful",
         "ratings": "5/5",
         "amenities": [
             "Security",
@@ -35,10 +35,10 @@
         "id": 3,
         "location_city": "Lagos",
         "hotel_name": "The View",
-        "hotel_address": "1, godwin omene street, chief collins uchidiuno, off fola osibo, lekki phase 1, lagos, Nigeria.",
+        "hotel_address": "1, Godwin Omene Street, Lekki Phase 1, Lagos.",
         "hotel_image": "src/assets/searchResultsImg/The_View.png",
         "number_of_reviews": 490,
-        "comment": "wonderful",
+        "comment": "Wonderful",
         "ratings": "5/5",
         "amenities": [
             "Security",
@@ -51,7 +51,7 @@
         "id": 4,
         "location_city": "Lagos",
         "hotel_name": "Ellyxville Hotel",
-        "hotel_address": "no 8 africa lane, off admiralty road, lekki phase 1, lagos.",
+        "hotel_address": "No 8 Africa Lane, Lekki Phase 1, Lagos.",
         "hotel_image": "src/assets/searchResultsImg/Ellyxville_Hotel.png",
         "number_of_reviews": 90,
         "comment": "Good",
@@ -61,44 +61,169 @@
     },
     {
         "id": 5,
-        "location_city": "Abuja",
-        "hotel_name": "Abuja Continental Hotel",
-        "hotel_address": "1 ladi Kwali St, Wuse Zone 4, Abuja 900281, Federal Capital Territory",
-        "hotel_image": "src/assets/searchResultsImg/Abuja_Continental_Hotel.png",
-        "number_of_reviews": 3500,
-        "comment": "wonderful",
-        "ratings": "5/5",
+        "location_city": "Lagos",
+        "hotel_name": "Sheraton Lagos Hotel",
+        "hotel_address": "30 Mobolaji Bank Anthony Way, Ikeja, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Sheraton_Lagos_Hotel.png",
+        "number_of_reviews": 520,
+        "comment": "Very good",
+        "ratings": "4/5",
         "amenities": [
             "Security",
             "Free wifi",
-            "Air conditioning"
+            "Air conditioning",
+            "Swimming pool",
+            "Restaurant"
         ],
-        "price": 423000
+        "price": 220000
     },
     {
         "id": 6,
-        "location_city": "Abuja",
-        "hotel_name": "Day Spring Hotel",
-        "hotel_address": "Zone 6, Plot 4 Juba St, Wuse, Abuja 904101, Federal Capital Territory",
-        "hotel_image": "src/assets/searchResultsImg/Day_Spring_Hotel.png",
-        "number_of_reviews": 763,
-        "comment": "wonderful",
+        "location_city": "Lagos",
+        "hotel_name": "Radisson Blu Anchorage Hotel",
+        "hotel_address": "1A Ozumba Mbadiwe Ave, Victoria Island, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Radisson_Blu_Anchorage.png",
+        "number_of_reviews": 630,
+        "comment": "Excellent",
         "ratings": "5/5",
         "amenities": [
             "Security",
             "Free wifi",
-            "Air conditioning"
+            "Air conditioning",
+            "Swimming pool"
         ],
-        "price": 170000
+        "price": 275000
     },
     {
         "id": 7,
+        "location_city": "Lagos",
+        "hotel_name": "Eko Hotels & Suites",
+        "hotel_address": "1415 Adetokunbo Ademola Street, Victoria Island, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Eko_Hotels_Suites.png",
+        "number_of_reviews": 850,
+        "comment": "Excellent",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Swimming pool",
+            "Gym"
+        ],
+        "price": 250000
+    },
+    {
+        "id": 8,
+        "location_city": "Lagos",
+        "hotel_name": "Protea Hotel Ikeja",
+        "hotel_address": "42/44 Isaac John Street, Ikeja GRA, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Protea_Hotel_Ikeja.png",
+        "number_of_reviews": 470,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Restaurant"
+        ],
+        "price": 200000
+    },
+    {
+        "id": 9,
+        "location_city": "Lagos",
+        "hotel_name": "Southern Sun Ikoyi",
+        "hotel_address": "47 Alfred Rewane Rd, Ikoyi, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Southern_Sun_Ikoyi.png",
+        "number_of_reviews": 390,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Restaurant"
+        ],
+        "price": 230000
+    },
+    {
+        "id": 10,
+        "location_city": "Lagos",
+        "hotel_name": "Lagos Marriott Hotel Ikeja",
+        "hotel_address": "122 Joel Ogunnaike Street, Ikeja GRA, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Marriott_Ikeja.png",
+        "number_of_reviews": 710,
+        "comment": "Excellent",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Swimming pool"
+        ],
+        "price": 290000
+    },
+    {
+        "id": 11,
+        "location_city": "Lagos",
+        "hotel_name": "Lagos Continental Hotel",
+        "hotel_address": "52 Kofo Abayomi St, Victoria Island, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Lagos_Continental_Hotel.png",
+        "number_of_reviews": 620,
+        "comment": "Excellent",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Swimming pool",
+            "Gym"
+        ],
+        "price": 320000
+    },
+    {
+        "id": 12,
         "location_city": "Abuja",
-        "hotel_name": "Fraser Suite Abuja",
-        "hotel_address": "294 Leventis Close, Central Business District, Abuja 900103, Federal Capital Territory",
-        "hotel_image": "src/assets/searchResultsImg/Fraser_Suite_Abuja.png",
+        "hotel_name": "Transcorp Hilton Abuja",
+        "hotel_address": "1 Aguiyi Ironsi Street, Maitama, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Transcorp_Hilton_Abuja.png",
+        "number_of_reviews": 3600,
+        "comment": "Excellent",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Swimming pool",
+            "Gym"
+        ],
+        "price": 420000
+    },
+    {
+        "id": 13,
+        "location_city": "Abuja",
+        "hotel_name": "Sheraton Abuja Hotel",
+        "hotel_address": "Ladi Kwali Way, Maitama, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Sheraton_Abuja_Hotel.png",
+        "number_of_reviews": 1800,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Swimming pool"
+        ],
+        "price": 350000
+    },
+    {
+        "id": 14,
+        "location_city": "Abuja",
+        "hotel_name": "Fraser Suites Abuja",
+        "hotel_address": "294 Leventis Close, Central Business District, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Fraser_Suites_Abuja.png",
         "number_of_reviews": 5747,
-        "comment": "wonderful",
+        "comment": "Wonderful",
         "ratings": "5/5",
         "amenities": [
             "Security",
@@ -108,12 +233,62 @@
         "price": 387500
     },
     {
-        "id": 8,
+        "id": 15,
         "location_city": "Abuja",
-        "hotel_name": "Centurion Apartments",
-        "hotel_address": "30, kitwe street, wuse zone 4, Wuse Zone 4, Abuja.",
-        "hotel_image": "src/assets/searchResultsImg/Centurion_Apartments.png",
-        "number_of_reviews": 220,
+        "hotel_name": "Grand Cubana Hotels",
+        "hotel_address": "6 Ebitu Ukiwe Street, Jabi, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Grand_Cubana_Hotels.png",
+        "number_of_reviews": 610,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": 240000
+    },
+    {
+        "id": 16,
+        "location_city": "Abuja",
+        "hotel_name": "The Envoy Hotel",
+        "hotel_address": "305 Diplomatic Drive, Central Business District, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/The_Envoy_Hotel.png",
+        "number_of_reviews": 720,
+        "comment": "Excellent",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Restaurant"
+        ],
+        "price": 280000
+    },
+    {
+        "id": 17,
+        "location_city": "Abuja",
+        "hotel_name": "Nicon Luxury",
+        "hotel_address": "Plot 903 Tafawa Balewa Way, Area 11, Garki, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Nicon_Luxury.png",
+        "number_of_reviews": 870,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Restaurant"
+        ],
+        "price": 270000
+    },
+    {
+        "id": 18,
+        "location_city": "Abuja",
+        "hotel_name": "Barcelona Hotel",
+        "hotel_address": "23 Blantyre Street, Wuse II, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Barcelona_Hotel.png",
+        "number_of_reviews": 510,
         "comment": "Good",
         "ratings": "3/5",
         "amenities": [
@@ -121,6 +296,371 @@
             "Free wifi",
             "Air conditioning"
         ],
-        "price": 171500
+        "price": 150000
+    },
+    {
+        "id": 19,
+        "location_city": "Abuja",
+        "hotel_name": "Reiz Continental Hotel",
+        "hotel_address": "Plot 779, Cadastral Zone, Central Business District, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Reiz_Continental_Hotel.png",
+        "number_of_reviews": 430,
+        "comment": "Good",
+        "ratings": "3/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": 160000
+    },
+    {
+        "id": 20,
+        "location_city": "Abuja",
+        "hotel_name": "Bolingo Hotel & Towers",
+        "hotel_address": "Independent Ave, Central Business District, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Bolingo_Hotel.png",
+        "number_of_reviews": 250,
+        "comment": "Fair",
+        "ratings": "2/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": 120000
+    },
+    {
+        "id": 21,
+        "location_city": "Lagos",
+        "hotel_name": "Federal Palace Hotel",
+        "hotel_address": "6-8 Ahmadu Bello Way, Victoria Island, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Federal_Palace_Hotel.png",
+        "number_of_reviews": 820,
+        "comment": "Excellent",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Casino"
+        ],
+        "price": 270000
+    },
+    {
+        "id": 22,
+        "location_city": "Lagos",
+        "hotel_name": "The Wheatbaker",
+        "hotel_address": "4 Onitolo Road, Ikoyi, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/The_Wheatbaker.png",
+        "number_of_reviews": 720,
+        "comment": "Excellent",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": 300000
+    },
+    {
+        "id": 23,
+        "location_city": "Lagos",
+        "hotel_name": "Ibis Hotel Ikeja",
+        "hotel_address": "23 Toyin Street, Ikeja, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Ibis_Hotel_Ikeja.png",
+        "number_of_reviews": 490,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Restaurant"
+        ],
+        "price": 95000
+    },
+    {
+        "id": 24,
+        "location_city": "Port Harcourt",
+        "hotel_name": "Le Méridien Ogeyi Place",
+        "hotel_address": "45 Tombia Street, GRA Phase 2, Port Harcourt.",
+        "hotel_image": "src/assets/searchResultsImg/Le_Méridien_Ogeyi_Place.png",
+        "number_of_reviews": 320,
+        "comment": "Wonderful",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Gym"
+        ],
+        "price": 180000
+    },
+    {
+        "id": 25,
+        "location_city": "Port Harcourt",
+        "hotel_name": "Hotel Presidential",
+        "hotel_address": "5141 Aba Road, GRA Phase 2, Port Harcourt.",
+        "hotel_image": "src/assets/searchResultsImg/Hotel_Presidential.png",
+        "number_of_reviews": 570,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Swimming pool"
+        ],
+        "price": 230000
+    },
+    {
+        "id": 26,
+        "location_city": "Port Harcourt",
+        "hotel_name": "Swiss International Mabisel",
+        "hotel_address": "9 Mabisel Avenue, Port Harcourt.",
+        "hotel_image": "src/assets/searchResultsImg/Swiss_International_Mabisel.png",
+        "number_of_reviews": 210,
+        "comment": "Good",
+        "ratings": "3/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": 155000
+    },
+    {
+        "id": 27,
+        "location_city": "Kano",
+        "hotel_name": "Bristol Palace Hotel",
+        "hotel_address": "54/56 Guda Abdullahi Road, Nassarawa GRA, Kano.",
+        "hotel_image": "src/assets/searchResultsImg/Bristol_Palace_Hotel.png",
+        "number_of_reviews": 410,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": 190000
+    },
+    {
+        "id": 28,
+        "location_city": "Kano",
+        "hotel_name": "Tahir Guest Palace",
+        "hotel_address": "No 4 Ibrahim Natsugune Rd, Nassarawa GRA, Kano.",
+        "hotel_image": "src/assets/searchResultsImg/Tahir_Guest_Palace.png",
+        "number_of_reviews": 330,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Restaurant"
+        ],
+        "price": 140000
+    },
+    {
+        "id": 29,
+        "location_city": "Kano",
+        "hotel_name": "Prince Hotel Kano",
+        "hotel_address": "21 Bompai Road, Kano.",
+        "hotel_image": "src/assets/searchResultsImg/Prince_Hotel_Kano.png",
+        "number_of_reviews": 120,
+        "comment": "Good",
+        "ratings": "3/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": 100000
+    },
+    {
+        "id": 30,
+        "location_city": "Enugu",
+        "hotel_name": "Nike Lake Resort",
+        "hotel_address": "Nike Lake Road, Abakpa, Enugu.",
+        "hotel_image": "src/assets/searchResultsImg/Nike_Lake_Resort.png",
+        "number_of_reviews": 200,
+        "comment": "Good",
+        "ratings": "3/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Swimming pool"
+        ],
+        "price": 130000
+    },
+    {
+        "id": 31,
+        "location_city": "Enugu",
+        "hotel_name": "Golden Royale Hotel",
+        "hotel_address": "No. 10 Bisalla Road, Independence Layout, Enugu.",
+        "hotel_image": "src/assets/searchResultsImg/Golden_Royale_Hotel.png",
+        "number_of_reviews": 340,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": 180000
+    },
+    {
+        "id": 32,
+        "location_city": "Enugu",
+        "hotel_name": "Hotel Sunshine",
+        "hotel_address": "No. 48 Presidential Road, Enugu.",
+        "hotel_image": "src/assets/searchResultsImg/Hotel_Sunshine.png",
+        "number_of_reviews": 450,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Swimming pool"
+        ],
+        "price": 200000
+    },
+    {
+        "id": 33,
+        "location_city": "Abuja",
+        "hotel_name": "Summerset Continental Hotel",
+        "hotel_address": "33, 5th Avenue, Gwarimpa, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Summerset_Continental_Hotel.png",
+        "number_of_reviews": 290,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": 170000
+    },
+    {
+        "id": 34,
+        "location_city": "Abuja",
+        "hotel_name": "Sandralia Hotel",
+        "hotel_address": "1, Solomon Lar Way, Jabi, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Sandralia_Hotel.png",
+        "number_of_reviews": 350,
+        "comment": "Good",
+        "ratings": "3/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Restaurant"
+        ],
+        "price": 145000
+    },
+    {
+        "id": 35,
+        "location_city": "Abuja",
+        "hotel_name": "Hawthorn Suites by Wyndham",
+        "hotel_address": "1 Uke Street, Garki II, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Hawthorn_Suites.png",
+        "number_of_reviews": 240,
+        "comment": "Fair",
+        "ratings": "2/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": 90000
+    },
+    {
+        "id": 36,
+        "location_city": "Lagos",
+        "hotel_name": "Four Points by Sheraton",
+        "hotel_address": "Plot 9/10 Block 2, Oniru Chieftaincy Estate, Victoria Island, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Four_Points_by_Sheraton.png",
+        "number_of_reviews": 750,
+        "comment": "Excellent",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Swimming pool"
+        ],
+        "price": 240000
+    },
+    {
+        "id": 37,
+        "location_city": "Lagos",
+        "hotel_name": "Eko Signature",
+        "hotel_address": "1415 Adetokunbo Ademola Street, Victoria Island, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Eko_Signature.png",
+        "number_of_reviews": 620,
+        "comment": "Very good",
+        "ratings": "4/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Restaurant"
+        ],
+        "price": 260000
+    },
+    {
+        "id": 38,
+        "location_city": "Lagos",
+        "hotel_name": "Southern Sun Ikoyi",
+        "hotel_address": "47 Alfred Rewane Road, Ikoyi, Lagos.",
+        "hotel_image": "src/assets/searchResultsImg/Southern_Sun_Ikoyi.png",
+        "number_of_reviews": 430,
+        "comment": "Good",
+        "ratings": "3/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Swimming pool"
+        ],
+        "price": 210000
+    },
+    {
+        "id": 39,
+        "location_city": "Abuja",
+        "hotel_name": "Grand Pela Hotel",
+        "hotel_address": "Plot 649, Cadastral Zone, Durumi, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Grand_Pela_Hotel.png",
+        "number_of_reviews": 150,
+        "comment": "Good",
+        "ratings": "3/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning"
+        ],
+        "price": 135000
+    },
+    {
+        "id": 40,
+        "location_city": "Abuja",
+        "hotel_name": "Transcorp Hilton Abuja",
+        "hotel_address": "1 Aguiyi Ironsi Street, Maitama, Abuja.",
+        "hotel_image": "src/assets/searchResultsImg/Transcorp_Hilton.png",
+        "number_of_reviews": 900,
+        "comment": "Excellent",
+        "ratings": "5/5",
+        "amenities": [
+            "Security",
+            "Free wifi",
+            "Air conditioning",
+            "Gym",
+            "Swimming pool"
+        ],
+        "price": 280000
     }
 ]
