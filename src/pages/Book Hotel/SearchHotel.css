@@ -84,6 +84,10 @@
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
 }
+.searchResult_2_child .hotel_img {
+    display: flex;
+    justify-content: center;
+}
 .searchResult_2_child .hotel_description{
     display: flex;
     flex-direction: column;
@@ -108,7 +112,7 @@
     gap: 0.5em;
 }
 .searchResult_2_child .hotel_description .hotel_description_child_1 p:nth-child(1){
-    font-size: 0.75em;   
+    font-size: 0.75em;
     color: white;
     background-color:#55BFEA;
     padding: 0.4em 1.8em 0.15em 1.5em;
@@ -188,4 +192,23 @@
 }
 .searchResult_3 button{
     padding: 0.625em 1.875em;
+}
+
+@media screen  and (min-width: 576px){
+    .searchNav{
+        font-size: 1em;
+    }
+    .searchResult_1_child{
+        font-size: 1.083em;
+    }
+    .searchResult_2_child{
+        font-size: 0.667em;
+    
+    }
+    .searchResult_2_child .hotel_description span{
+        font-size: 2.833em;
+    }
+    .searchResult_3{
+        font-size: 1.167em;
+    }
 }
