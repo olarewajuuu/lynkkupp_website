@@ -281,7 +281,7 @@ const HotelPartnerForm3 = () => {
 							<div className="flex flex-col md:flex-row justify-start gap-8 mt-4">
 								<FormControl component="fieldset">
 									{/* <FormLabel component="legend">Event Location</FormLabel> */}
-									<h4 className="md:ml-[-70px]  font-bold text-[16px]">Event location type*</h4>
+									<h4 className="font-bold text-[16px] text-left">Event location type*</h4>
 									<RadioGroup
 										name="entry"
 										value={formData.entry}
@@ -348,7 +348,7 @@ const HotelPartnerForm3 = () => {
 							<div className="flex flex-col md:flex-row justify-start gap-8 mt-4">
 								<FormControl component="fieldset">
 									{/* <FormLabel component="legend">Event Location</FormLabel> */}
-									<h4 className="md:ml-[-70px]  font-bold text-[16px]">Is it free*</h4>
+									<h4 className="font-bold text-[16px] text-left">Is it free*</h4>
 									<RadioGroup
 										name="eventLocation"
 										value={formData.eventLocation}

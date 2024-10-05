@@ -21,7 +21,21 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 	const [formData, setFormData] = useState({
 		file1: null,
 		file2: null,
+		file3: null,
+		file4: null,
+		file5: null,
+		file6: null,
+		price: '',
+		price1: '',
+		price2: '',
+		price3: '',
+		price4: '',
+		price5: '',
 		selectedOption: '',
+		selectedOption1: '',
+		selectedOption2: '',
+		selectedOption3: '',
+		selectedOption4: '',
 		checkbox1: false,
 		checkbox2: false,
 	});
@@ -42,7 +56,9 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (!formData.file1 || !formData.file2 || !formData.selectedOption || !formData.checkbox1 || !formData.checkbox2) {
+		// const { file1, file2, price, selectedOption, checkbox1, checkbox2 } = formData;
+
+		if (!formData.file1 || !formData.file2 || !formData.file3 || !formData.file4 || !formData.file5 || !formData.file6 || !formData.price || !formData.price1 || !formData.price2 || !formData.price3 || !formData.price4 || !formData.price5 || !formData.selectedOption || !formData.selectedOption1 || !formData.selectedOption2 || !formData.selectedOption3 || !formData.selectedOption4 || !formData.checkbox1 || !formData.checkbox2) {
 			alert('Please complete all required fields.');
 			return;
 		}
@@ -106,7 +122,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 							</h1>
 						</div>
 
-						<form action="" className="mt-6 px-2 md:px-0 md:mt-10">
+						<form action="" className="mt-6 px-2 md:px-0 md:mt-10" onSubmit={handleSubmit}>
 							{/* upload start  */}
 
 							<div className="flex flex-col mt-10">
@@ -127,43 +143,342 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 							{/* Rooms & Prices start  */}
 							<div className="mt-32">
 								<label htmlFor="Rooms&Prices" className="text-inherit flex mb-2 text-[13px] md:text-[16px] font-medium">Rooms & Prices*</label>
-								<div className="flex w-full border-[2px] h-[1151px] border-[#494949] rounded-[6px]">
-									<div>
-										<FileUpload2
-											file={formData.file2}
-											setFile={(file) => setFormData({ ...formData, file2: file })}
-										/>
-										<div>
-											<div>
-												<input type="text" className="border border-[#494949] rounded-[2px] w-[218px] h-[30px] mt-5" />
-											</div>
-											<FormControl component="fieldset" required className="ml-[-85px]">
-												<FormLabel component="legend" className="font-bold">Select room type</FormLabel>
-												<RadioGroup
-													name="selectedOption"
-													value={formData.selectedOption}
-													onChange={handleChange}
-												>
-													<FormControlLabel value="standard  " control={<Radio />} label="Standard  " />
-													<FormControlLabel value="classic " control={<Radio />} label="Classic " />
-													<FormControlLabel value="executive " control={<Radio />} label="Executive " />
-													<FormControlLabel value="presidential" control={<Radio />} label="Presidential" />
-												</RadioGroup>
-											</FormControl>
-										</div>
-									</div>
+								<div className="w-full border-[2px] h-[1151px] border-[#494949] rounded-[6px] p-[50px]">
 
+
+									<h4 className="text-[19px] font-[700] mb-9">Upload at least 5 rooms and state your price <span className="text-[14px] font-[500]"> that stand out from the competition</span></h4>
+									<div className="grid grid-cols-3 ">
+										{/* First  */}
+										<div>
+											<FileUpload2
+												file={formData.file6}
+												setFile={(file) => setFormData({ ...formData, file6: file })}
+											/>
+											<div className="text-left">
+												<div>
+													<input value={formData.price}
+														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[218px] h-[30px] mt-6 mb-9 pl-4" />
+												</div>
+
+												<FormControl component="fieldset" required className="ml-10">
+													{/* <FormLabel component="legend" className="font-extrabold"></FormLabel> */}
+													<label htmlFor="" className="font-extrabold text-[19px]">Select room type</label>
+													<RadioGroup
+														name="selectedOption"
+														value={formData.selectedOption}
+														onChange={handleChange}
+													>
+														<FormControlLabel value="standard  " control={<Radio />} label="Standard  " />
+														<FormControlLabel value="classic " control={<Radio />} label="Classic " />
+														<FormControlLabel value="executive " control={<Radio />} label="Executive " />
+														<FormControlLabel value="presidential" control={<Radio />} label="Presidential" />
+													</RadioGroup>
+												</FormControl>
+												<div className="flex flex-col mt-3">
+													<div >
+
+														<FormControlLabel
+															control={
+																<Checkbox
+																	checked={formData.checkbox1}
+																	onChange={handleCheckboxChange}
+																	name="checkbox1"
+																// required
+																/>
+															}
+														// label="Refundable"
+														/>
+														<label htmlFor="" className="text-[#55BFEA] text-[11px] ml-[-20px] font-[500]">Refundable</label>
+													</div>
+													<div>
+
+														<FormControlLabel
+															control={
+																<Checkbox
+																	checked={formData.checkbox2}
+																	onChange={handleCheckboxChange}
+																	name="checkbox2"
+																// required
+																/>
+															}
+														// label="Checkbox 2 (Required)"
+														/>
+														<label htmlFor="" className="text-[#55BFEA] text-[11px] ml-[-20px] font-[500]">Refundable</label>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+										{/* Two  */}
+										<div>
+											<FileUpload2
+												file={formData.file2}
+												setFile={(file) => setFormData({ ...formData, file2: file })}
+											/>
+											<div className="text-left">
+												<div>
+													<input value={formData.price2}
+														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[218px] h-[30px] mt-6 mb-9 pl-4" />
+												</div>
+												<p></p>
+												<FormControl component="fieldset" required className="ml-10">
+													{/* <FormLabel component="legend" className="font-extrabold"></FormLabel> */}
+													<label htmlFor="" className="font-extrabold text-[19px]">Select room type</label>
+													<RadioGroup
+														name="selectedOption"
+														value={formData.selectedOption1}
+														onChange={handleChange}
+													>
+														<FormControlLabel value="standard" control={<Radio />} label="Standard  " />
+														<FormControlLabel value="classic" control={<Radio />} label="Classic " />
+														<FormControlLabel value="executive" control={<Radio />} label="Executive " />
+														<FormControlLabel value="presidential" control={<Radio />} label="Presidential" />
+													</RadioGroup>
+												</FormControl>
+												<div className="flex flex-col mt-3">
+													<div >
+
+														<FormControlLabel
+															control={
+																<Checkbox
+																	checked={formData.checkbox1}
+																	onChange={handleCheckboxChange}
+																	name="checkbox1"
+																// required
+																/>
+															}
+														// label="Refundable"
+														/>
+														<label htmlFor="" className="text-[#55BFEA] text-[11px] ml-[-20px] font-[500]">Refundable</label>
+													</div>
+													<div>
+
+														<FormControlLabel
+															control={
+																<Checkbox
+																	checked={formData.checkbox2}
+																	onChange={handleCheckboxChange}
+																	name="checkbox2"
+																// required
+																/>
+															}
+														// label="Checkbox 2 (Required)"
+														/>
+														<label htmlFor="" className="text-[#55BFEA] text-[11px] ml-[-20px] font-[500]">Refundable</label>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+										{/* Three  */}
+										<div>
+											<FileUpload2
+												file={formData.file3}
+												setFile={(file) => setFormData({ ...formData, file3: file })}
+											/>
+											<div className="text-left">
+												<div>
+													<input value={formData.price3}
+														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[218px] h-[30px] mt-6 mb-9 pl-4" />
+												</div>
+												<p></p>
+												<FormControl component="fieldset" required className="ml-10">
+													{/* <FormLabel component="legend" className="font-extrabold"></FormLabel> */}
+													<label htmlFor="" className="font-extrabold text-[19px]">Select room type</label>
+													<RadioGroup
+														name="selectedOption"
+														value={formData.selectedOption2}
+														onChange={handleChange}
+													>
+														<FormControlLabel value="standard  " control={<Radio />} label="Standard  " />
+														<FormControlLabel value="classic " control={<Radio />} label="Classic " />
+														<FormControlLabel value="executive " control={<Radio />} label="Executive " />
+														<FormControlLabel value="presidential" control={<Radio />} label="Presidential" />
+													</RadioGroup>
+												</FormControl>
+												<div className="flex flex-col mt-3">
+													<div >
+
+														<FormControlLabel
+															control={
+																<Checkbox
+																	checked={formData.checkbox1}
+																	onChange={handleCheckboxChange}
+																	name="checkbox1"
+																// required
+																/>
+															}
+														// label="Refundable"
+														/>
+														<label htmlFor="" className="text-[#55BFEA] text-[11px] ml-[-20px] font-[500]">Refundable</label>
+													</div>
+													<div>
+
+														<FormControlLabel
+															control={
+																<Checkbox
+																	checked={formData.checkbox2}
+																	onChange={handleCheckboxChange}
+																	name="checkbox2"
+																// required
+																/>
+															}
+														// label="Checkbox 2 (Required)"
+														/>
+														<label htmlFor="" className="text-[#55BFEA] text-[11px] ml-[-20px] font-[500]">Refundable</label>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+										{/* Four  */}
+										<div>
+											<FileUpload2
+												file={formData.file4}
+												setFile={(file) => setFormData({ ...formData, file4: file })}
+											/>
+											<div className="text-left">
+												<div>
+													<input value={formData.price4}
+														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[218px] h-[30px] mt-6 mb-9 pl-4" />
+												</div>
+												<p></p>
+												<FormControl component="fieldset" required className="ml-10">
+													{/* <FormLabel component="legend" className="font-extrabold"></FormLabel> */}
+													<label htmlFor="" className="font-extrabold text-[19px]">Select room type</label>
+													<RadioGroup
+														name="selectedOption"
+														value={formData.selectedOption3}
+														onChange={handleChange}
+													>
+														<FormControlLabel value="standard  " control={<Radio />} label="Standard  " />
+														<FormControlLabel value="classic " control={<Radio />} label="Classic " />
+														<FormControlLabel value="executive " control={<Radio />} label="Executive " />
+														<FormControlLabel value="presidential" control={<Radio />} label="Presidential" />
+													</RadioGroup>
+												</FormControl>
+												<div className="flex flex-col mt-3">
+													<div >
+
+														<FormControlLabel
+															control={
+																<Checkbox
+																	checked={formData.checkbox1}
+																	onChange={handleCheckboxChange}
+																	name="checkbox1"
+																// required
+																/>
+															}
+														// label="Refundable"
+														/>
+														<label htmlFor="" className="text-[#55BFEA] text-[11px] ml-[-20px] font-[500]">Refundable</label>
+													</div>
+													<div>
+
+														<FormControlLabel
+															control={
+																<Checkbox
+																	checked={formData.checkbox2}
+																	onChange={handleCheckboxChange}
+																	name="checkbox2"
+																// required
+																/>
+															}
+														// label="Checkbox 2 (Required)"
+														/>
+														<label htmlFor="" className="text-[#55BFEA] text-[11px] ml-[-20px] font-[500]">Refundable</label>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+										{/* Five  */}
+										<div>
+											<FileUpload2
+												file={formData.file5}
+												setFile={(file) => setFormData({ ...formData, file5: file })}
+											/>
+											<div className="text-left">
+												<div>
+													<input value={formData.price5}
+														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[218px] h-[30px] mt-6 mb-9 pl-4" />
+												</div>
+												<p></p>
+												<FormControl component="fieldset" required className="ml-10">
+													{/* <FormLabel component="legend" className="font-extrabold"></FormLabel> */}
+													<label htmlFor="" className="font-extrabold text-[19px]">Select room type</label>
+													<RadioGroup
+														name="selectedOption"
+														value={formData.selectedOption4}
+														onChange={handleChange}
+													>
+														<FormControlLabel value="standard  " control={<Radio />} label="Standard  " />
+														<FormControlLabel value="classic " control={<Radio />} label="Classic " />
+														<FormControlLabel value="executive " control={<Radio />} label="Executive " />
+														<FormControlLabel value="presidential" control={<Radio />} label="Presidential" />
+													</RadioGroup>
+												</FormControl>
+												<div className="flex flex-col mt-3">
+													<div >
+
+														<FormControlLabel
+															control={
+																<Checkbox
+																	checked={formData.checkbox1}
+																	onChange={handleCheckboxChange}
+																	name="checkbox1"
+																// required
+																/>
+															}
+														// label="Refundable"
+														/>
+														<label htmlFor="" className="text-[#55BFEA] text-[11px] ml-[-20px] font-[500]">Refundable</label>
+													</div>
+													<div>
+
+														<FormControlLabel
+															control={
+																<Checkbox
+																	checked={formData.checkbox2}
+																	onChange={handleCheckboxChange}
+																	name="checkbox2"
+																// required
+																/>
+															}
+														// label="Checkbox 2 (Required)"
+														/>
+														<label htmlFor="" className="text-[#55BFEA] text-[11px] ml-[-20px] font-[500]">Refundable</label>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+
+
+
+
+									</div>
 								</div>
 							</div>
 							{/* Rooms & Prices ends */}
 
 
 							{/* Submit btn start  */}
-							<Link to="/hotelpartner2" className="mt-14 flex">
-								<button type="submit" className="text-white bg-[#55bfea] py-3.5 px-5 w-full text-[13px] md:text-[23px] font-bold rounded-md">
-									Continue
-								</button>
-							</Link>
+
+							<button type="submit" className="text-white bg-[#55bfea] py-3.5 px-5 w-full text-[13px] md:text-[23px] font-bold rounded-md">
+								Continue
+							</button>
+
 							{/* Submit btn ends */}
 						</form>
 

@@ -1,5 +1,173 @@
-
 .login_container {
+  max-width: 400px;
+  height: 630px;
+  background-color: #fff;
+  padding: 0rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 20;
+}
+
+.login_content {
+  padding: 0rem 3.5rem;
+}
+
+.login_content h3 {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 32.2px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+}
+
+.login_content label {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18.2px;
+  text-align: left;
+}
+
+.login_content input {
+  margin-top: 10px;
+  width: 300px;
+  height: 41px;
+  padding: 13px 10px 13px 10px;
+  border-radius: 6px;
+  border: 0.5px solid #494949;
+}
+
+.loginBtn button {
+  margin: 10px auto;
+  width: 300px;
+  height: 42px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+  background-color: #55bfea;
+  border: none;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+}
+
+.loginBtn button:hover {
+  background-color: #039dda;
+}
+
+.createAccount {
+  margin: 10px auto;
+  width: 300px;
+  height: 42px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #55bfea;
+  font-size: 15px;
+  font-weight: 400;
+  color: #55bfea;
+  cursor: pointer;
+  text-align: center;
+}
+
+.altlogin {
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  color: #23222259;
+  margin-bottom: 25px;
+}
+
+.loginsocialIcons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 32px;
+}
+
+.loginicon {
+  text-align: center;
+}
+
+.loginicon p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.4px;
+  text-align: center;
+  color: #23222259;
+}
+
+.logintext {
+  font-size: 10.9px;
+  font-weight: 400;
+  line-height: 15.4px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.errors {
+  color: #ec0606;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sign_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 760px) {
+  .silogin_container .overlay {
+    display: none;
+  }
+
+  .login_mobile {
+    display: block;
+    background-color: #55bfea;
+    padding: 0px 5px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 22.4px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+
+  .login_mobile img {
+    width: 31px;
+    height: 31px;
+  }
+
+  .login_mobile p {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logintext {
+    margin-right: 0px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15.4px;
+    text-align: center;
+    margin-top: 0px;
+    padding: 20px;
+  }
+
+  .login_container {
     max-width: 400px;
     height: 630px;
     background-color: #fff;
@@ -13,142 +181,4 @@
     right: 0px;
     z-index: 20;
   }
-  .login_content {
-    padding: 0rem 3.5rem;
-  }
-  .login_content h3 {
-    font-size: 23px;
-    font-weight: 700;
-    line-height: 32.2px;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  .login_form {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: start;
-  }
-  .login_content label {
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 18.2px;
-    text-align: left;
-  }
-  .login_content input {
-    margin-top: 10px;
-    width: 300px;
-    height: 41px;
-    padding: 13px 10px 13px 10px;
-    border-radius: 6px;
-    border: 0.5px solid #494949;
-  }
-  .loginBtn button {
-    margin: 10px auto;
-    width: 300px;
-    height: 42px;
-    padding: 10px 30px 10px 30px;
-    border-radius: 5px;
-    background-color: #55bfea;
-    border: none;
-    font-size: 15px;
-    font-weight: 400;
-    color: #fff;
-    cursor: pointer;
-  }
-  .loginBtn button:hover {
-    background-color: #039dda;
-  }
-  .createAccount{
-    margin: 10px auto;
-    width: 300px;
-    height: 42px;
-    padding: 10px 30px 10px 30px;
-    border-radius: 5px;
-    background-color: #fff;
-    border: 1px solid #55bfea;
-    font-size: 15px;
-    font-weight: 400;
-    color: #55bfea;
-    cursor: pointer;
-    text-align: center;
-  }
-  .altlogin{
-    font-size: 13px;
-    font-weight: 400;
-    text-align: center;
-    color: #23222259;
-    margin-bottom: 25px;
-  }
-  .loginsocialIcons{
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    gap: 32px;
-  }
-  .loginicon {
-    text-align: center;
-  }
-  .loginicon p {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 15.4px;
-    text-align: center;
-    color: #23222259;
-  }
-  .logintext {
-    font-size: 10.9px;
-    font-weight: 400;
-    line-height: 15.4px;
-    text-align: center;
-    margin-top: 25px;
-  }
-  .errors {
-    color: #ec0606;
-    font-size: 12px;
-    text-align: center;
-  }
-  .sign_mobile {
-    display: none;
-  }
-  
-  @media screen and (max-width: 760px) {
-    .silogin_container .overlay {
-      display: none;
-    }
-    
-    .login_mobile {
-      display: block;
-      background-color: #55bfea;
-      padding: 0px 5px;
-      color: #fff;
-      font-size: 14px;
-      line-height: 22.4px;
-      text-align: left;
-      width: 100%;
-      margin-bottom: 10px;
-      margin-left: 0px;
-    }
-
-    .login_mobile img {
-      width: 31px;
-      height: 31px;
-    }
-    .login_mobile p {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .logintext {
-      margin-right: 0px;
-      font-size: 11px;
-      font-weight: 400;
-      line-height: 15.4px;
-      text-align: center;
-      margin-top: 0px;
-      padding: 20px;
-    }
-  }
-  
+}

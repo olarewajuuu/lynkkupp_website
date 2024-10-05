@@ -102,7 +102,7 @@ const FlightHero = () => {
           </div>
         </div>
         <div>
-          <div className="heroform_container
+          <div className="heroform_container md:w-full
           ">
             <form action="">
               <div className="formDisplay flex gap-3">
