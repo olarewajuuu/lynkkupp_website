@@ -2,7 +2,9 @@
 
 const Support = () => {
   return (
-    <div>Support Page is under construction</div>
+    <div>
+      <h1>Under construction</h1>
+    </div>
   )
 }
 
