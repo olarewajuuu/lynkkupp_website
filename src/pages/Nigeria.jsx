@@ -1,8 +1,9 @@
-
-
+import GuestDetails from "./Book Flight/GuestDetails"
 const Nigeria = () => {
   return (
-    <div>NGN Page is under construction</div>
+    <div>
+      <GuestDetails />
+    </div>
   )
 }
 

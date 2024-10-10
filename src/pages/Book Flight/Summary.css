@@ -1,0 +1,542 @@
+.GeneralDiv{
+    display: flex;
+    margin: 7rem 10rem;
+    gap: 8rem;
+}
+.group1{
+    justify-content: center;
+    align-items: center;
+    width:fit-content;
+    background-color: rgb(222, 217, 217);
+    padding: 10px;
+}
+.Flight{
+    display: flex;
+    gap: 20rem;
+}
+.YourTrip{
+    display: flex;
+    padding-bottom: 1rem;
+}
+.YourTrip h1{
+    font-family: Roboto;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    padding-right: 10px;
+    text-align: center;
+}
+.YourTrip img{
+    width: 25px;
+    height: 30px;
+    flex-shrink: 0;
+    padding-right: 10px;
+}
+.TripDate{
+    display: flex;
+    padding-bottom: 1rem;
+}
+.TripDate h1{
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 140%; 
+    border-radius: 4px;
+    background: rgba(227, 138, 55, 0.15);
+    
+}
+.TripDate p{
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; 
+    padding-left: 10px;
+}
+.Economy{
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 5px;
+}
+.FlightBooking p{
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 4px;
+    background: rgba(33, 235, 90, 0.20);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.AirP{
+    display: flex;
+    gap: 5px;
+}
+.AirP img{
+    width: 25px;
+    height: 25px;
+    border: 0.5px solid var(--Acent-states-Sky-Blue, #55BFEA);
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+.AirP p{
+    color: var(--Acent-states-Sky-Blue, #55BFEA);
+    font-family: Roboto;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    padding-top: 3px;
+}
+.TakeoffTime{
+    display: flex;
+    padding-top: 1rem;
+}
+.TakeoffTime h1{
+    margin-right: 10px;
+    font-family: Roboto;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+.TakeoffTime img{
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 12px;
+    height: 80px;
+}
+.TakeoffTime p{
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-top: 5px;
+}
+.LandingTime{
+    display: flex;
+    padding-top: 2px;
+}
+.LandingTime h1{
+    margin-right: 10px;
+    font-family: Roboto;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+.LandingTime h2{
+    margin-left: 15px;
+    font-family: Roboto;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+.LandingTime p{
+    margin-left: 10px;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-top: 5px;
+}
+.line{
+    width: 700px;
+    height: 1px;
+    margin-top: 36px;
+}
+.GuestD h1{
+    font-family: Roboto;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+.GuestData{
+    width: 700px;
+    height: 123px;
+    background-color: rgb(222, 217, 217);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 1rem;
+
+}
+.Data{
+    display: flex;
+    padding: 20px 25px 8px 25px;
+    gap: 5px;
+}
+.Data h1{
+    font-family: Roboto;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+.Data P{
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    padding-top: 3px;
+}
+.Button{
+    display: flex;
+    width: 700px;
+    height: 60px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 5px;
+    color: white;
+    background: var(--Acent-states-Sky-Blue, #55BFEA);
+}
+.Container2{
+    border: 1.5px solid black;
+    width: 272px;
+    height: 400px;
+    padding: 2rem 25px;
+}
+.cart{
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    padding-bottom: 10px;
+}
+.flight h1{
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 10px;
+}
+.flight p{
+    font-family: Roboto;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; 
+    padding-bottom: 5px;
+}
+.fare h1{
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.fare p{
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding-bottom: 5px;
+}
+.standard{
+    display: flex;
+    gap: 4rem;
+    padding-bottom: 5px;
+}
+.standard h1{
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.standard p{
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.discount{
+    display: flex;
+    gap: 9rem;
+    padding-bottom: 5px;
+}
+.discount h1{
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.discount p{
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.service{
+    display: flex;
+    gap: 7rem;
+    padding-bottom: 15px;
+}
+.service h1{
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.service p{
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.total h1{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:18px; 
+}
+.total p{
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 39px; 
+}
+.Jam img{
+    background-color: #55BFEA;
+    width: 50px;
+    height: 50px;
+    margin-top: 5rem;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: smaller;
+}
+@media screen and (max-width: 760px){
+    .GeneralDiv{
+        display: flex;
+        margin: 5rem 10px;
+        gap: 8rem;
+    }
+    .group1{
+        justify-content: center;
+        align-items: center;
+        width:390px;
+        height: 150px;
+        background-color: rgb(222, 217, 217);
+        padding: 10px;
+    }
+    .Flight{
+        display: flex;
+        gap: 6rem;
+    }
+    .YourTrip{
+        display: flex;
+        padding-bottom: 10px;
+    }
+    .YourTrip h1{
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        padding-right: 5px;
+        text-align: center;
+    }
+    .YourTrip img{
+        width: 20px;
+        height: 15px;
+        flex-shrink: 0;
+        padding-right: 5px;
+    }
+    .TripDate{
+        display: flex;
+        padding-bottom: 2px;
+    }
+    .TripDate h1{
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 140%; 
+        border-radius: 2px;
+        background: rgba(227, 138, 55, 0.15);
+        
+    }
+    .TripDate p{
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%; 
+        padding-left: 10px;
+    }
+    .Economy{
+        display: none;
+    }
+    .FlightBooking p{
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        border-radius: 4px;
+        background: rgba(33, 235, 90, 0.20);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .AirP{
+        display: flex;
+        gap: 5px;
+    }
+    .AirP img{
+        width: 20px;
+        height: 20px;
+        border: 0.5px solid var(--Acent-states-Sky-Blue, #55BFEA);
+        background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+        margin-bottom: 10px;
+    }
+    .AirP p{
+        color: var(--Acent-states-Sky-Blue, #55BFEA);
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        padding-top: 3px;
+    }
+    .TakeoffTime{
+        display: flex;
+        padding-top: 1rem;
+    }
+    .TakeoffTime h1{
+        margin-right: 5px;
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+    }
+    .TakeoffTime img{
+        margin-right: 5px;
+        margin-top: 8px;
+        width: 12px;
+        height: 30px;
+    }
+    .TakeoffTime p{
+        font-family: Roboto;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        margin-top: 2px;
+    }
+    .LandingTime{
+        display: flex;
+        padding-top: 2px;
+    }
+    .LandingTime h1{
+        margin-right: 10px;
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+    }
+    .LandingTime h2{
+        margin-left: 15px;
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+    }
+    .LandingTime p{
+        margin-left: 10px;
+        font-family: Roboto;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        margin-top: 2px;
+    }
+    .line{
+        width: 390px;
+        height: 1px;
+        margin-top: 36px;
+    }
+    .GuestD{
+        display: flex;
+    }
+    .GuestD h1{
+        font-family: Roboto;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        padding-top: 5px;
+    }
+    .GuestData{
+        width: 390px;
+        height: 123px;
+        background-color: rgb(222, 217, 217);
+        display: grid;
+        grid-template-columns: auto auto ;
+        margin-bottom: 1rem;
+    
+    }
+    .Data{
+        display: flex;
+        padding: 8px 10px 5px 10px;
+        gap: 3px;
+    }
+    .Data h1{
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    
+    }
+    .Data P{
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        padding-top: 0px;
+    }
+    .Button{
+        display: flex;
+        width: 390px;
+        height: 40px;
+        padding: 10px 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 5px;
+        color: white;
+        background: var(--Acent-states-Sky-Blue, #55BFEA);
+    }
+}
