@@ -3,11 +3,42 @@ import Arrow from "../../assets/Images/teenyicons_arrow-up-solid.svg"
 import Airpeace from "../../assets/Images/Rectangle 136.svg"
 import Column from "../../assets/Images/Group 246.svg"
 import Jam from "../../assets/Images/jam_messages-f.svg"
+import ArrowBack from "../../assets/Images/ep_back.svg"
+import StraightLine from "../../assets/Images/Line 36.svg"
 import { Link } from "react-router-dom"
 
 const Summary = () => {
   return (
     <div>
+        <div className="Headline">
+            <div className="Aback"> 
+                <img src={ArrowBack} alt="" />
+                <Link to="/guestdetails">Go back</Link>
+            </div>
+            <div className="HeadDetails">
+                <p>Summary</p>
+            </div>
+            <div className="NumberOne">
+                <h1>1</h1>
+                <p>Search Flight</p>
+                <img src={StraightLine} alt="" />
+            </div>
+            <div className="NumberTwo">
+                <h1>2</h1>
+                <p>Guest Details</p>
+                <img src={StraightLine} alt="" />
+            </div>
+            <div className="NumberThree">
+                <h1>3</h1>
+                <p>Summary</p>
+                <img src={StraightLine} alt="" />
+            </div>
+            <div className="NumberFour">
+                <h1>4</h1>
+                <p>Payment</p>
+            </div>
+
+        </div>
         <div className="GeneralDiv">
             <div className="Container1">
                 <div className="group1">
