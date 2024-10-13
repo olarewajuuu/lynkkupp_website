@@ -2,7 +2,9 @@
 
 const FlightStatus = () => {
   return (
-    <div>FlightStatus Page is under construction</div>
+    <div>
+    <h1>under construction</h1>
+    </div>
   )
 }
 

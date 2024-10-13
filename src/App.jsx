@@ -12,7 +12,11 @@ import HotelPartnerForm from "./components/auth/HotelPartnerForm";
 import HotelPartnerForm2 from "./components/auth/HotelPartnerForm2";
 import HotelPartnerForm3 from "./components/auth/HotelPartnerForm3";
 import HotelPartnerForm4 from "./components/auth/HotelPartnerForm4";
-
+import GuestDetails from "./pages/Book Flight/GuestDetails";
+import Summary from "./pages/Book Flight/Summary";
+import CardDetails from "./pages/Book Flight/CardDetails";
+// import Congratulations from "./pages/Book Flight/Congratulations";
+import Approved from "./pages/Book Flight/Approved";
 function App() {
 	return (
 		<>
@@ -30,6 +34,11 @@ function App() {
 					<Route exact path="hotelpartner2" element={<HotelPartnerForm2 />} />
 					<Route exact path="hotelpartner3" element={<HotelPartnerForm3 />} />
 					<Route exact path="hotelpartner4" element={<HotelPartnerForm4 />} />
+					<Route exact path="guestdetails" element={<GuestDetails />} />
+					<Route exact path="summary" element={<Summary />} />
+					<Route exact path="carddetails" element={<CardDetails />} /> 
+					{/* <Route exact path="cogratulations" element={<Congratulations />} /> */}
+					<Route exact path="approved" element={<Approved />} />
 				</Routes>
 				<br />
 				<Footer />
