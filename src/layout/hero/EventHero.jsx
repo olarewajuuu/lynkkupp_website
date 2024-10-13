@@ -50,7 +50,7 @@ const EventHero = () => {
                             <input
                                 type="search"
                                 placeholder="Enter Keywords"
-                                className="ml-7"
+                                className="ml-7 outline-none w-[250px]"
                             />
                         </div>
 

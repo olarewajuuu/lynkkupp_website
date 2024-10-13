@@ -31,7 +31,7 @@ const FileUpload1 = ({ file, setFile }) => {
         </Typography>
       ) : (
         <Typography variant="body1">
-          <img src={uploadImg} alt="" />
+          <img src={uploadImg} alt="" className='py-[90px] px-[120px] md:py-[100px] md:px-[400px] w-[]'/>
         </Typography>
       )}
     </Box>

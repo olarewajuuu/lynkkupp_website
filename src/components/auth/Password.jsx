@@ -75,7 +75,7 @@ const Password = ({ cancelPassword }) => {
       >
         {/* <div className="overlay" onClick={cancelPassword}></div> */}
         <div className="password_mobile">
-          <p className="mobile md:flex items-center gap-0 text-white">
+          <p className="w-full h-[49px] bg-[#55BFEA] flex flex-row justify-start items-center gap-4 pl-0  md:hidden">
             <img src={backImg} onClick={cancelPassword} /> Create password
           </p>
         </div>

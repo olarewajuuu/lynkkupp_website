@@ -11,7 +11,7 @@ const FileUpload2 = ({ file, setFile }) => {
     });
 
     return (
-        <Grid className="flex justify-center items-center w-[218px]  border-[2px] h-[130px] border-[#494949] rounded-[6px]">
+        <Grid className="flex justify-center items-center w-[197px] md:w-[218px] md:h-[130px]  border-[2px] h-[86px] border-[#494949] rounded-[6px]">
             <Box
                 {...getRootProps()}
                 sx={{
@@ -30,7 +30,7 @@ const FileUpload2 = ({ file, setFile }) => {
                     </Typography>
                 ) : (
                     <Typography variant="body1">
-                        <img src={uploadImg2} alt="" />
+                        <img src={uploadImg2} alt="" className='py-[0px] px-[60px] md:py-[10px] md:px-[60px] mt-4'/>
                     </Typography>
                 )}
             </Box>

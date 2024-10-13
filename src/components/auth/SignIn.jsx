@@ -59,7 +59,7 @@ const SignIn = ({cancelSignin}) => {
       >
        
       <div className="login_mobile" >
-      <p onClick={cancelSignin}  className="mobile md:flex items-center gap-0 text-white"> <img src={backImg }/> Create account</p>
+      <p onClick={cancelSignin}  className="w-full h-[49px] bg-[#55BFEA] flex flex-row justify-start items-center gap-4 pl-10  md:hidden"> <img src={backImg }/> Create account</p>
       </div>
 
         {/* <div className="overlay" onClick={cancelSignin} ></div> */}

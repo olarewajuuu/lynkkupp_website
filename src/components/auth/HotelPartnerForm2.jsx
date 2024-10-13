@@ -90,7 +90,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 							<span className="text-[#55BFEA]"> LynKKupp</span>
 						</h1>
 					</div>
-					<div className="flex flex-row items-center justify-center px-2 md:px-0 md:gap-28 mt-10 border-b-4">
+					<div className="flex flex-row items-center justify-center px-6 md:px-0 md:gap-28 mt-10 border-b-4">
 						<div className="flex flex-col w-full pl-0 md:pl-12 border-b-4 border-[#0588BD]">
 							<div className="flex flex-row gap-2 md:gap-4 items-center">
 								<img src={hotelImg} alt="hotel image" className="w-5 h-5" />
@@ -102,7 +102,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 							{/* <hr className="w-[489px] bg-[#0588BD] h-1" /> */}
 						</div>
 
-						<div className="flex flex-col w-full pl-0 md:pl-4 ">
+						<div className="flex flex-col w-full pl-0 md:pl-4">
 							<div className="flex flex-row gap-2 md:gap-4 items-center">
 								<img src={eventImg} alt="event image" className="w-5 h-5" />
 
@@ -115,7 +115,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 
 					</div>
 
-					<div className="container">
+					<div className="container px-4">
 						<div className="flex mt-10 px-2 md:px-0">
 							<h1 className="text-inherit text-[16px] md:text-[40px] font-bold">
 								Part 2 (Uploads)
@@ -143,11 +143,11 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 							{/* Rooms & Prices start  */}
 							<div className="mt-32">
 								<label htmlFor="Rooms&Prices" className="text-inherit flex mb-2 text-[13px] md:text-[16px] font-medium">Rooms & Prices*</label>
-								<div className="w-full border-[2px] h-[1151px] border-[#494949] rounded-[6px] p-[50px]">
+								<div className="w-full md:border-[2px] h-[1551px] md:h-[1251px] md:border-[#494949] rounded-[6px] md:p-[50px]">
 
 
-									<h4 className="text-[19px] font-[700] mb-9">Upload at least 5 rooms and state your price <span className="text-[14px] font-[500]"> that stand out from the competition</span></h4>
-									<div className="grid grid-cols-3 ">
+									<h4 className="text-[19px] font-[700] mb-9 px-[50px]">Upload at least 5 rooms and state your price <span className="text-[14px] font-[500]"> that stand out from the competition</span></h4>
+									<div className="grid grid-cols-2 md:grid-cols-3 gap-10">
 										{/* First  */}
 										<div>
 											<FileUpload2
@@ -157,7 +157,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 											<div className="text-left">
 												<div>
 													<input value={formData.price}
-														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[218px] h-[30px] mt-6 mb-9 pl-4" />
+														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[197px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
 												</div>
 
 												<FormControl component="fieldset" required className="ml-10">
@@ -165,8 +165,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 													<label htmlFor="" className="font-extrabold text-[19px]">Select room type</label>
 													<RadioGroup
 														name="selectedOption"
-														value={formData.selectedOption}
-														onChange={handleChange}
+													// value={formData.selectedOption}
+													// onChange={handleChange}
 													>
 														<FormControlLabel value="standard  " control={<Radio />} label="Standard  " />
 														<FormControlLabel value="classic " control={<Radio />} label="Classic " />
@@ -180,8 +180,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 														<FormControlLabel
 															control={
 																<Checkbox
-																	checked={formData.checkbox1}
-																	onChange={handleCheckboxChange}
+																	// checked={formData.checkbox1}
+																	// onChange={handleCheckboxChange}
 																	name="checkbox1"
 																// required
 																/>
@@ -195,8 +195,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 														<FormControlLabel
 															control={
 																<Checkbox
-																	checked={formData.checkbox2}
-																	onChange={handleCheckboxChange}
+																	// checked={formData.checkbox2}
+																	// onChange={handleCheckboxChange}
 																	name="checkbox2"
 																// required
 																/>
@@ -220,7 +220,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 											<div className="text-left">
 												<div>
 													<input value={formData.price2}
-														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[218px] h-[30px] mt-6 mb-9 pl-4" />
+														onChange={handleChange} placeholder="Price" type="text"  className="border border-[#494949] rounded-[2px] w-[197px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
 												</div>
 												<p></p>
 												<FormControl component="fieldset" required className="ml-10">
@@ -228,8 +228,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 													<label htmlFor="" className="font-extrabold text-[19px]">Select room type</label>
 													<RadioGroup
 														name="selectedOption"
-														value={formData.selectedOption1}
-														onChange={handleChange}
+													// value={formData.selectedOption1}
+													// onChange={handleChange}
 													>
 														<FormControlLabel value="standard" control={<Radio />} label="Standard  " />
 														<FormControlLabel value="classic" control={<Radio />} label="Classic " />
@@ -243,8 +243,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 														<FormControlLabel
 															control={
 																<Checkbox
-																	checked={formData.checkbox1}
-																	onChange={handleCheckboxChange}
+																	// checked={formData.checkbox1}
+																	// onChange={handleCheckboxChange}
 																	name="checkbox1"
 																// required
 																/>
@@ -258,8 +258,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 														<FormControlLabel
 															control={
 																<Checkbox
-																	checked={formData.checkbox2}
-																	onChange={handleCheckboxChange}
+																	// checked={formData.checkbox2}
+																	// onChange={handleCheckboxChange}
 																	name="checkbox2"
 																// required
 																/>
@@ -283,7 +283,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 											<div className="text-left">
 												<div>
 													<input value={formData.price3}
-														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[218px] h-[30px] mt-6 mb-9 pl-4" />
+														onChange={handleChange} placeholder="Price" type="text"  className="border border-[#494949] rounded-[2px] w-[197px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
 												</div>
 												<p></p>
 												<FormControl component="fieldset" required className="ml-10">
@@ -291,8 +291,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 													<label htmlFor="" className="font-extrabold text-[19px]">Select room type</label>
 													<RadioGroup
 														name="selectedOption"
-														value={formData.selectedOption2}
-														onChange={handleChange}
+													// value={formData.selectedOption2}
+													// onChange={handleChange}
 													>
 														<FormControlLabel value="standard  " control={<Radio />} label="Standard  " />
 														<FormControlLabel value="classic " control={<Radio />} label="Classic " />
@@ -306,8 +306,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 														<FormControlLabel
 															control={
 																<Checkbox
-																	checked={formData.checkbox1}
-																	onChange={handleCheckboxChange}
+																	// checked={formData.checkbox1}
+																	// onChange={handleCheckboxChange}
 																	name="checkbox1"
 																// required
 																/>
@@ -321,8 +321,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 														<FormControlLabel
 															control={
 																<Checkbox
-																	checked={formData.checkbox2}
-																	onChange={handleCheckboxChange}
+																	// checked={formData.checkbox2}
+																	// onChange={handleCheckboxChange}
 																	name="checkbox2"
 																// required
 																/>
@@ -346,7 +346,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 											<div className="text-left">
 												<div>
 													<input value={formData.price4}
-														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[218px] h-[30px] mt-6 mb-9 pl-4" />
+														onChange={handleChange} placeholder="Price" type="text"  className="border border-[#494949] rounded-[2px] w-[197px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
 												</div>
 												<p></p>
 												<FormControl component="fieldset" required className="ml-10">
@@ -354,8 +354,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 													<label htmlFor="" className="font-extrabold text-[19px]">Select room type</label>
 													<RadioGroup
 														name="selectedOption"
-														value={formData.selectedOption3}
-														onChange={handleChange}
+													// value={formData.selectedOption3}
+													// onChange={handleChange}
 													>
 														<FormControlLabel value="standard  " control={<Radio />} label="Standard  " />
 														<FormControlLabel value="classic " control={<Radio />} label="Classic " />
@@ -369,8 +369,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 														<FormControlLabel
 															control={
 																<Checkbox
-																	checked={formData.checkbox1}
-																	onChange={handleCheckboxChange}
+																	// checked={formData.checkbox1}
+																	// onChange={handleCheckboxChange}
 																	name="checkbox1"
 																// required
 																/>
@@ -384,8 +384,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 														<FormControlLabel
 															control={
 																<Checkbox
-																	checked={formData.checkbox2}
-																	onChange={handleCheckboxChange}
+																	// checked={formData.checkbox2}
+																	// onChange={handleCheckboxChange}
 																	name="checkbox2"
 																// required
 																/>
@@ -409,7 +409,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 											<div className="text-left">
 												<div>
 													<input value={formData.price5}
-														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[218px] h-[30px] mt-6 mb-9 pl-4" />
+														onChange={handleChange} placeholder="Price" type="text"  className="border border-[#494949] rounded-[2px] w-[197px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
 												</div>
 												<p></p>
 												<FormControl component="fieldset" required className="ml-10">
@@ -417,8 +417,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 													<label htmlFor="" className="font-extrabold text-[19px]">Select room type</label>
 													<RadioGroup
 														name="selectedOption"
-														value={formData.selectedOption4}
-														onChange={handleChange}
+													// value={formData.selectedOption4}
+													// onChange={handleChange}
 													>
 														<FormControlLabel value="standard  " control={<Radio />} label="Standard  " />
 														<FormControlLabel value="classic " control={<Radio />} label="Classic " />
@@ -432,8 +432,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 														<FormControlLabel
 															control={
 																<Checkbox
-																	checked={formData.checkbox1}
-																	onChange={handleCheckboxChange}
+																	// checked={formData.checkbox1}
+																	// onChange={handleCheckboxChange}
 																	name="checkbox1"
 																// required
 																/>
@@ -447,8 +447,8 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 														<FormControlLabel
 															control={
 																<Checkbox
-																	checked={formData.checkbox2}
-																	onChange={handleCheckboxChange}
+																	// checked={formData.checkbox2}
+																	// onChange={handleCheckboxChange}
 																	name="checkbox2"
 																// required
 																/>
@@ -471,6 +471,40 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 								</div>
 							</div>
 							{/* Rooms & Prices ends */}
+
+							{/*Hotel facilities and features start */}
+							<div className="text-left mt-20">
+								<label htmlFor="Rooms&Prices" className="text-inherit flex mb-6 text-[13px] md:text-[16px] font-medium ">Hotel facilities and features</label>
+								<div className="flex flex-col">
+									<FormControlLabel
+										control={<Checkbox name="pool" />}
+										label="Swimming Pool"
+									/>
+									<FormControlLabel
+										control={<Checkbox name="wifi" />}
+										label="Wi-Fi"
+									/>
+									<FormControlLabel
+										control={<Checkbox name="breakfast" />}
+										label="Breakfast"
+									/>
+									<FormControlLabel
+										control={<Checkbox name="gym" />}
+										label="Gym"
+									/>
+									<input type="text" placeholder="Other facilities" className="w-[316px] border-b-4 border-[#494949] border-dotted focus:outline-none mt-4 mb-8" />
+
+									{/* Terms and conditions */}
+									<div className="mb-20">
+										<FormControlLabel
+											id="terms"
+											control={<Checkbox name="terms" />}
+										/>
+										<label htmlFor="" className=" text-[11px] md:text-[16px] font-[500] ml-[-15px]">Click here to indicate that you <a href="" className="text-[#55BFEA]">agree</a> to the terms and <a href="" className="text-[#55BFEA]">conditions</a> set forth by Lynkkupp</label>
+									</div>
+								</div>
+							</div>
+							{/*Hotel facilities and features end */}
 
 
 							{/* Submit btn start  */}

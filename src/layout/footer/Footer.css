@@ -3,7 +3,7 @@
     background-color: rgb(34, 33, 33);
     display: flex;
     text-align: start;
-    margin: 50px 0px;
+    margin: 50px 0px 0px 0px ;
     padding: 50px 50px;
     gap: 8rem;
 }

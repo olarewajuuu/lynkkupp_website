@@ -110,7 +110,7 @@ const HotelHero = () => {
                   <input
                     type="search"
                     placeholder="City or airport"
-                    className="ml-7"
+                    className="ml-7 outline-none w-[250px]"
                   />
                 </div>
 

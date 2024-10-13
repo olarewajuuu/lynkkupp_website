@@ -13,7 +13,7 @@ const ResetLink = ({cancelReset}) => {
       onClick={(e) => e.stopPropagation()}
       >
       <div className="reset_mobile" >
-      <p onClick={cancelReset}  className="mobile md:flex items-center gap-0 text-white"> <img src={backImg }  /> Password reset</p>
+      <p onClick={cancelReset}  className="w-full h-[49px] bg-[#55BFEA] flex flex-row justify-start items-center gap-4 pl-6  md:hidden"> <img src={backImg }  /> Password reset</p>
       </div>
 
         {/* <div className="overlay" onClick={cancelSignin} ></div> */}
