@@ -1,6 +1,152 @@
+.Headline{
+    display: flex;
+    background-color: #55BFEA;
+    width: 1500px;
+    height: 93px;
+    padding: 20px 40px;
+    color: white;
+}
+.Aback{
+    display: flex;
+    background-color: #494949;
+    width: 81px;
+    height: 30px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    gap: 10px;
+    padding: 5px 3px;
+}
+.Aback img{
+    width: 12px;
+    height: 12px;
+}
+.HeadDetails p{
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin-left: -25rem;
+    margin-right: 20rem;
+}
+.NumberOne{
+    display: flex;
+    gap: 8px;
+}
+.NumberOne h1{
+    width: 25px;
+    height: 25px;
+    padding: 2px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    color: #55BFEA;
+    background: var(--White, #FFF);
+}
+.NumberOne p{
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin-top: 5px;
+}
+.NumberOne img{
+    width: 35px;
+    height: 2px;
+    margin-top: 13px;
+    padding-right: 5px;
+}
+.NumberTwo{
+    display: flex;
+    gap: 8px;
+}
+.NumberTwo h1{
+    width: 25px;
+    height: 25px;
+    padding: 2px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    color: #55BFEA;
+    background: var(--White, #FFF);
+}
+.NumberTwo p{
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin-top: 5px;
+}
+.NumberTwo img{
+    width: 35px;
+    height: 2px;
+    margin-top: 13px;
+    padding-right: 5px;
+}
+.NumberThree{
+    display: flex;
+    gap: 8px;
+}
+.NumberThree h1{
+    width: 25px;
+    height: 25px;
+    padding: 2px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    color: #55BFEA;
+    background: rgba(255, 255, 255, 0.40);
+
+}
+.NumberThree p{
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin-top: 5px;
+}
+.NumberThree img{
+    width: 35px;
+    height: 2px;
+    margin-top: 13px;
+    padding-right: 5px;
+}
+.NumberFour{
+    display: flex;
+    gap: 8px;
+}
+.NumberFour h1{
+    width: 25px;
+    height: 25px;
+    padding: 2px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    color: #55BFEA;
+    background: rgba(255, 255, 255, 0.40);
+}
+.NumberFour p{
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin-top: 5px;
+}
+
 .GeneralDiv{
     display: flex;
-    margin: 7rem 10rem;
+    margin: 2rem 10rem;
     gap: 8rem;
 }
 .group1{
@@ -272,10 +418,10 @@
 .PersonalInfo select{
     width: 150px;
     height: 40px;
-    padding: 22px 22px 22px 25px;
+    padding: 10px 25px;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content:left;
+    align-items: center;
     border-radius: 6px;
     font-size: 10px;
     border: 0.5px solid var(--Secondary-states-Black, #494949);
@@ -438,6 +584,52 @@
 }
 
 @media screen and (max-width: 760px){
+    .Headline{
+        display: flex;
+        background-color: #55BFEA;
+        width: 425px;
+        height: 60px;
+        padding: 20px 40px;
+        color: white;
+    }
+    .Aback{
+        display: flex;
+        background-color: white;
+        color: #55BFEA;
+        width: 81px;
+        height: 30px;
+        font-family: Roboto;
+        font-size: 12px;
+        gap: 5px;
+        padding: 7px 10px;
+        margin-right: 5px;
+    }
+    .Aback img{
+        width: 12px;
+        height: 12px;
+        color: #55BFEA;
+    }
+    .HeadDetails p{
+        font-family: Roboto;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+    .NumberOne{
+        display: none;
+    }
+    .NumberTwo{
+        display: none;
+    }
+    .NumberThree{
+        display: none;
+    }
+    .NumberFour{
+        display: none;
+    }
     .GeneralDiv{
         display: flex;
         margin: 5rem 10px;
@@ -712,10 +904,7 @@
         width: 150px;
         height: 40px;
         font-size: 10px;
-        padding: 22px 22px 22px 25px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
+        padding: 5px 10px;
         border-radius: 6px;
         border: 0.5px solid var(--Secondary-states-Black, #494949);
     }
