@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as Slider from "@radix-ui/react-slider"
 import "./HotelFilterSystem.css"
-const HotelFilterSystem = ({ setSortBy, setSelectedAmenities, setSelectedRatings }) => {
+const HotelFilterSystem = ({ setShowFilter, setSortBy, setSelectedAmenities, setSelectedRatings }) => {
 
     const minPrice = 16000
     const [maxPrice, setMaxPrice] = useState([270000]);
@@ -29,11 +29,16 @@ const HotelFilterSystem = ({ setSortBy, setSelectedAmenities, setSelectedRatings
             setSelectedRatings(prev => prev.filter(rating => rating !== value));
         }
     }
+    const closeFilter = () =>{
+        setShowFilter((prev) => {
+            return !prev
+        })
+    }
 
     return (
         <aside>
-            <div className="close-button">
-                <img src="../src/assets/Images/cross-icon.svg" alt="" />
+            <div className="close-button" onClick={closeFilter}>
+                <img src="../src/assets/Images/cross-icon.svg" alt=""  />
             </div>
             <div className="filter">
                 <div className="sort-filter">
