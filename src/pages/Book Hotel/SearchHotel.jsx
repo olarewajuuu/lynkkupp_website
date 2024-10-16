@@ -8,6 +8,7 @@ import "./SearchHotel.css";
 const SearchHotel = () => {
   const [data, setData] = useState(null);
   const [showFilter, setShowFilter] = useState(false)
+  const [showFilterBasedOnWidth, setShowFilterBasedOnWidth] = useState(false)
   const [sortBy, setSortBy] = useState("");
   const [selectedAmenities, setSelectedAmenities] = useState([]);
   const [selectedRatings, setSelectedRatings] = useState([])
@@ -75,100 +76,187 @@ const SearchHotel = () => {
       return newShowFilter;
     })
   }
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1025) {
+        setShowFilterBasedOnWidth(true)
+      } else {
+        setShowFilterBasedOnWidth(false)
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize)
+  }, []);
+
+  const getImageSrc = (imagePath) => {
+    return window.innerWidth >= 1025 ? imagePath.replace(/\/(\w+)\./, '/sm-$1.') : imagePath
+  }
+  const hotel_description = (item) => {
+    if (window.innerWidth >= 1025) {
+      return (
+        <div className="hotel_description">
+          <span>
+            {item.hotel_name}
+          </span>
+          <div className="hotel_description_child">
+            <div className="hotel_description_child_1">
+              <img src="../src/assets/Images/location_icon.svg" />
+              <p>{item.hotel_address}</p>
+            </div>
+            <div className="hotel_description_child_2">
+              <p>{item.ratings}</p>
+              <p>{item.comment}</p>
+              <p>( {item.number_of_reviews} reviews)</p>
+            </div>
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <div className="hotel_description">
+          <span>
+            {item.hotel_name}
+          </span>
+          <div className="hotel_description_child">
+            <div className="hotel_description_child_1">
+              <p>{item.ratings}</p>
+              <p>{item.comment}</p>
+              <p>( {item.number_of_reviews} reviews)</p>
+            </div>
+            <div className="hotel_description_child_2">
+              <img src="../src/assets/Images/location_icon.svg" />
+              <p>{item.hotel_address}</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+  }
+  const hotel_details = (item) => {
+    if (window.innerWidth >= 1025) {
+      return (
+        <>
+          <div className="hotel_amenities">
+            <ul>
+              {item.amenities.map((amenity, index) => (
+                <li key={index}>
+                  <img src="../src/assets/Images/check_icon.svg" /> {amenity}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="hotel_price">
+            <span>
+              &#8358;{item.price}
+            </span>
+            <span>
+              (includes taxes and charges) <br /> per room, per night
+            </span>
+            <button type="submit">Select room</button>
+          </div>
+        </>
+      )
+
+    } else {
+      return (
+        <>
+          <div className="hotel_details">
+            <div>
+              <ul>
+                {item.amenities.map((amenity, index) => (
+                  <li key={index}>
+                    <img src="../src/assets/Images/check_icon.svg" /> {amenity}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <span>
+                &#8358;{item.price}
+              </span>
+              <span>
+                (includes taxes and charges) <br /> per room, per night
+              </span>
+              <button type="submit">Select room</button>
+            </div>
+          </div>
+        </>
+      )
+    }
+  }
 
   return (
     <>
-      <nav className="searchNav">
-        {/*Home navigation panel*/}
-        <div className="searchNav_1">
-          <span>
-            <a href="/">Home</a>
-          </span>
-          <img src={ChevronIcon} />
-          <span>
-            <a href="/">Hotels in Lagos</a>
-          </span>
-        </div>
-        {/*Filter button */}
-        <div className="searchNav_2">
-          <button type="submit" onClick={toggleFilter}>FILTERS</button>
-        </div>
-
-        <div className="searchNav_3">
-          <HotelForm />
-        </div>
-      </nav>
-      <section className="searchResult">
-        <div className="searchResult_1">
-          <div className="searchResult_1_child">
-            <button type="submit">
-              {" "}
-              <img src="../src/assets/Images/ep_back.svg" /> Go back
-            </button>
-            <p>Hotels in Lekki, NG</p>
+      <div className="searchResultPage">
+        <nav className="searchNav">
+          {/*Home navigation panel*/}
+          <div className="searchNav_1">
+            <span>
+              <a href="/">Home</a>
+            </span>
+            <img src={ChevronIcon} />
+            <span>
+              <a href="/">Hotels in Lagos</a>
+            </span>
           </div>
-          <img className="contact" src="../src/assets/Images/contact.svg" />
-        </div>
-        <div className="searchResult_2">
-          {filteredHotels.slice(0, visibleCount).map(item => (
-            <div className="searchResult_2_child" key={item.id}>
-              <div className="hotel_img">
-                <img src={item.hotel_image} />
-              </div>
-              <div className="hotel_description">
-                <span>
-                  {item.hotel_name}
-                </span>
-                <div className="hotel_description_child">
-                  <div className="hotel_description_child_1">
-                    <p>{item.ratings}</p>
-                    <p>{item.comment}</p>
-                    <p>( {item.number_of_reviews} reviews)</p>
-                  </div>
-                  <div className="hotel_description_child_2">
-                    <img src="../src/assets/Images/location_icon.svg" />
-                    <p>{item.hotel_address}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="hotel_details">
-                <div>
-                  <ul>
-                    {item.amenities.map((amenity, index) => (
-                      <li key={index}>
-                        <img src="../src/assets/Images/check_icon.svg" /> {amenity}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <span>
-                    <img src="../src/assets/Images/naira_icon.svg" alt="" />
-                    {item.price}
-                  </span>
-                  <span>
-                    (includes taxes and charges) <br /> per room, per night
-                  </span>
-                  <button type="submit">Select room</button>
-                </div>
-              </div>
+          {/*Filter button */}
+          <div className="searchNav_2">
+            <button type="submit" onClick={toggleFilter}>FILTERS</button>
+          </div>
+
+          <div className="searchNav_3">
+            <HotelForm />
+          </div>
+        </nav>
+        <section className="searchResult">
+          {/* Shows the current page in the hotel pages*/}
+          {showFilterBasedOnWidth && <HotelPageOption />}
+          <div className="searchResult_1">
+            <div className="searchResult_1_child">
+              <button type="submit">
+                {" "}
+                <img src="../src/assets/Images/ep_back.svg" /> Go back
+              </button>
+              <p>Hotels in Lekki, NG</p>
             </div>
-          ))}
-        </div>
-        {filteredHotels.length > visibleCount && (
-          <div className="searchResult_3">
-            <button onClick={handleShowMore} type="submit">
-              Show more results
-            </button>
+            <img className="contact" src="../src/assets/Images/contact.svg" />
           </div>
-        )}
-      </section>
+          <div className="searchResult_2">
+            {filteredHotels.slice(0, visibleCount).map(item => (
+              <div className="searchResult_2_child" key={item.id}>
+                <div className="hotel_img">
+                  <img src={getImageSrc(item.hotel_image)} alt={item.hotel_image} />
+                </div>
+                {/* hotel description component */}
+                <>
+                  {hotel_description(item)}
+                </>
+                {/* hotel details component */}
+                <>
+                  {hotel_details(item)}
+                </>
+              </div>
+            ))}
+          </div>
+          {filteredHotels.length > visibleCount && (
+            <div className="searchResult_3">
+              <button onClick={handleShowMore} type="submit">
+                Show more results
+              </button>
+            </div>
+          )}
+        </section>
 
-      {showFilter && 
-      <HotelFilterSystem
-        setSortBy={setSortBy}
-        setSelectedAmenities={setSelectedAmenities}
-        setSelectedRatings={setSelectedRatings}
-      />}
+        <div className="filter-panel">
+          {(showFilter || showFilterBasedOnWidth) &&
+            <HotelFilterSystem
+              setShowFilter={setShowFilter}
+              setSortBy={setSortBy}
+              setSelectedAmenities={setSelectedAmenities}
+              setSelectedRatings={setSelectedRatings}
+            />}
+        </div>
+      </div>
     </>
   );
 };
