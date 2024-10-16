@@ -14,6 +14,7 @@ import HotelPartnerForm3 from "./components/auth/HotelPartnerForm3";
 import HotelPartnerForm4 from "./components/auth/HotelPartnerForm4";
 import SearchHotel from "./pages/Book Hotel/SearchHotel"
 
+
 function App() {
 	return (
 		<>
