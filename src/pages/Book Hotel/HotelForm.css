@@ -190,3 +190,194 @@
         font-size: 1.1818em;
     }
 }
+
+@media screen and (min-width: 1025px) {
+    .formContainer {
+        position: relative;
+        display: flex;
+        gap: unset;
+        padding-top: 0em; 
+        background-color: #55BFEA;
+    }
+
+    .formChild_1 {
+        color: #494949;
+        background-color: white;
+        height: 3.923em;
+        /*margin: 1.923em 6.308em 1.308em 6.692em;
+        */margin: 1.6154em 6.308em 1.308em 6.692em;
+        padding: 0.6923em 17.692em 0.6923em 1.231em;
+        white-space: unset;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        order: 1;
+}
+
+    .formChild_1 span {
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    .formChild_1 input {
+        font-size: 1.231em;
+        margin-top: unset;
+        line-height: 140%;
+        font-weight: 500;
+    }
+
+    .formChild_2 {
+        height: 3.923em;
+        /* margin: 1.923em 3.769em 1.308em 2.462em; */
+        margin: 1.6154em 3.769em 1.308em 2.462em;
+        padding: 1.154em 1.615em 2.538em 1em;
+        order: 3;
+    }
+
+    .formChild_2 p {
+        display: flex;
+        line-height: 140%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .formChild_2 p img:nth-of-type(1) {
+        width: 1.615em;
+        height: 1.615em;
+    }
+
+    .formChild_2 p span {
+        flex-grow: unset;
+        margin-left: 0.462em;
+        line-height: 140%;
+        font-weight: 400;
+        color: #494949;
+    }
+
+    .formChild_2 p img:nth-of-type(2) {
+        width: 0.769em;
+        height: 0.308em;
+        margin-left: 0.6154em;
+        margin-top: unset;
+    }
+
+    .formChild_3 {
+        /* margin: 1.923em 3.154em 1.308em 3.154em; */
+        margin: 1.6154em 3.154em 1.308em 3.154em;
+        padding: unset;
+        order: 2;
+    }
+
+    .formContainer .formChild_3 .hotelSearchItem {
+        margin-top: unset;
+        display: flex;
+        gap: 0.385em;
+    }
+
+    .formContainer .formChild_3 .hotelSearchItem img {
+        width: 59px;
+        height: unset;
+    }
+
+    .formContainer .formChild_3 .hotelleavingNow,
+    .formContainer .formChild_3 .hotelreturningNow {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 18% 70%;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 0.5385em;
+        row-gap: 0;
+        grid-template-areas:            ".           checkIn-Out"            "calendarImg date";
+        width: unset;
+        height: 3.923em;
+        border-radius: 5px;
+        cursor: unset;
+        position: unset;
+        padding: 0em 1.154em 1.154em 1em;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+}
+
+    .formContainer .formChild_3 .hotelleavingNow::before {
+        content: "Check-in";
+        font-size: 1em;
+    }
+
+    .formContainer .formChild_3 .hotelreturningNow::before {
+        content: "Check-out";
+        font-size: 1em;
+    }
+
+    .formContainer .formChild_3 .hoteldateMonth {
+        font-size: 1.078em;
+        line-height: 140%;
+    }
+
+
+
+    .formContainer .formChild_3 .hotelleavingNow::before,
+    .formContainer .formChild_3 .hotelreturningNow::before {
+        /* margin-left: 1.25em; */
+        grid-area: checkIn-Out;
+    }
+
+    .formContainer .formChild_3 .hotelSearchItem img {
+        grid-area: calendarImg;
+    }
+
+
+
+    /* .formContainer .formChild_3 .hotelleavingNow::before,
+    .formContainer .formChild_3 .hotelreturningNow::before {
+    }
+
+    .formContainer .formChild_3 .hotelSearchItem img {
+    } */
+
+    .formContainer .formChild_3 .hoteldateMonth {
+        /* font-size: 1.375em; */
+        font-weight: unset;
+        color: #494949;
+    }
+
+    .formChild_4 {
+        display: flex;
+        align-items: center;
+        /* margin: 1.923em 10.769em 1.31em 3.8462em; */
+        margin: 1.6154em 10.769em 1.31em 3.8462em;
+        padding: 0.769em 3.461em 0.769em 3.461em;
+        text-align: center;
+        border: 1px solid white;
+        border-radius: 5px;
+        color: white;
+        /*margin-block: 1.2727em 1.3636em;
+        */-webkit-border-radius: unset;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        order: 4;
+}
+
+    .formChild_4 h4 {
+        font-size: 1.462em;
+
+    }
+
+    /* .formChild_1,
+    .formChild_2 {
+        height: unset;
+        background: white;
+        border-radius: 5px;
+        white-space: unset;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+} */
+}
