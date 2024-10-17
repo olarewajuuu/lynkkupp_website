@@ -1,14 +1,13 @@
 import { useState } from "react";
 import * as Slider from "@radix-ui/react-slider"
+import useScreenSize from "./useScreenSize"
+import SortFilter from "./SortFilter"
 import "./HotelFilterSystem.css"
-const HotelFilterSystem = ({ setShowFilter, setSortBy, setSelectedAmenities, setSelectedRatings }) => {
-
+const HotelFilterSystem = ({ filteredHotels, setFilteredHotels, setShowFilter, setSelectedAmenities, setSelectedRatings }) => {
+    const isLargeScreen = useScreenSize()
     const minPrice = 16000
     const [maxPrice, setMaxPrice] = useState([270000]);
 
-    const handleSortClick = (option) => {
-        setSortBy(option);
-    }
     const handlePriceChange = (newValue) => {
         setMaxPrice(newValue[0]);
     }
@@ -29,7 +28,7 @@ const HotelFilterSystem = ({ setShowFilter, setSortBy, setSelectedAmenities, set
             setSelectedRatings(prev => prev.filter(rating => rating !== value));
         }
     }
-    const closeFilter = () =>{
+    const closeFilter = () => {
         setShowFilter((prev) => {
             return !prev
         })
@@ -38,18 +37,12 @@ const HotelFilterSystem = ({ setShowFilter, setSortBy, setSelectedAmenities, set
     return (
         <aside>
             <div className="close-button" onClick={closeFilter}>
-                <img src="../src/assets/Images/cross-icon.svg" alt=""  />
+                <img src="../src/assets/Images/cross-icon.svg" alt="" />
             </div>
             <div className="filter">
-                <div className="sort-filter">
-                    <h2>SORT BY:</h2>
-                    <ul className="sorting-options">
-                        <li onClick={() => handleSortClick("popular")}><p>Popular</p></li>
-                        <li onClick={() => handleSortClick("highest-price")}><p>Highest Price</p></li>
-                        <li onClick={() => handleSortClick('lowest-price')}><p>Lowest Price</p></li>
-                        <li onClick={() => handleSortClick('user-rating')}><p>User ratings ( Highest first )</p></li>
-                    </ul>
-                </div>
+                {/*Sort filter component */}
+                {!isLargeScreen &&
+                    <SortFilter filteredHotels={filteredHotels} setFilteredHotels={setFilteredHotels} />}
 
                 <div className="display-map">
                     <div>
@@ -81,7 +74,7 @@ const HotelFilterSystem = ({ setShowFilter, setSortBy, setSelectedAmenities, set
                     </form>
                     <div className="slider-price">
                         <span>&#8358;{minPrice}</span>
-                        <span>&#8358;{maxPrice}</span> 
+                        <span>&#8358;{maxPrice}</span>
                     </div>
                 </div>
 
