@@ -1,20 +1,23 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom"
+import useScreenSize from "./useScreenSize"
 import HotelForm from "./HotelForm";
+import HotelPagesOption from "./HotelPagesOption"
 import HotelFilterSystem from "./HotelFilterSystem";
+import SortFilter from "./SortFilter";
 import ChevronIcon from "../../assets/Images/ChevronIcon.svg";
 import "./SearchHotel.css";
 
 const SearchHotel = () => {
   const [data, setData] = useState(null);
+  const [filteredHotels, setFilteredHotels] = useState([])
   const [showFilter, setShowFilter] = useState(false)
-  const [showFilterBasedOnWidth, setShowFilterBasedOnWidth] = useState(false)
-  const [sortBy, setSortBy] = useState("");
   const [selectedAmenities, setSelectedAmenities] = useState([]);
   const [selectedRatings, setSelectedRatings] = useState([])
   const location = useLocation();
   const searchQuery = location.state?.searchData || "";
   const searchQueryLocation = searchQuery.cityOrAirport
+  const isLargeScreen = useScreenSize()
 
   useEffect(() => {
     fetch("/SearchHotelResult.json")
@@ -23,45 +26,29 @@ const SearchHotel = () => {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  // Filter the JSON data based on the search query
-  let filteredHotels = data ? data.filter(
-    (hotel) => hotel.location_city.toLowerCase().includes(searchQueryLocation.toLowerCase())
-  ) : [];
+  useEffect(() => {
+    if (data) {
+      // Filter the JSON data based on the search query
+      let Hotels = data.filter(
+        (hotel) => hotel.location_city.toLowerCase().includes(searchQueryLocation.toLowerCase())
+      );
+      // Apply amenities filter if there are selected amenities
+      if (selectedAmenities.length > 0) {
+        Hotels = Hotels.filter(hotel =>
+          // Only include hotels that have amenities and match all selected amenities
+          hotel.amenities.length > 0 && selectedAmenities.every(amenity => hotel.amenities.includes(amenity))
+        );
+      }
+      // Apply rating filter
+      if (selectedRatings.length > 0) {
+        Hotels = Hotels.filter(hotel => selectedRatings.includes(parseInt(hotel.ratings.split("/")[0]))
+        )
+      }
 
-
-  // Apply sort by filter
-  if (sortBy) {
-    switch (sortBy) {
-      case "popular":
-        filteredHotels.sort((a, b) => (b.number_of_reviews - a.number_of_reviews))
-        break;
-      case "highest-price":
-        filteredHotels.sort((a, b) => (b.price - a.price));
-        break;
-      case "lowest-price":
-        filteredHotels.sort((a, b) => (a.price - b.price));
-        break;
-      case "user-rating":
-        filteredHotels.sort((a, b) => (b.number_of_reviews - a.number_of_reviews))
-        break;
-      default:
-        break;
+      //Update the filtered hotels state
+      setFilteredHotels(Hotels);
     }
-  }
-  // Apply amenities filter if there are selected amenities
-  if (selectedAmenities.length > 0) {
-    filteredHotels = filteredHotels.filter(hotel =>
-      // Only include hotels that have amenities and match all selected amenities
-      hotel.amenities.length > 0 && selectedAmenities.every(amenity => hotel.amenities.includes(amenity))
-    );
-  }
-
-  // Apply rating filter
-  if (selectedRatings.length > 0) {
-    filteredHotels = filteredHotels.filter(hotel => selectedRatings.includes(parseInt(hotel.ratings.split("/")[0]))
-    )
-  }
-
+  }, [data, searchQueryLocation, selectedAmenities, selectedRatings]);
 
   const [visibleCount, setVisibleCount] = useState(4)
 
@@ -76,25 +63,11 @@ const SearchHotel = () => {
       return newShowFilter;
     })
   }
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1025) {
-        setShowFilterBasedOnWidth(true)
-      } else {
-        setShowFilterBasedOnWidth(false)
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize)
-  }, []);
-
   const getImageSrc = (imagePath) => {
-    return window.innerWidth >= 1025 ? imagePath.replace(/\/(\w+)\./, '/sm-$1.') : imagePath
+    return isLargeScreen ? imagePath.replace(/\/(\w+)\./, '/sm-$1.') : imagePath
   }
   const hotel_description = (item) => {
-    if (window.innerWidth >= 1025) {
+    if (isLargeScreen) {
       return (
         <div className="hotel_description">
           <span>
@@ -135,7 +108,7 @@ const SearchHotel = () => {
     }
   }
   const hotel_details = (item) => {
-    if (window.innerWidth >= 1025) {
+    if (isLargeScreen) {
       return (
         <>
           <div className="hotel_amenities">
@@ -210,7 +183,7 @@ const SearchHotel = () => {
         </nav>
         <section className="searchResult">
           {/* Shows the current page in the hotel pages*/}
-          {showFilterBasedOnWidth && <HotelPageOption />}
+          {isLargeScreen && <HotelPagesOption />}
           <div className="searchResult_1">
             <div className="searchResult_1_child">
               <button type="submit">
@@ -222,6 +195,19 @@ const SearchHotel = () => {
             <img className="contact" src="../src/assets/Images/contact.svg" />
           </div>
           <div className="searchResult_2">
+            {isLargeScreen &&
+              <div className="searchResultNav">
+                <span>
+                  <a href="/">Home</a>
+                </span>
+                <img src={ChevronIcon} />
+                <span>
+                  <a href="/">Hotels in Lagos</a>
+                </span>
+              </div>}
+            <div className="sortByFilter">
+              {isLargeScreen && <SortFilter filteredHotels={filteredHotels} setFilteredHotels={setFilteredHotels} />}
+            </div>
             {filteredHotels.slice(0, visibleCount).map(item => (
               <div className="searchResult_2_child" key={item.id}>
                 <div className="hotel_img">
@@ -246,12 +232,12 @@ const SearchHotel = () => {
             </div>
           )}
         </section>
-
         <div className="filter-panel">
-          {(showFilter || showFilterBasedOnWidth) &&
+          {(showFilter || isLargeScreen) &&
             <HotelFilterSystem
+              filteredHotels={filteredHotels}
+              setFilteredHotels={setFilteredHotels}
               setShowFilter={setShowFilter}
-              setSortBy={setSortBy}
               setSelectedAmenities={setSelectedAmenities}
               setSelectedRatings={setSelectedRatings}
             />}

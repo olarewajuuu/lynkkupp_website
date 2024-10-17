@@ -291,6 +291,7 @@
         grid-area: searchResult;
         background-color: unset;
         margin-right: 10.5rem;
+        padding: unset;
     }
 
     .filter-panel {
@@ -324,19 +325,122 @@
         display: none;
     }
 
-    .filter-panel .filter .sort-filter {
-        display: none;
-    }
-
     .searchResult_2 {
         font-size: 0.8125rem;
+    }
+
+    .searchResult_2 .searchResultNav {
+        font-size: 1.5em;
+        display: flex;
+        justify-content: start;
+        gap: 1em;
+        line-height: 140%;
+        margin-block: 1.3125rem 2.15625rem;
+    }
+
+    .searchResult_2 .searchResultNav span:nth-of-type(1) {
+        color: rgba(35, 34, 34, 0.35);
+        font-weight: 500;
+    }
+
+    .searchResult_2 .searchResultNav span:nth-of-type(2) {
+        color: #55BFEA;
+    }
+
+    .searchResult_2 .sortByFilter .sort-filter {
+        display: flex;
+        gap: 2.4em;
+        border-bottom: unset;
+        padding-bottom: unset;
+        align-items: center;
+    }
+
+    .searchResult_2 .sortByFilter .sort-filter .sorting-options {
+        display: flex;
+        gap: 2.4em;
+        align-items: center;
+        color: var(--Secondary-states-fade, rgba(35, 34, 34, 0.35));
+        font-size: 1.3em;
+        font-weight: 500;
+        line-height: 140%;
+        
+    }
+
+    .searchResult_2 .sortByFilter .sort-filter h2 {
+        color: var(--Secondary-states-Black, #494949);
+        font-size: 1.6em;
+        font-weight: 700;
+        line-height: 140%;
+
+    }
+
+    .searchResult_2 .sortByFilter .sort-filter ul li {
+        padding: unset;
+        color: rgba(35, 34, 34, 0.35);
+    }
+
+    .searchResult_2 .sortByFilter .sort-filter ul li p:hover {
+        display: inline;
+        border-bottom: 2px solid #55BFEA;
+        color: #55BFEA;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .searchResult_1_child p {
+        font-size: 2em;
+        font-style: normal;
+        font-weight: 700;
+        margin-block: unset;
+    }
+
+    .searchResult_1_child button {
+        display: none;
     }
 
     .searchResult_2_child {
         display: grid;
         grid-template-columns: 35.6% 37% 27.3%;
         grid-template-rows: 50% 50%;
-        grid-template-areas: "hotel_img hotel_description hotel_price"            "hotel_img hotel_amenities hotel_price";
+        grid-template-areas: "hotel_img hotel_description hotel_price" "hotel_img hotel_amenities hotel_price";
         font-size: unset;
         padding: unset;
         background: var(--White, #FFF);
@@ -347,15 +451,16 @@
         -moz-border-radius: unset;
         -ms-border-radius: unset;
         -o-border-radius: unset;
-}
+    }
 
     .searchResult_2_child .hotel_img {
         padding: 1.923em 0em 1.923em 1.5385em;
         grid-area: hotel_img;
     }
-    .searchResult_2_child .hotel_img img{
+
+    .searchResult_2_child .hotel_img img {
         width: 100%;
-}
+    }
 
     .searchResult_2_child .hotel_description {
         grid-area: hotel_description;
@@ -365,7 +470,7 @@
         margin-top: unset;
         padding-block: 3.0769em 0.846em;
         padding-inline-start: 1.462em;
-    
+
     }
 
     .searchResult_2_child .hotel_description span:nth-of-type(1) {
@@ -400,7 +505,7 @@
         -ms-border-radius: 2px;
         -o-border-radius: 2px;
         text-align: center;
-}
+    }
 
     .searchResult_2_child .hotel_description .hotel_description_child_2 p:nth-child(2) {
         font-weight: 400;
@@ -469,5 +574,5 @@
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
-}
+    }
 }

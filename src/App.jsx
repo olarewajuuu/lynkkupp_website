@@ -19,7 +19,7 @@ function App() {
 	return (
 		<>
 			<Router>
-				<Navbar />
+				{/* <Navbar /> */}
 				<Routes>
 					<Route exact path="/" element={<Flights />} />
 					<Route exact path="hotels" element={<Hotels />} />
@@ -35,7 +35,7 @@ function App() {
 					<Route exact path="hotelpartner4" element={<HotelPartnerForm4 />} />
 				</Routes>
 				<br />
-				<Footer /> 
+				{/* <Footer />  */}
 			</Router>
 		</>
 	);
