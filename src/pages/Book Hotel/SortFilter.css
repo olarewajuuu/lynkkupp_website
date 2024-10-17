@@ -1,0 +1,26 @@
+.sort-filter {
+    border-bottom: 0.6px solid rgba(35, 34, 34, 0.20);
+    padding-bottom: 0.7em;
+}
+
+.sort-filter h2 {
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.sort-filter ul li {
+    padding-block: 0.6154em 0.5384em;
+    color: rgba(35, 34, 34, 0.35);
+}
+
+.sort-filter ul li p:hover {
+    display: inline;
+    border-bottom: 2px solid #55BFEA;
+    color: #55BFEA;
+}
+@media screen  and (min-width: 576px){
+    .sort-filter h2 {
+        font-size: 1.083em;
+    } 
+}
