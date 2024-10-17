@@ -26,29 +26,6 @@ aside {
     border-top: 0.6px solid rgba(35, 34, 34, 0.20);
     ;
 }
-
-.sort-filter {
-    border-bottom: 0.6px solid rgba(35, 34, 34, 0.20);
-    padding-bottom: 0.7em;
-}
-
-.sort-filter h2 {
-    font-size: 1em;
-    font-weight: 700;
-    line-height: 140%;
-}
-
-.sort-filter ul li {
-    padding-block: 0.6154em 0.5384em;
-    color: rgba(35, 34, 34, 0.35);
-}
-
-.sort-filter ul li p:hover {
-    display: inline-block;
-    border-bottom: 2px solid #55BFEA;
-    color: #55BFEA;
-}
-
 .display-map {
     background-color: rgba(85, 191, 234, 0.80);
     padding: 0.538em 7.308em 0.308em 6.846em;
@@ -97,10 +74,6 @@ aside {
     border: 0.5px solid rgba(35, 34, 34, 0.35);
     border-radius: 2px;
     outline: none;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
 }
 
 .slider-filter {
@@ -141,10 +114,6 @@ aside {
     background-color: #494949;
     height: 0.2205em;
     border-radius: 50px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
 }
 
 .slider-range {
@@ -229,10 +198,7 @@ aside {
 @media screen  and (min-width: 576px){
     aside {
         font-size: 1rem;
-    } 
-    .sort-filter h2 {
-        font-size: 1.083em;
-    } 
+    }
 }
 @media screen and (min-width: 1025px) {
     .filter{
