@@ -2,6 +2,7 @@ import { useState } from "react";
 import eventsData from './eventsData';
 import locationImg from "/images/location.svg"
 import filterClose from "/images/filterclose.svg"
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -86,6 +87,12 @@ const EventTicket = () => {
         setIsSidebarOpen(false); // Close sidebar on filter selection
     };
 
+    const navigate = useNavigate();
+
+    const handleEventClick = (eventId) => {
+        navigate(`/event/${eventId}`);
+    };
+
     return (
         <div className="relative">
             <div className="relative">
@@ -100,7 +107,7 @@ const EventTicket = () => {
                         } md:hidden`}
                 >
                     <div className="p-6 bg-[#ffF] shadow-md">
-                        <img src={filterClose} alt=""  onClick={() => setIsSidebarOpen(false)} />
+                        <img src={filterClose} alt="" onClick={() => setIsSidebarOpen(false)} />
                     </div>
                     <div className="p-12 mt">
                         <h3 className="text-lg font-semibold mb-4">SORT BY:</h3>
@@ -121,7 +128,7 @@ const EventTicket = () => {
 
             </div>
             {/* Search Section */}
-            <div className="md:bg-[#55BFEA] py-6 absolute top-48 md:relative md:top-0 z-10">
+            <div className="md:bg-[#55BFEA] py-6 absolute top-24 md:relative md:top-0 z-10">
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-4">
                     <div className="flex w-full justify-center items-center gap-4 md:gap-14">
                         <input
@@ -166,12 +173,12 @@ const EventTicket = () => {
 
             {/* Hero Section */}
             <section
-                className="relative h-96 bg-cover bg-center"
+                className="relative h-64 md:h-96 bg-cover bg-center md:bg-cover "
                 style={{ backgroundImage: "url('/images/ticketHero.svg')" }}
             >
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className="relative flex flex-col items-center justify-center h-full text-center text-white">
-                    <h1 className=" text-[19px] md:text-[48px] font-bold">Your Event Booking Journey Starts Here</h1>
+                    <h1 className="text-[19px] md:text-[48px] font-bold">Your Event Booking Journey Starts Here</h1>
                     <p className="mt-4 text-[14px] md:text-[28px] mb-28 md:mb-0">connect, discover, and create unforgettable experience with ease</p>
                 </div>
             </section>
@@ -206,7 +213,8 @@ const EventTicket = () => {
             {/* Events List */}
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-8">
                 {filteredEvents.slice(0, visibleEvents).map((event) => (
-                    <div key={event.id} className="bg-white shadow-md rounded-lg overflow-hidden">
+                    <div key={event.id} onClick={() => handleEventClick(event.id)}
+                    className="bg-white shadow-md rounded-lg overflow-hidden">
                         <img src={event.imageUrl} alt={event.name} className="w-full h-48 object-cover" />
                         <div className="p-4">
                             <h3 className="text-xl font-bold">{event.name}</h3>

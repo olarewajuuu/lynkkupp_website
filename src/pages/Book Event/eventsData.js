@@ -10,8 +10,11 @@ const eventsData = [
         timeUrl: "/images/time.svg",
         locationUrl: "/images/location.svg",
         category: "Offline",
-        price: "₦5,000.00",
+        price: 5000,
         free: false,
+        description: "Event lasts for 7 hours",
+        tags: ["Conference", "Lagos events", "Nigeria events", "Global", "Blockchain", "Technology"],
+        ticketPrice: 50,
     },
     {
         id: 2,
@@ -26,6 +29,9 @@ const eventsData = [
         category: "Online",
         price: "Free",
         free: true,
+        description: "Join us for an amazing music concert featuring top artists.",
+        tags: ["Music", "Concert", "Live"],
+        ticketPrice: 50,
     },
     {
         id: 3,
@@ -40,6 +46,9 @@ const eventsData = [
         category: "Offline",
         price: "₦1,000.00",
         free: false,
+        description: "Join us for an amazing music concert featuring top artists.",
+        tags: ["Music", "Concert", "Live"],
+        ticketPrice: 50,
     },
     {
         id: 4,
@@ -54,6 +63,9 @@ const eventsData = [
         category: "Offline",
         price: "₦5,000.00",
         free: false,
+        description: "Join us for an amazing music concert featuring top artists.",
+        tags: ["Music", "Concert", "Live"],
+        ticketPrice: 50,
     },
     {
         id: 5,
@@ -68,6 +80,9 @@ const eventsData = [
         category: "Online",
         price: "Free",
         free: true,
+        description: "Join us for an amazing music concert featuring top artists.",
+        tags: ["Music", "Concert", "Live"],
+        ticketPrice: 50,
     },
     {
         id: 6,
@@ -82,6 +97,9 @@ const eventsData = [
         category: "Offline",
         price: "₦1,000.00",
         free: false,
+        description: "Join us for an amazing music concert featuring top artists.",
+        tags: ["Music", "Concert", "Live"],
+        ticketPrice: 50,
     },
     {
         id: 7,
@@ -96,6 +114,9 @@ const eventsData = [
         category: "Offline",
         price: "₦5,000.00",
         free: false,
+        description: "Join us for an amazing music concert featuring top artists.",
+        tags: ["Music", "Concert", "Live"],
+        ticketPrice: 50,
     },
     {
         id: 8,
@@ -110,6 +131,9 @@ const eventsData = [
         category: "Online",
         price: "Free",
         free: true,
+        description: "Join us for an amazing music concert featuring top artists.",
+        tags: ["Music", "Concert", "Live"],
+        ticketPrice: 50,
     },
     {
         id: 9,
@@ -124,6 +148,9 @@ const eventsData = [
         category: "Offline",
         price: "₦1,000.00",
         free: false,
+        description: "Join us for an amazing music concert featuring top artists.",
+        tags: ["Music", "Concert", "Live"],
+        ticketPrice: 50,
     },
     
     // Add more events here
