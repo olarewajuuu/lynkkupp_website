@@ -9,32 +9,32 @@ import { useNavigate } from "react-router-dom";
 import { Checkbox, FormControlLabel, Typography } from "@mui/material";
 import { Box } from "@mui/system"
 import Alert from "@mui/material/Alert";
+import FileUpload1 from "../../utility/FileUpload1";
 
 
 const HotelPartnerForm4 = () => {
-
-
-	const [file, setFile] = useState(null);
 	const [checked, setChecked] = useState(false);
 	const [errorMessage, setErrorMessage] = useState(""); // State for error message
 	const navigate = useNavigate();
 
-	const onDrop = (acceptedFiles) => {
-		setFile(acceptedFiles[0]);
-	};
 
-	const { getRootProps, getInputProps, isDragActive } = useDropzone({
-		onDrop,
-		multiple: false,
-		accept: "image/*", // Accept images only (customize as per your requirement)
-	});
+	const [formData, setFormData] = useState({
+		file1: null,
+
+	})
+
+	// if (!formData.file1 || !formData.file2 || !formData.file3 || !formData.file4 || !formData.file5 || !formData.file6 || !formData.price || !formData.price1 || !formData.price2 || !formData.price3 || !formData.price4 || !formData.price5 || !formData.selectedOption || !formData.selectedOption1 || !formData.selectedOption2 || !formData.selectedOption3 || !formData.selectedOption4 || !formData.checkbox1 || !formData.checkbox2) {
+	// 	alert('Please complete all required fields.');
+	// 	return;
+	// }
+	// console.log('Form Data:', formData);
 
 	// Handle form submission
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		if (!file && !checked) {
+		if (!formData.file1 && !checked) {
 			setErrorMessage("Please upload a file and agree to the terms.");
-		} else if (!file) {
+		} else if (!formData.file1) {
 			setErrorMessage("Please upload a file.");
 		} else if (!checked) {
 			setErrorMessage("Please agree to the terms.");
@@ -68,7 +68,6 @@ const HotelPartnerForm4 = () => {
 						<div className="flex flex-col w-full pl-0 md:justify-center md:items-center ">
 							<div className="flex flex-row gap-2 md:gap-4 items-center">
 								<img src={hotelImg} alt="hotel image" className="w-5 h-5" />
-
 								<NavLink to="/hotelpartner" activeNlassName="active" className="text-[0.9rem] md:text-[33px] font-medium text-inherit">
 									I am a hotel owner
 								</NavLink>
@@ -102,44 +101,24 @@ const HotelPartnerForm4 = () => {
 							>
 								A copy of ticket
 							</label>
-							<div className="flex justify-center items-center md:w-full border-[2px] md:h-[327px] border-[#494949] rounded-[6px] w-[390px] h-[175px] m-[auto]">
-								<Box
-									{...getRootProps()}
-									sx={{
-										borderRadius: '8px',
-										padding: '20px',
-										textAlign: 'center',
-										cursor: 'pointer',
-										marginBottom: '16px',
-									}}
-								>
-									<input {...getInputProps()} />
-									{isDragActive ? (
-										<p>Drop the file here...</p>
-									) : (
-										<img src={uploadImg} alt="" />
-									)}
-								</Box>
-								{file && (
-									<Typography variant="body2" sx={{ mt: 2 }}>
-										File Selected: {file.name}
-									</Typography>
-								)}
+							<br /> <br /> <br />
+							<div className="flex justify-center items-center md:w-full border-[2px] md:h-[327px] border-[#49494] rounded-[6px] w-[390px] h-[175px] m-[auto]">
+								
+								<FileUpload1
+
+									file={formData.file1}
+									setFile={(file) => setFormData({ ...formData, file1: file })}
+								/>
 							</div>
 
-							<div className="flex justify-start items-center mt-14 mb-10">
-								<FormControlLabel
-									control={
-										<Checkbox
-											checked={checked}
+							<div className="mb-20 mt-32">
+										<FormControlLabel
+											id="terms"
 											onChange={(e) => setChecked(e.target.checked)}
-										// required
+											control={<Checkbox name="terms" />}
 										/>
-									}
-								// label="I agree to the terms and conditions"
-								/>
-								<label htmlFor="" className="text-[16px] font-[500] ml-[-15px]">Click here to indicate that you <a href="" className="text-[#55BFEA]">agree</a> to the terms and <a href="" className="text-[#55BFEA]">conditions</a> set forth by Lynkkupp</label>
-							</div>
+										<label htmlFor="" className=" text-[11px] md:text-[16px] font-[500] ml-[-20px]">Click here to indicate that you <a href="" className="text-[#55BFEA]">agree</a> to the terms and <a href="" className="text-[#55BFEA]">conditions</a> set forth by Lynkkupp</label>
+									</div>
 							{/* Custom Error Message */}
 							{errorMessage && (
 								<Alert severity="error" sx={{ mt: 2 }}>
@@ -150,6 +129,7 @@ const HotelPartnerForm4 = () => {
 							<button
 								className="text-white bg-[#55bfea] py-3.5 px-5 w-full text-[13px] md:text-[23px] font-bold rounded-md"
 								type="submit"
+
 							>
 								Proceed to submit
 							</button>

@@ -17,6 +17,7 @@ import Summary from "./pages/Book Flight/Summary";
 import CardDetails from "./pages/Book Flight/CardDetails";
 // import Congratulations from "./pages/Book Flight/Congratulations";
 import Approved from "./pages/Book Flight/Approved";
+import EventTicket from "./pages/Book Event/EventTicket";
 function App() {
 	return (
 		<>
@@ -39,6 +40,7 @@ function App() {
 					<Route exact path="carddetails" element={<CardDetails />} /> 
 					{/* <Route exact path="cogratulations" element={<Congratulations />} /> */}
 					<Route exact path="approved" element={<Approved />} />
+					<Route exact path="eventticket" element={<EventTicket />} />
 				</Routes>
 				<br />
 				<Footer />

@@ -6,8 +6,17 @@ import searcImg from "../../assets/Images/search.svg";
 import { NavLink } from "react-router-dom";
 import "react-datepicker/dist/react-datepicker.css";
 import goingImg from "../../assets/Images/goingtto.svg";
+import { useNavigate } from "react-router-dom";
 
 const EventHero = () => {
+
+  const navigate = useNavigate();
+
+	const handleClick = () => {
+		navigate('/eventticket'); //  route here
+	};
+
+
   return (
     <div>
       <div className="eventflight_container">
@@ -72,7 +81,7 @@ const EventHero = () => {
                             </select>
                         </div>
 
-                        <div className="Getticket">
+                        <div onClick={handleClick} className="Getticket">
                             <h4>Get ticket</h4>
                         </div>
                     </div>

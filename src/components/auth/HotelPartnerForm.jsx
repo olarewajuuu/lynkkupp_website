@@ -112,7 +112,7 @@ const HotelPartnerForm = () => {
 							<div className="flex flex-row gap-2 md:gap-4 items-center">
 								<img src={hotelImg} alt="hotel image" className="w-5 h-5" />
 
-								<NavLink to="/hotelpartner" activeNlassName="active" className="text-[0.9rem] md:text-[33px] font-medium text-inherit">
+								<NavLink to="/hotelpartner" activeNlassName="active" className="text-[0.8rem] md:text-[33px] font-medium text-inherit">
 									I am a hotel owner
 								</NavLink>
 							</div>
@@ -123,7 +123,7 @@ const HotelPartnerForm = () => {
 							<div className="flex flex-row gap-0 md:gap-4 items-center">
 								<img src={eventImg} alt="event image" className="w-5 h-5" />
 
-								<NavLink to="/hotelpartner3" activeNlassName="active" className="text-[0.9rem] md:text-[33px] font-medium text-inherit">
+								<NavLink to="/hotelpartner3" activeNlassName="active" className="text-[0.8rem] md:text-[33px] font-medium text-inherit">
 									I handle event ticketing
 								</NavLink>
 

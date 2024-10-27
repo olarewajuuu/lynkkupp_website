@@ -57,12 +57,10 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		// const { file1, file2, price, selectedOption, checkbox1, checkbox2 } = formData;
-
 		if (!formData.file1 || !formData.file2 || !formData.file3 || !formData.file4 || !formData.file5 || !formData.file6 || !formData.price || !formData.price1 || !formData.price2 || !formData.price3 || !formData.price4 || !formData.price5 || !formData.selectedOption || !formData.selectedOption1 || !formData.selectedOption2 || !formData.selectedOption3 || !formData.selectedOption4 || !formData.checkbox1 || !formData.checkbox2) {
 			alert('Please complete all required fields.');
 			return;
 		}
-
 		console.log('Form Data:', formData);
 		// navigate('/success');
 	};
@@ -95,7 +93,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 							<div className="flex flex-row gap-2 md:gap-4 items-center">
 								<img src={hotelImg} alt="hotel image" className="w-5 h-5" />
 
-								<NavLink to="/" activeNlassName="active" className="text-[0.9rem] md:text-[33px] font-medium text-inherit">
+								<NavLink to="/" activeNlassName="active" className="text-[0.8rem] md:text-[33px] font-medium text-inherit">
 									I am a hotel owner
 								</NavLink>
 							</div>
@@ -103,10 +101,10 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 						</div>
 
 						<div className="flex flex-col w-full pl-0 md:pl-4">
-							<div className="flex flex-row gap-2 md:gap-4 items-center">
+							<div className="flex flex-row gap-0 md:gap-4 items-center">
 								<img src={eventImg} alt="event image" className="w-5 h-5" />
 
-								<NavLink to="/hotelpartner3" activeNlassName="active" className="text-[0.9rem] md:text-[33px] font-medium text-inherit">
+								<NavLink to="/hotelpartner3" activeNlassName="active" className="text-[0.8rem] md:text-[33px] font-medium text-inherit">
 									I handle event ticketing
 								</NavLink>
 
@@ -147,7 +145,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 
 
 									<h4 className="text-[19px] font-[700] mb-9 px-[50px]">Upload at least 5 rooms and state your price <span className="text-[14px] font-[500]"> that stand out from the competition</span></h4>
-									<div className="grid grid-cols-2 md:grid-cols-3 gap-10">
+									<div className="grid grid-cols-2 md:grid-cols-3 gap-6 ml-[-10px]">
 										{/* First  */}
 										<div>
 											<FileUpload2
@@ -157,7 +155,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 											<div className="text-left">
 												<div>
 													<input value={formData.price}
-														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[197px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
+														onChange={handleChange} placeholder="Price" type="text" className="border border-[#494949] rounded-[2px] w-[160px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
 												</div>
 
 												<FormControl component="fieldset" required className="ml-10">
@@ -220,7 +218,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 											<div className="text-left">
 												<div>
 													<input value={formData.price2}
-														onChange={handleChange} placeholder="Price" type="text"  className="border border-[#494949] rounded-[2px] w-[197px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
+														onChange={handleChange} placeholder="Price" type="text"  className="border border-[#494949] rounded-[2px] w-[160px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
 												</div>
 												<p></p>
 												<FormControl component="fieldset" required className="ml-10">
@@ -283,7 +281,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 											<div className="text-left">
 												<div>
 													<input value={formData.price3}
-														onChange={handleChange} placeholder="Price" type="text"  className="border border-[#494949] rounded-[2px] w-[197px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
+														onChange={handleChange} placeholder="Price" type="text"  className="border border-[#494949] rounded-[2px] w-[160px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
 												</div>
 												<p></p>
 												<FormControl component="fieldset" required className="ml-10">
@@ -346,7 +344,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 											<div className="text-left">
 												<div>
 													<input value={formData.price4}
-														onChange={handleChange} placeholder="Price" type="text"  className="border border-[#494949] rounded-[2px] w-[197px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
+														onChange={handleChange} placeholder="Price" type="text"  className="border border-[#494949] rounded-[2px] w-[160px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
 												</div>
 												<p></p>
 												<FormControl component="fieldset" required className="ml-10">
@@ -409,7 +407,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 											<div className="text-left">
 												<div>
 													<input value={formData.price5}
-														onChange={handleChange} placeholder="Price" type="text"  className="border border-[#494949] rounded-[2px] w-[197px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
+														onChange={handleChange} placeholder="Price" type="text"  className="border border-[#494949] rounded-[2px] w-[160px] h-[30px] md:w-[218px] md:h-[30px] mt-6 mb-9 pl-4" />
 												</div>
 												<p></p>
 												<FormControl component="fieldset" required className="ml-10">
@@ -473,7 +471,7 @@ const HotelPartnerForm2 = ({ partner2 }) => {
 							{/* Rooms & Prices ends */}
 
 							{/*Hotel facilities and features start */}
-							<div className="text-left mt-20">
+							<div className="text-left mt-10 md:mt-20">
 								<label htmlFor="Rooms&Prices" className="text-inherit flex mb-6 text-[13px] md:text-[16px] font-medium ">Hotel facilities and features</label>
 								<div className="flex flex-col">
 									<FormControlLabel

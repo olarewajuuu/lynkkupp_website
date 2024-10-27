@@ -11,7 +11,7 @@ const FileUpload2 = ({ file, setFile }) => {
     });
 
     return (
-        <Grid className="flex justify-center items-center w-[197px] md:w-[218px] md:h-[130px]  border-[2px] h-[86px] border-[#494949] rounded-[6px]">
+        <Grid className="flex justify-center items-center w-[160px] md:w-[218px] md:h-[130px]  border-[2px] h-[86px] border-[#494949] rounded-[6px]">
             <Box
                 {...getRootProps()}
                 sx={{
