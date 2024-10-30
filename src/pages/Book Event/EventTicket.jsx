@@ -147,6 +147,7 @@ const EventTicket = () => {
                                 onChange={(e) => setLocation(e.target.value)}
                                 className="w-full py-2 bg-transparent outline-none"
                             >
+                                <option value="">Select location</option>
                                 <option value="Lagos">Lagos</option>
                                 <option value="Maduguri">Maduguri</option>
                                 <option value="Ilorin">Ilorin</option>
@@ -157,6 +158,7 @@ const EventTicket = () => {
                                 <option value="Benin">Benin</option>
                                 <option value="Zaria">Zaria</option>
                                 <option value="Kaduna">Kaduna</option>
+                                <option value="Online">Online</option>
                             </select>
                         </div>
                         {/* <div className="h-full w-[2px] bg-white"></div> */}
@@ -229,7 +231,10 @@ const EventTicket = () => {
                             </div>
                             <div className="flex items-center justify-between text-gray-500 my-2">
                                 <button className="bg-[#55BFEA] py-2 px-4 text-white rounded-md">Get ticket</button>
-                                <span>{event.price}</span>
+                                <span> {event.price.toLocaleString("en-NG", {
+                                        style: "currency",
+                                        currency: "NGN",
+                                    })}</span>
                             </div>
                         </div>
                     </div>

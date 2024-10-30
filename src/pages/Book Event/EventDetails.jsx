@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import eventsData from './eventsData';
 import backImg from "/images/back.svg"
+import GetDetails from "./GetDetails";
 // import { useNavigate } from "react-router-dom";
 // import { FaCalendarAlt, FaClock, FaMapMarkerAlt } from "react-icons/fa";
 
@@ -11,6 +12,7 @@ const EventDetails = () => {
     const { eventId } = useParams();
     const event = eventsData.find((event) => event.id === parseInt(eventId));
     const [showBookingSummary, setShowBookingSummary] = useState(false);
+    const [showGetDetails, setShowGetDetails] = useState(false);
     const [quantity, setQuantity] = useState(1);
 
     if (!event) return <p>Event not found!</p>;
@@ -24,6 +26,10 @@ const EventDetails = () => {
         style: "currency",
         currency: "NGN",
     });
+    const handleCheckoutClick = () => {
+        setShowBookingSummary(false);
+        setShowGetDetails(true);
+      };
 
 
     return (
@@ -33,7 +39,7 @@ const EventDetails = () => {
                 <img src={event.imageUrl} alt={event.name} className="w-full md:h-96 object-cover" />
 
                 {/* Event Details */}
-                <div className={`p-5 md:p-10 md:flex justify-between items-start relative  ${showBookingSummary ? "hidden md:block" : ""}`}>
+                <div className={`p-5 md:p-10 md:flex justify-between items-start relative  ${showBookingSummary ? "hidden md:block" : ""}  ${showGetDetails ? "hidden md:hidden " : ""}`}>
                     <div>
                         <h1 className=" text-[19px] md:text-[48px] font-bold mb-4">{event.name}</h1>
                         <img src={event.imageUrl} alt={event.name} className="w-full md:w-2/4 md:h-96 object-cover rounded-xl" />
@@ -95,7 +101,7 @@ const EventDetails = () => {
 
                 {/* Booking Summary Modal */}
                 {showBookingSummary && (
-                    <div className=" inset-0 flex flex-col items-center justify-center md:justify-end  md:absolute md:top-[50rem] md:mr-16">
+                    <div className=" inset-0 flex flex-col items-center md:items-end justify-center   md:absolute md:top-[50rem] md:right-0 md:mr-16">
                         <div className="mt-16 mb-8 relative -left-32">
                             <button
                                 onClick={handleCloseSummary}
@@ -124,7 +130,7 @@ const EventDetails = () => {
                                     <div className="flex items-center gap-4 ">
                                         <button
                                             onClick={handleDecrement}
-                                            className={`px-4 py-1 md:text-lg rounded-full  ${quantity === 1 ? "bg-gray-300 text-gray-500 cursor-not-allowed border border-[#494949] " : "bg-gray-200 border border-[#55BFEA]"
+                                            className={`px-[14px] py-[5px] md:text-lg rounded-full  ${quantity === 1 ? "bg-gray-300 text-gray-500 cursor-not-allowed border border-[#494949] " : "bg-gray-200 border border-[#55BFEA]"
                                                 }`}
                                             disabled={quantity === 1}
                                         >
@@ -150,7 +156,7 @@ const EventDetails = () => {
 
                             {/* Checkout and Close Buttons */}
                             <button
-                                onClick={() => alert("Proceeding to checkout")}
+                                onClick={handleCheckoutClick}
                                 className="w-full p-4 bg-[#55BFEA] text-white rounded-md mt-4 text-[19px]"
                             >
                                 Checkout
@@ -158,6 +164,11 @@ const EventDetails = () => {
 
                         </div>
                     </div>
+                )}
+
+                {/* Get Details Component */}
+                {showGetDetails && (
+                    <GetDetails quantity={quantity} onClose={() => setShowGetDetails(false)} />
                 )}
             </div>
 
