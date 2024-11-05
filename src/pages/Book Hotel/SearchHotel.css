@@ -295,6 +295,7 @@
     }
 
     .filter-panel {
+        margin-top: 3.75rem;
         grid-area: filterPanel;
         margin-left: 5.4375rem;
     }

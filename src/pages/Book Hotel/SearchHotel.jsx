@@ -19,6 +19,7 @@ const SearchHotel = () => {
   const searchQueryLocation = searchQuery.cityOrAirport
   const isLargeScreen = useScreenSize()
 
+
   useEffect(() => {
     fetch("/SearchHotelResult.json")
       .then((response) => response.json())
@@ -169,7 +170,7 @@ const SearchHotel = () => {
             </span>
             <img src={ChevronIcon} />
             <span>
-              <a href="/">Hotels in Lagos</a>
+              <a href="/">Hotels in {searchQuery.cityOrAirport}</a>
             </span>
           </div>
           {/*Filter button */}
@@ -178,7 +179,7 @@ const SearchHotel = () => {
           </div>
 
           <div className="searchNav_3">
-            <HotelForm />
+            <HotelForm  searchQuery={searchQuery}/>
           </div>
         </nav>
         <section className="searchResult">
@@ -190,7 +191,7 @@ const SearchHotel = () => {
                 {" "}
                 <img src="../src/assets/Images/ep_back.svg" /> Go back
               </button>
-              <p>Hotels in Lekki, NG</p>
+              <p>Hotels in {searchQuery.cityOrAirport}</p>
             </div>
             <img className="contact" src="../src/assets/Images/contact.svg" />
           </div>
