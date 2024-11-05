@@ -7,7 +7,7 @@ aside {
     height: 100%;
     background-color: white;
     overflow: auto;
-}   
+}
 
 .close-button {
     display: flex;
@@ -26,6 +26,7 @@ aside {
     border-top: 0.6px solid rgba(35, 34, 34, 0.20);
     ;
 }
+
 .display-map {
     background-color: rgba(85, 191, 234, 0.80);
     padding: 0.538em 7.308em 0.308em 6.846em;
@@ -156,30 +157,40 @@ aside {
 
 .amenities-filter {
     padding-block: 1.538em 1.462em;
-    border-bottom: 0.5px solid rgba(35, 34, 34, 0.35);;
+    border-bottom: 0.5px solid rgba(35, 34, 34, 0.35);
+    ;
 }
-.amenities-filter form, .rating-filter form{
+
+.amenities-filter form,
+.rating-filter form {
     display: flex;
     flex-direction: column;
     margin-top: 1.23em;
     gap: 0.462em;
 }
-.amenities-filter form label, .rating-filter form label{
+
+.amenities-filter form label,
+.rating-filter form label {
     display: flex;
     align-items: center;
 }
-.amenities-filter form input, .rating-filter form input{
+
+.amenities-filter form input,
+.rating-filter form input {
     margin-right: 0.538em;
 }
+
 .amenities-filter h3 {
     color: #494949;
     font-weight: 500;
     line-height: 140%;
 }
-.rating-filter{
+
+.rating-filter {
     padding-block: 1.538em 2.308em;
 }
-.apply-filterBtn{
+
+.apply-filterBtn {
     background-color: #55BFEA;
     padding: 10px 30px;
     color: white;
@@ -195,13 +206,30 @@ aside {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-@media screen  and (min-width: 576px){
+
+@media screen and (min-width: 576px) {
     aside {
         font-size: 1rem;
     }
 }
+
 @media screen and (min-width: 1025px) {
-    .filter{
+    aside {
+        background-color: unset;
+    }
+
+    .filter {
+        background-color: white;
         padding: 0 0.9375rem 3.267rem 0.9375rem;
+        border-top: unset;
+    }
+
+    .search-filter {
+        border-top: unset;
+
+    }
+
+    .display-map {
+        margin-bottom: 0.75rem;
     }
 }
